@@ -3,6 +3,7 @@ import lombok.Data;
 
 import javax.xml.bind.annotation.XmlElement;
 import java.util.Date;
+import java.util.List;
 
 /**
  *
@@ -10,14 +11,14 @@ import java.util.Date;
 @Data
 public class SvScFact {
 
-    @XmlElement(name = "НомерСчФ",required = true)
+    @XmlElement(name = "НомерСчФ", required = true)
     @ApiModelProperty(value = "Формат\n" +
             "T(1000) Строка (длина от 1 до 1000 знаков)\n" +
             "Тип элемента\n" +
             "Обязательный")
     private String numberScF;
 
-    @XmlElement(name = "ДатаСчФ",required = true)
+    @XmlElement(name = "ДатаСчФ", required = true)
     @ApiModelProperty(value = "Формат\n" +
             "D(10) Дата (фиксированное число знаков 10)\n" +
             "Тип элемента\n" +
@@ -31,4 +32,19 @@ public class SvScFact {
             "Обязательный")
     private String codeOKV;
 
+    @XmlElement(name = "ИспрСчФ", required = false)
+    @ApiModelProperty(value = "Формат\n" +
+            "Строка\n" +
+            "Тип элемента\n" +
+            "Необязательный\n" +
+            "Узел")
+    private List<IsprScF> isprScFList;
+
+    @XmlElement(name = "СвПрод",required = true)
+    @ApiModelProperty(value = "Формат\n" +
+            "Составной элемент\n" +
+            "Тип элемента\n" +
+            "Обязательный\n" +
+            "Узел")
+    private List<SvProd> svProdList;
 }
