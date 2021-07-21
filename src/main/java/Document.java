@@ -87,7 +87,28 @@ public class Document {
             "Узел")
     private List<SvScFact> svScFactList;
 
+    @XmlElement(name = "ТаблСчФакт")
+    @ApiModelProperty(value = "Формат\n" +
+            "Строка\n" +
+            "Тип элемента\n" +
+            "Условно-Обязательный\n" +
+            "Узел")
+    private List<TableScFact> tableScFactList;
+    
+    @XmlElement(name = "СвПродПер")
+    @ApiModelProperty(value = "Формат\n" +
+            "Строка\n" +
+            "Тип элемента\n" +
+            "Условно-Обязательный\n" +
+            "Узел")
+    private List<SvProdPer> svProdPerList;
 
-
+    @XmlElement(name = "Подписант",required = true)
+    @ApiModelProperty(value = "Формат\n" +
+            "Составной элемент\n" +
+            "Тип элемента\n" +
+            "Обязательный\n" +
+            "Узел")
+    private List<Podpisant> podpisantList;
 
 }

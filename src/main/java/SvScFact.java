@@ -79,4 +79,29 @@ public class SvScFact {
             "Обязательный\n" +
             "Узел")
     private List<SvBuyer> svBuyerList;
+
+    @XmlElement(name = "ДопСвФХЖ1")
+    @ApiModelProperty(value = "Формат\n" +
+            "Строка\n" +
+            "Тип элемента\n" +
+            "Необязательный\n" +
+            "Узел")
+    private List<DopSvFXZ1> dopSvFXZ1List;
+
+
+    @XmlElement(name = "ДокПодтвОтгр")
+    @ApiModelProperty(value = "Формат\n" +
+            "Составной элемент\n" +
+            "Тип элемента\n" +
+            "Необязательный\n" +
+            "Узел")
+    private List<DocumentConfirmShipment> documentConfirmShipmentList;
+
+    @XmlElement(name = "ИнфПолФХЖ1")
+    @ApiModelProperty(value = "Формат\n" +
+            "Строка\n" +
+            "Тип элемента\n" +
+            "Необязательный\n" +
+            "Узел")
+    private List<InfPolFXZ1> infPolFXZ1List;
 }
