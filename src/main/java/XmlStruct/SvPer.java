@@ -7,7 +7,7 @@ import javax.xml.bind.annotation.XmlElement;
 import java.util.Date;
 import java.util.List;
 
-@Data
+
 public class SvPer {
 
     @XmlElement(name = "СодОпер",required = true)
@@ -77,4 +77,77 @@ public class SvPer {
             "Необязательный\n" +
             "Узел")
     private List<SvPerVech> svPerVechList;
+
+
+    public String getSodOper() {
+        return sodOper;
+    }
+
+    public void setSodOper(String sodOper) {
+        this.sodOper = sodOper;
+    }
+
+    public String getVidOper() {
+        return vidOper;
+    }
+
+    public void setVidOper(String vidOper) {
+        this.vidOper = vidOper;
+    }
+
+    public Date getDatePer() {
+        return datePer;
+    }
+
+    public void setDatePer(Date datePer) {
+        this.datePer = datePer;
+    }
+
+    public Date getDateStart() {
+        return dateStart;
+    }
+
+    public void setDateStart(Date dateStart) {
+        this.dateStart = dateStart;
+    }
+
+    public Date getDateEnd() {
+        return dateEnd;
+    }
+
+    public void setDateEnd(Date dateEnd) {
+        this.dateEnd = dateEnd;
+    }
+
+    public List<OsnPer> getOsnPerList() {
+        return osnPerList;
+    }
+
+    public void setOsnPerList(List<OsnPer> osnPerList) {
+        this.osnPerList = osnPerList;
+    }
+
+    public List<SvLicPer> getSvLicPerList() {
+        return svLicPerList;
+    }
+
+    public void setSvLicPerList(List<SvLicPer> svLicPerList) {
+        this.svLicPerList = svLicPerList;
+    }
+
+    public List<TranGruz> getTranGruzList() {
+        return tranGruzList;
+    }
+
+    public void setTranGruzList(List<TranGruz> tranGruzList) {
+        this.tranGruzList = tranGruzList;
+    }
+
+    public List<SvPerVech> getSvPerVechList() {
+        return svPerVechList;
+    }
+
+    public void setSvPerVechList(List<SvPerVech> svPerVechList) {
+        this.svPerVechList = svPerVechList;
+    }
 }

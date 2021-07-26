@@ -10,7 +10,7 @@ import java.util.List;
 /**
  *
  */
-@Data
+
 public class InfProdGosZakKazn {
 
     @XmlElement(name = "ДатаГосКонт",required = true)
@@ -78,5 +78,75 @@ public class InfProdGosZakKazn {
             "Узел")
     private List<OsnUstDenTreb> osnUstDenTrebList;
 
+    public Date getDateContract() {
+        return dateContract;
+    }
 
+    public void setDateContract(Date dateContract) {
+        this.dateContract = dateContract;
+    }
+
+    public String getNumberGosContract() {
+        return numberGosContract;
+    }
+
+    public void setNumberGosContract(String numberGosContract) {
+        this.numberGosContract = numberGosContract;
+    }
+
+    public String getPersonalAccSeller() {
+        return personalAccSeller;
+    }
+
+    public void setPersonalAccSeller(String personalAccSeller) {
+        this.personalAccSeller = personalAccSeller;
+    }
+
+    public String getCodeProdBudzClass() {
+        return codeProdBudzClass;
+    }
+
+    public void setCodeProdBudzClass(String codeProdBudzClass) {
+        this.codeProdBudzClass = codeProdBudzClass;
+    }
+
+    public String getCodeTargetProd() {
+        return codeTargetProd;
+    }
+
+    public void setCodeTargetProd(String codeTargetProd) {
+        this.codeTargetProd = codeTargetProd;
+    }
+
+    public String getCodeKaznacProd() {
+        return codeKaznacProd;
+    }
+
+    public void setCodeKaznacProd(String codeKaznacProd) {
+        this.codeKaznacProd = codeKaznacProd;
+    }
+
+    public String getNameKaznacProd() {
+        return nameKaznacProd;
+    }
+
+    public void setNameKaznacProd(String nameKaznacProd) {
+        this.nameKaznacProd = nameKaznacProd;
+    }
+
+    public List<SvFactor> getSvFactorList() {
+        return svFactorList;
+    }
+
+    public void setSvFactorList(List<SvFactor> svFactorList) {
+        this.svFactorList = svFactorList;
+    }
+
+    public List<OsnUstDenTreb> getOsnUstDenTrebList() {
+        return osnUstDenTrebList;
+    }
+
+    public void setOsnUstDenTrebList(List<OsnUstDenTreb> osnUstDenTrebList) {
+        this.osnUstDenTrebList = osnUstDenTrebList;
+    }
 }

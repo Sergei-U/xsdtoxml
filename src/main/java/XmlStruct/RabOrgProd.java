@@ -6,7 +6,7 @@ import lombok.Data;
 import javax.xml.bind.annotation.XmlElement;
 import java.util.List;
 
-@Data
+
 public class RabOrgProd {
 
 
@@ -32,5 +32,44 @@ public class RabOrgProd {
             "Необязательный")
     private String osnSved;
 
+
+    @XmlElement(name = "ФИО",required = true)
+    @ApiModelProperty(value = "Формат\n" +
+            "Строка\n" +
+            "Тип элемента\n" +
+            "Обязательный\n" +
+            "Узел")
     private List<FIO> fioList;
+
+    public String getRabOrgProd() {
+        return rabOrgProd;
+    }
+
+    public void setRabOrgProd(String rabOrgProd) {
+        this.rabOrgProd = rabOrgProd;
+    }
+
+    public String getOverSved() {
+        return overSved;
+    }
+
+    public void setOverSved(String overSved) {
+        this.overSved = overSved;
+    }
+
+    public String getOsnSved() {
+        return osnSved;
+    }
+
+    public void setOsnSved(String osnSved) {
+        this.osnSved = osnSved;
+    }
+
+    public List<FIO> getFioList() {
+        return fioList;
+    }
+
+    public void setFioList(List<FIO> fioList) {
+        this.fioList = fioList;
+    }
 }

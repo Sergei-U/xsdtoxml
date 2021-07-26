@@ -8,7 +8,7 @@ import javax.xml.bind.annotation.XmlElement;
 /**
  *
  */
-@Data
+
 public class SvedProslez {
 
 
@@ -47,4 +47,45 @@ public class SvedProslez {
             "Тип элемента\n" +
             "Необязательный")
     private String dopProsl;
+
+
+    public String getNominalProductProsl() {
+        return nominalProductProsl;
+    }
+
+    public void setNominalProductProsl(String nominalProductProsl) {
+        this.nominalProductProsl = nominalProductProsl;
+    }
+
+    public String getEdIzmProsl() {
+        return edIzmProsl;
+    }
+
+    public void setEdIzmProsl(String edIzmProsl) {
+        this.edIzmProsl = edIzmProsl;
+    }
+
+    public String getNameEdIzmProsl() {
+        return nameEdIzmProsl;
+    }
+
+    public void setNameEdIzmProsl(String nameEdIzmProsl) {
+        this.nameEdIzmProsl = nameEdIzmProsl;
+    }
+
+    public String getQuantityVedProsl() {
+        return quantityVedProsl;
+    }
+
+    public void setQuantityVedProsl(String quantityVedProsl) {
+        this.quantityVedProsl = quantityVedProsl;
+    }
+
+    public String getDopProsl() {
+        return dopProsl;
+    }
+
+    public void setDopProsl(String dopProsl) {
+        this.dopProsl = dopProsl;
+    }
 }

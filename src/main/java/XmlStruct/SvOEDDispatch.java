@@ -1,12 +1,14 @@
 package XmlStruct;
 
 import io.swagger.annotations.ApiModelProperty;
+import lombok.Data;
 
 import javax.xml.bind.annotation.XmlElement;
 
 /**
  *
  */
+
 public class SvOEDDispatch {
 
     @XmlElement(name = "НаимОрг", required = true)
@@ -29,4 +31,29 @@ public class SvOEDDispatch {
             "Тип элемента\n" +
             "Обязательный")
     private String idEDO;
+
+
+    public String getNameCompany() {
+        return nameCompany;
+    }
+
+    public void setNameCompany(String nameCompany) {
+        this.nameCompany = nameCompany;
+    }
+
+    public String getIdNumberCompany() {
+        return idNumberCompany;
+    }
+
+    public void setIdNumberCompany(String idNumberCompany) {
+        this.idNumberCompany = idNumberCompany;
+    }
+
+    public String getIdEDO() {
+        return idEDO;
+    }
+
+    public void setIdEDO(String idEDO) {
+        this.idEDO = idEDO;
+    }
 }

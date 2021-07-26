@@ -6,7 +6,7 @@ import lombok.Data;
 import javax.xml.bind.annotation.XmlElement;
 import java.util.List;
 
-@Data
+
 public class Perevozchik {
 
 
@@ -69,4 +69,68 @@ public class Perevozchik {
             "Необязательный\n" +
             "Узел")
     private List<BankReq> bankReqList;
+
+    public String getOkpo() {
+        return okpo;
+    }
+
+    public void setOkpo(String okpo) {
+        this.okpo = okpo;
+    }
+
+    public String getStructSubdivision() {
+        return structSubdivision;
+    }
+
+    public void setStructSubdivision(String structSubdivision) {
+        this.structSubdivision = structSubdivision;
+    }
+
+    public String getInfForParticipation() {
+        return infForParticipation;
+    }
+
+    public void setInfForParticipation(String infForParticipation) {
+        this.infForParticipation = infForParticipation;
+    }
+
+    public String getShortName() {
+        return shortName;
+    }
+
+    public void setShortName(String shortName) {
+        this.shortName = shortName;
+    }
+
+    public List<IdSv> getIdSvList() {
+        return idSvList;
+    }
+
+    public void setIdSvList(List<IdSv> idSvList) {
+        this.idSvList = idSvList;
+    }
+
+    public List<Address> getAddressList() {
+        return addressList;
+    }
+
+    public void setAddressList(List<Address> addressList) {
+        this.addressList = addressList;
+    }
+
+    public List<Contact> getContactList() {
+        return contactList;
+    }
+
+    public void setContactList(List<Contact> contactList) {
+        this.contactList = contactList;
+    }
+
+    public List<BankReq> getBankReqList() {
+        return bankReqList;
+    }
+
+    public void setBankReqList(List<BankReq> bankReqList) {
+        this.bankReqList = bankReqList;
+    }
 }

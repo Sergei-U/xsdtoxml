@@ -6,7 +6,7 @@ import lombok.Data;
 import javax.xml.bind.annotation.XmlElement;
 import java.util.List;
 
-@Data
+
 public class TranGruz {
 
 
@@ -32,4 +32,29 @@ public class TranGruz {
             "Необязательный\n" +
             "Узел")
     private List<Perevozchik> perevozchikList;
+
+
+    public String getSvTranGruz() {
+        return svTranGruz;
+    }
+
+    public void setSvTranGruz(String svTranGruz) {
+        this.svTranGruz = svTranGruz;
+    }
+
+    public List<TranNakl> getTranNaklList() {
+        return tranNaklList;
+    }
+
+    public void setTranNaklList(List<TranNakl> tranNaklList) {
+        this.tranNaklList = tranNaklList;
+    }
+
+    public List<Perevozchik> getPerevozchikList() {
+        return perevozchikList;
+    }
+
+    public void setPerevozchikList(List<Perevozchik> perevozchikList) {
+        this.perevozchikList = perevozchikList;
+    }
 }

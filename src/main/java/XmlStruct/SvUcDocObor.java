@@ -10,7 +10,7 @@ import java.util.List;
 /**
  *
  */
-@Data
+
 @AllArgsConstructor
 public class SvUcDocObor {
 
@@ -30,4 +30,28 @@ public class SvUcDocObor {
 
     @XmlElement(name = "СвОЭДОтпр")
     private List<SvOEDDispatch> svOEDDispatchList;
+
+    public String getIdDispatch() {
+        return idDispatch;
+    }
+
+    public void setIdDispatch(String idDispatch) {
+        this.idDispatch = idDispatch;
+    }
+
+    public String getIdReception() {
+        return idReception;
+    }
+
+    public void setIdReception(String idReception) {
+        this.idReception = idReception;
+    }
+
+    public List<SvOEDDispatch> getSvOEDDispatchList() {
+        return svOEDDispatchList;
+    }
+
+    public void setSvOEDDispatchList(List<SvOEDDispatch> svOEDDispatchList) {
+        this.svOEDDispatchList = svOEDDispatchList;
+    }
 }

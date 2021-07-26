@@ -9,7 +9,7 @@ import java.util.List;
 /**
  *
  */
-@Data
+
 public class SvProdPer {
 
 
@@ -28,4 +28,20 @@ public class SvProdPer {
             "Необязательный\n" +
             "Узел")
     private List<InfPolFXZ3> infPolFXZ3List;
+
+    public List<SvPer> getSvPerList() {
+        return svPerList;
+    }
+
+    public void setSvPerList(List<SvPer> svPerList) {
+        this.svPerList = svPerList;
+    }
+
+    public List<InfPolFXZ3> getInfPolFXZ3List() {
+        return infPolFXZ3List;
+    }
+
+    public void setInfPolFXZ3List(List<InfPolFXZ3> infPolFXZ3List) {
+        this.infPolFXZ3List = infPolFXZ3List;
+    }
 }

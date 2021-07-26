@@ -8,7 +8,7 @@ import javax.xml.bind.annotation.XmlElement;
 /**
  *
  */
-@Data
+
 public class TextInf {
 
     @XmlElement(name = "Идентиф",required = true)
@@ -24,4 +24,20 @@ public class TextInf {
             "Тип элемента\n" +
             "Обязательный")
     private String valueText;
+
+    public String getIdText() {
+        return idText;
+    }
+
+    public void setIdText(String idText) {
+        this.idText = idText;
+    }
+
+    public String getValueText() {
+        return valueText;
+    }
+
+    public void setValueText(String valueText) {
+        this.valueText = valueText;
+    }
 }

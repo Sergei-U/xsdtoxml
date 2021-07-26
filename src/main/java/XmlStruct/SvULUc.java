@@ -8,7 +8,7 @@ import javax.xml.bind.annotation.XmlElement;
 /**
  *
  */
-@Data
+
 public class SvULUc {
 
 
@@ -47,4 +47,44 @@ public class SvULUc {
             "Тип элемента\n" +
             "Необязательный")
     private String defKpp;
+
+    public String getNameOrg() {
+        return nameOrg;
+    }
+
+    public void setNameOrg(String nameOrg) {
+        this.nameOrg = nameOrg;
+    }
+
+    public String getInnUL() {
+        return innUL;
+    }
+
+    public void setInnUL(String innUL) {
+        this.innUL = innUL;
+    }
+
+    public String getDefInnUL() {
+        return defInnUL;
+    }
+
+    public void setDefInnUL(String defInnUL) {
+        this.defInnUL = defInnUL;
+    }
+
+    public String getKpp() {
+        return kpp;
+    }
+
+    public void setKpp(String kpp) {
+        this.kpp = kpp;
+    }
+
+    public String getDefKpp() {
+        return defKpp;
+    }
+
+    public void setDefKpp(String defKpp) {
+        this.defKpp = defKpp;
+    }
 }

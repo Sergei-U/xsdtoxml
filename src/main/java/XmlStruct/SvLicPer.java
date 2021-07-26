@@ -6,7 +6,7 @@ import lombok.Data;
 import javax.xml.bind.annotation.XmlElement;
 import java.util.List;
 
-@Data
+
 public class SvLicPer {
 
 
@@ -25,4 +25,20 @@ public class SvLicPer {
             "Обязательный\n" +
             "Узел")
     private List<InLico> inLicoList;
+
+    public List<RabOrgProd> getRabOrgProdList() {
+        return rabOrgProdList;
+    }
+
+    public void setRabOrgProdList(List<RabOrgProd> rabOrgProdList) {
+        this.rabOrgProdList = rabOrgProdList;
+    }
+
+    public List<InLico> getInLicoList() {
+        return inLicoList;
+    }
+
+    public void setInLicoList(List<InLico> inLicoList) {
+        this.inLicoList = inLicoList;
+    }
 }

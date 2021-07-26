@@ -8,7 +8,7 @@ import javax.xml.bind.annotation.XmlElement;
 /**
  *
  */
-@Data
+
 public class NomSredIndentTov {
 
     @XmlElement(name = "ИдентТрансУпак")
@@ -33,4 +33,28 @@ public class NomSredIndentTov {
             "Условно-Обязательный\n" +
             "Узел")
     private String nomPack;
+
+    public String getIdentTransPack() {
+        return identTransPack;
+    }
+
+    public void setIdentTransPack(String identTransPack) {
+        this.identTransPack = identTransPack;
+    }
+
+    public String getKiz() {
+        return kiz;
+    }
+
+    public void setKiz(String kiz) {
+        this.kiz = kiz;
+    }
+
+    public String getNomPack() {
+        return nomPack;
+    }
+
+    public void setNomPack(String nomPack) {
+        this.nomPack = nomPack;
+    }
 }

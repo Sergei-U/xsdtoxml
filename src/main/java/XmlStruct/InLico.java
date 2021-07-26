@@ -6,7 +6,7 @@ import lombok.Data;
 import javax.xml.bind.annotation.XmlElement;
 import java.util.List;
 
-@Data
+
 public class InLico {
 
     @XmlElement(name = "ПредОргПер",required = true)
@@ -24,4 +24,20 @@ public class InLico {
             "Обязательный\n" +
             "Узел")
     private List<FlPer> flPerList;
+
+    public List<PredOrgPer> getPredOrgPerList() {
+        return predOrgPerList;
+    }
+
+    public void setPredOrgPerList(List<PredOrgPer> predOrgPerList) {
+        this.predOrgPerList = predOrgPerList;
+    }
+
+    public List<FlPer> getFlPerList() {
+        return flPerList;
+    }
+
+    public void setFlPerList(List<FlPer> flPerList) {
+        this.flPerList = flPerList;
+    }
 }

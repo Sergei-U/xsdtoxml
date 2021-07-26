@@ -9,7 +9,7 @@ import java.util.List;
 /**
  *
  */
-@Data
+
 public class BankReq {
 
     @XmlElement(name = "НомерСчета")
@@ -26,4 +26,21 @@ public class BankReq {
             "Необязательный\n" +
             "Узел")
     private List<SvBank> svBankList;
+
+
+    public String getAccNumber() {
+        return accNumber;
+    }
+
+    public void setAccNumber(String accNumber) {
+        this.accNumber = accNumber;
+    }
+
+    public List<SvBank> getSvBankList() {
+        return svBankList;
+    }
+
+    public void setSvBankList(List<SvBank> svBankList) {
+        this.svBankList = svBankList;
+    }
 }

@@ -9,7 +9,7 @@ import java.util.List;
 /**
  *
  */
-@Data
+
 public class SvFLUcastFXZ {
 
     @XmlElement(name = "ГосРегИПВыдДов")
@@ -40,4 +40,36 @@ public class SvFLUcastFXZ {
             "Обязательный\n" +
             "Узел")
     private List<FIO> fioList;
+
+    public String getGosRegIPVidDov() {
+        return gosRegIPVidDov;
+    }
+
+    public void setGosRegIPVidDov(String gosRegIPVidDov) {
+        this.gosRegIPVidDov = gosRegIPVidDov;
+    }
+
+    public String getInnFL() {
+        return innFL;
+    }
+
+    public void setInnFL(String innFL) {
+        this.innFL = innFL;
+    }
+
+    public String getOverInf() {
+        return overInf;
+    }
+
+    public void setOverInf(String overInf) {
+        this.overInf = overInf;
+    }
+
+    public List<FIO> getFioList() {
+        return fioList;
+    }
+
+    public void setFioList(List<FIO> fioList) {
+        this.fioList = fioList;
+    }
 }

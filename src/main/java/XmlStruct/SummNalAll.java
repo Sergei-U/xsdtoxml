@@ -9,7 +9,7 @@ import java.math.BigDecimal;
 /**
  *
  */
-@Data
+
 public class SummNalAll {
     @XmlElement(name = "СумНал")
     @ApiModelProperty(value = "Формат\n" +
@@ -37,4 +37,28 @@ public class SummNalAll {
             "Узел\n" +
             "Принимает значение: -")
     private String defNDS;
+
+    public BigDecimal getSummNal() {
+        return summNal;
+    }
+
+    public void setSummNal(BigDecimal summNal) {
+        this.summNal = summNal;
+    }
+
+    public String getNonNDS() {
+        return nonNDS;
+    }
+
+    public void setNonNDS(String nonNDS) {
+        this.nonNDS = nonNDS;
+    }
+
+    public String getDefNDS() {
+        return defNDS;
+    }
+
+    public void setDefNDS(String defNDS) {
+        this.defNDS = defNDS;
+    }
 }

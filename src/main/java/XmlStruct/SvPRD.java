@@ -10,7 +10,7 @@ import java.util.Date;
 /**
  *
  */
-@Data
+
 public class SvPRD {
 
     @XmlElement(name = "НомерПРД",required = true)
@@ -33,4 +33,28 @@ public class SvPRD {
             "Тип элемента\n" +
             "Необязательный")
     private BigDecimal summPRD;
+
+    public String getNumberPRD() {
+        return numberPRD;
+    }
+
+    public void setNumberPRD(String numberPRD) {
+        this.numberPRD = numberPRD;
+    }
+
+    public Date getDatePRD() {
+        return datePRD;
+    }
+
+    public void setDatePRD(Date datePRD) {
+        this.datePRD = datePRD;
+    }
+
+    public BigDecimal getSummPRD() {
+        return summPRD;
+    }
+
+    public void setSummPRD(BigDecimal summPRD) {
+        this.summPRD = summPRD;
+    }
 }

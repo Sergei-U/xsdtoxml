@@ -10,7 +10,7 @@ import java.util.List;
 /**
  *
  */
-@Data
+
 public class DopSvFXZ1 {
 
     @XmlElement(name = "ИдГосКон")
@@ -57,4 +57,44 @@ public class DopSvFXZ1 {
             "Необязательный\n" +
             "Узел")
     private List<SvFactor> svFactorList;
+
+    public String getIdGosContr() {
+        return idGosContr;
+    }
+
+    public void setIdGosContr(String idGosContr) {
+        this.idGosContr = idGosContr;
+    }
+
+    public String getNameOKV() {
+        return nameOKV;
+    }
+
+    public void setNameOKV(String nameOKV) {
+        this.nameOKV = nameOKV;
+    }
+
+    public BigDecimal getCursVal() {
+        return cursVal;
+    }
+
+    public void setCursVal(BigDecimal cursVal) {
+        this.cursVal = cursVal;
+    }
+
+    public List<InfProdGosZakKazn> getInfProdGosZakKaznList() {
+        return infProdGosZakKaznList;
+    }
+
+    public void setInfProdGosZakKaznList(List<InfProdGosZakKazn> infProdGosZakKaznList) {
+        this.infProdGosZakKaznList = infProdGosZakKaznList;
+    }
+
+    public List<SvFactor> getSvFactorList() {
+        return svFactorList;
+    }
+
+    public void setSvFactorList(List<SvFactor> svFactorList) {
+        this.svFactorList = svFactorList;
+    }
 }

@@ -9,7 +9,7 @@ import java.util.List;
 /**
  *
  */
-@Data
+
 public class CargoSender {
 
     @XmlElement(name = "ОнЖе")
@@ -28,4 +28,20 @@ public class CargoSender {
             "Обязательный\n" +
             "Узел")
     private List<CargoSend> cargoSendList;
+
+    public String getOnZ() {
+        return onZ;
+    }
+
+    public void setOnZ(String onZ) {
+        this.onZ = onZ;
+    }
+
+    public List<CargoSend> getCargoSendList() {
+        return cargoSendList;
+    }
+
+    public void setCargoSendList(List<CargoSend> cargoSendList) {
+        this.cargoSendList = cargoSendList;
+    }
 }

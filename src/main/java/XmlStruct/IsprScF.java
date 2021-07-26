@@ -9,7 +9,7 @@ import java.util.Date;
 /**
  *
  */
-@Data
+
 public class IsprScF {
 
     @XmlElement(name = "НомИспрСчФ",required = true)
@@ -43,5 +43,35 @@ public class IsprScF {
             "Принимает значение: -")
     private String defDateIsprScf;
 
+    public int getNomIsprScf() {
+        return nomIsprScf;
+    }
 
+    public void setNomIsprScf(int nomIsprScf) {
+        this.nomIsprScf = nomIsprScf;
+    }
+
+    public String getDefNomIsprScf() {
+        return defNomIsprScf;
+    }
+
+    public void setDefNomIsprScf(String defNomIsprScf) {
+        this.defNomIsprScf = defNomIsprScf;
+    }
+
+    public Date getDateIsprScf() {
+        return dateIsprScf;
+    }
+
+    public void setDateIsprScf(Date dateIsprScf) {
+        this.dateIsprScf = dateIsprScf;
+    }
+
+    public String getDefDateIsprScf() {
+        return defDateIsprScf;
+    }
+
+    public void setDefDateIsprScf(String defDateIsprScf) {
+        this.defDateIsprScf = defDateIsprScf;
+    }
 }

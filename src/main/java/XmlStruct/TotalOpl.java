@@ -10,7 +10,7 @@ import java.util.List;
 /**
  *
  */
-@Data
+
 public class TotalOpl {
 
 
@@ -52,4 +52,44 @@ public class TotalOpl {
             "Необязательный\n" +
             "Узел")
     private BigDecimal summNetAll;
- }
+
+    public BigDecimal getStProdNoNDSAll() {
+        return stProdNoNDSAll;
+    }
+
+    public void setStProdNoNDSAll(BigDecimal stProdNoNDSAll) {
+        this.stProdNoNDSAll = stProdNoNDSAll;
+    }
+
+    public BigDecimal getStProdUcNalAll() {
+        return stProdUcNalAll;
+    }
+
+    public void setStProdUcNalAll(BigDecimal stProdUcNalAll) {
+        this.stProdUcNalAll = stProdUcNalAll;
+    }
+
+    public String getDefStProdUcNalAll() {
+        return defStProdUcNalAll;
+    }
+
+    public void setDefStProdUcNalAll(String defStProdUcNalAll) {
+        this.defStProdUcNalAll = defStProdUcNalAll;
+    }
+
+    public List<SummNalAll> getSummNalAllList() {
+        return summNalAllList;
+    }
+
+    public void setSummNalAllList(List<SummNalAll> summNalAllList) {
+        this.summNalAllList = summNalAllList;
+    }
+
+    public BigDecimal getSummNetAll() {
+        return summNetAll;
+    }
+
+    public void setSummNetAll(BigDecimal summNetAll) {
+        this.summNetAll = summNetAll;
+    }
+}

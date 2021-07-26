@@ -6,7 +6,7 @@ import lombok.Data;
 import javax.xml.bind.annotation.XmlElement;
 import java.util.Date;
 
-@Data
+
 public class SvPerVech {
 
     @XmlElement(name = "ДатаПерВещ")
@@ -22,4 +22,20 @@ public class SvPerVech {
             "Тип элемента\n" +
             "Необязательный")
     private String svPerVech;
+
+    public Date getDatePerVech() {
+        return datePerVech;
+    }
+
+    public void setDatePerVech(Date datePerVech) {
+        this.datePerVech = datePerVech;
+    }
+
+    public String getSvPerVech() {
+        return svPerVech;
+    }
+
+    public void setSvPerVech(String svPerVech) {
+        this.svPerVech = svPerVech;
+    }
 }

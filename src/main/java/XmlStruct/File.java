@@ -21,7 +21,6 @@ class ObjectFactory{
 
 @XmlRootElement(name = "Файл")
 @XmlAccessorType(XmlAccessType.FIELD)
-@Data
 public class File implements Serializable {
 
     @XmlElement(name = "ИдФайл",required = true)
@@ -52,5 +51,46 @@ public class File implements Serializable {
 
     @XmlElement(name = "Документ")
     private List<Document> documentList;
+
+
+    public String getIdFile() {
+        return idFile;
+    }
+
+    public void setIdFile(String idFile) {
+        this.idFile = idFile;
+    }
+
+    public String getVerForm() {
+        return verForm;
+    }
+
+    public void setVerForm(String verForm) {
+        this.verForm = verForm;
+    }
+
+    public String getVerProgram() {
+        return verProgram;
+    }
+
+    public void setVerProgram(String verProgram) {
+        this.verProgram = verProgram;
+    }
+
+    public List<SvUcDocObor> getSvUcDocOborList() {
+        return svUcDocOborList;
+    }
+
+    public void setSvUcDocOborList(List<SvUcDocObor> svUcDocOborList) {
+        this.svUcDocOborList = svUcDocOborList;
+    }
+
+    public List<Document> getDocumentList() {
+        return documentList;
+    }
+
+    public void setDocumentList(List<Document> documentList) {
+        this.documentList = documentList;
+    }
 }
 //@XmlType(name = "", propOrder = {"СвУчДокОбор", "Документ"})

@@ -8,7 +8,7 @@ import javax.xml.bind.annotation.XmlElement;
 /**
  *
  */
-@Data
+
 public class AddressInf {
 
 
@@ -25,4 +25,20 @@ public class AddressInf {
             "Тип элемента\n" +
             "Обязательный")
     private String addressText;
+
+    public String getCountryCode() {
+        return countryCode;
+    }
+
+    public void setCountryCode(String countryCode) {
+        this.countryCode = countryCode;
+    }
+
+    public String getAddressText() {
+        return addressText;
+    }
+
+    public void setAddressText(String addressText) {
+        this.addressText = addressText;
+    }
 }

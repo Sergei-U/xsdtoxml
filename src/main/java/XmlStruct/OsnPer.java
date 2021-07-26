@@ -6,7 +6,7 @@ import lombok.Data;
 import javax.xml.bind.annotation.XmlElement;
 import java.util.Date;
 
-@Data
+
 public class OsnPer {
 
     @XmlElement(name = "НаимОсн",required = true)
@@ -46,4 +46,43 @@ public class OsnPer {
     private String identOsn;
 
 
+    public String getNameOsn() {
+        return nameOsn;
+    }
+
+    public void setNameOsn(String nameOsn) {
+        this.nameOsn = nameOsn;
+    }
+
+    public String getNomOns() {
+        return nomOns;
+    }
+
+    public void setNomOns(String nomOns) {
+        this.nomOns = nomOns;
+    }
+
+    public Date getDateOsn() {
+        return dateOsn;
+    }
+
+    public void setDateOsn(Date dateOsn) {
+        this.dateOsn = dateOsn;
+    }
+
+    public String getDopSvOsn() {
+        return dopSvOsn;
+    }
+
+    public void setDopSvOsn(String dopSvOsn) {
+        this.dopSvOsn = dopSvOsn;
+    }
+
+    public String getIdentOsn() {
+        return identOsn;
+    }
+
+    public void setIdentOsn(String identOsn) {
+        this.identOsn = identOsn;
+    }
 }

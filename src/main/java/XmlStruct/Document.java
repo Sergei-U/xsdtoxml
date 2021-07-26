@@ -12,7 +12,7 @@ import java.util.List;
 /**
  *
  */
-@Data
+
 public class Document  {
 
     @XmlElement(name = "КНД", required = true,defaultValue = "1115131")
@@ -114,4 +114,108 @@ public class Document  {
             "Узел")
     private List<Podpisant> podpisantList;
 
+
+    public String getKnd() {
+        return knd;
+    }
+
+    public void setKnd(String knd) {
+        this.knd = knd;
+    }
+
+    public String getFunc() {
+        return func;
+    }
+
+    public void setFunc(String func) {
+        this.func = func;
+    }
+
+    public String getPoFactHZ() {
+        return poFactHZ;
+    }
+
+    public void setPoFactHZ(String poFactHZ) {
+        this.poFactHZ = poFactHZ;
+    }
+
+    public String getNameDocReq() {
+        return nameDocReq;
+    }
+
+    public void setNameDocReq(String nameDocReq) {
+        this.nameDocReq = nameDocReq;
+    }
+
+    public LocalDate getDateInfPr() {
+        return dateInfPr;
+    }
+
+    public void setDateInfPr(LocalDate dateInfPr) {
+        this.dateInfPr = dateInfPr;
+    }
+
+    public LocalDate getTimeInfPr() {
+        return timeInfPr;
+    }
+
+    public void setTimeInfPr(LocalDate timeInfPr) {
+        this.timeInfPr = timeInfPr;
+    }
+
+    public String getNameEconSubCondition() {
+        return nameEconSubCondition;
+    }
+
+    public void setNameEconSubCondition(String nameEconSubCondition) {
+        this.nameEconSubCondition = nameEconSubCondition;
+    }
+
+    public String getOsnDoverOrgCondition() {
+        return osnDoverOrgCondition;
+    }
+
+    public void setOsnDoverOrgCondition(String osnDoverOrgCondition) {
+        this.osnDoverOrgCondition = osnDoverOrgCondition;
+    }
+
+    public String getSoglStrDopInf() {
+        return soglStrDopInf;
+    }
+
+    public void setSoglStrDopInf(String soglStrDopInf) {
+        this.soglStrDopInf = soglStrDopInf;
+    }
+
+    public List<SvScFact> getSvScFactList() {
+        return svScFactList;
+    }
+
+    public void setSvScFactList(List<SvScFact> svScFactList) {
+        this.svScFactList = svScFactList;
+    }
+
+    public List<TableScFact> getTableScFactList() {
+        return tableScFactList;
+    }
+
+    public void setTableScFactList(List<TableScFact> tableScFactList) {
+        this.tableScFactList = tableScFactList;
+    }
+
+    public List<SvProdPer> getSvProdPerList() {
+        return svProdPerList;
+    }
+
+    public void setSvProdPerList(List<SvProdPer> svProdPerList) {
+        this.svProdPerList = svProdPerList;
+    }
+
+    public List<Podpisant> getPodpisantList() {
+        return podpisantList;
+    }
+
+    public void setPodpisantList(List<Podpisant> podpisantList) {
+        this.podpisantList = podpisantList;
+    }
 }

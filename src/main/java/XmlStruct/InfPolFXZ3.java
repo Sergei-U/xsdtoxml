@@ -6,7 +6,7 @@ import lombok.Data;
 import javax.xml.bind.annotation.XmlElement;
 import java.util.List;
 
-@Data
+
 public class InfPolFXZ3 {
 
     @XmlElement(name = "ИдФайлИнфПол")
@@ -23,4 +23,20 @@ public class InfPolFXZ3 {
             "Необязательный\n" +
             "Узел")
     private List<TextInf> textInfList;
+
+    public String getIdFileInfPol() {
+        return idFileInfPol;
+    }
+
+    public void setIdFileInfPol(String idFileInfPol) {
+        this.idFileInfPol = idFileInfPol;
+    }
+
+    public List<TextInf> getTextInfList() {
+        return textInfList;
+    }
+
+    public void setTextInfList(List<TextInf> textInfList) {
+        this.textInfList = textInfList;
+    }
 }

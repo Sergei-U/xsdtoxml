@@ -10,7 +10,7 @@ import java.util.List;
 /**
  *
  */
-@Data
+
 public class SvScFact {
 
     @XmlElement(name = "НомерСчФ", required = true)
@@ -106,4 +106,100 @@ public class SvScFact {
             "Необязательный\n" +
             "Узел")
     private List<InfPolFXZ1> infPolFXZ1List;
+
+    public String getNumberScF() {
+        return numberScF;
+    }
+
+    public void setNumberScF(String numberScF) {
+        this.numberScF = numberScF;
+    }
+
+    public Date getDateScF() {
+        return dateScF;
+    }
+
+    public void setDateScF(Date dateScF) {
+        this.dateScF = dateScF;
+    }
+
+    public String getCodeOKV() {
+        return codeOKV;
+    }
+
+    public void setCodeOKV(String codeOKV) {
+        this.codeOKV = codeOKV;
+    }
+
+    public List<IsprScF> getIsprScFList() {
+        return isprScFList;
+    }
+
+    public void setIsprScFList(List<IsprScF> isprScFList) {
+        this.isprScFList = isprScFList;
+    }
+
+    public List<SvProd> getSvProdList() {
+        return svProdList;
+    }
+
+    public void setSvProdList(List<SvProd> svProdList) {
+        this.svProdList = svProdList;
+    }
+
+    public List<CargoSender> getCargoSenderList() {
+        return cargoSenderList;
+    }
+
+    public void setCargoSenderList(List<CargoSender> cargoSenderList) {
+        this.cargoSenderList = cargoSenderList;
+    }
+
+    public List<CargoReceiver> getCargoReceiverList() {
+        return cargoReceiverList;
+    }
+
+    public void setCargoReceiverList(List<CargoReceiver> cargoReceiverList) {
+        this.cargoReceiverList = cargoReceiverList;
+    }
+
+    public List<SvPRD> getSvPRDList() {
+        return svPRDList;
+    }
+
+    public void setSvPRDList(List<SvPRD> svPRDList) {
+        this.svPRDList = svPRDList;
+    }
+
+    public List<SvBuyer> getSvBuyerList() {
+        return svBuyerList;
+    }
+
+    public void setSvBuyerList(List<SvBuyer> svBuyerList) {
+        this.svBuyerList = svBuyerList;
+    }
+
+    public List<DopSvFXZ1> getDopSvFXZ1List() {
+        return dopSvFXZ1List;
+    }
+
+    public void setDopSvFXZ1List(List<DopSvFXZ1> dopSvFXZ1List) {
+        this.dopSvFXZ1List = dopSvFXZ1List;
+    }
+
+    public List<DocumentConfirmShipment> getDocumentConfirmShipmentList() {
+        return documentConfirmShipmentList;
+    }
+
+    public void setDocumentConfirmShipmentList(List<DocumentConfirmShipment> documentConfirmShipmentList) {
+        this.documentConfirmShipmentList = documentConfirmShipmentList;
+    }
+
+    public List<InfPolFXZ1> getInfPolFXZ1List() {
+        return infPolFXZ1List;
+    }
+
+    public void setInfPolFXZ1List(List<InfPolFXZ1> infPolFXZ1List) {
+        this.infPolFXZ1List = infPolFXZ1List;
+    }
 }

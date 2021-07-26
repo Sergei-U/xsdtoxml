@@ -6,7 +6,7 @@ import lombok.Data;
 import javax.xml.bind.annotation.XmlElement;
 import java.util.Date;
 
-@Data
+
 public class TranNakl {
 
     @XmlElement(name = "НомТранНакл",required = true)
@@ -22,4 +22,20 @@ public class TranNakl {
             "Тип элемента\n" +
             "Обязательный")
     private Date dateTranNakl;
+
+    public String getNomTranNakl() {
+        return nomTranNakl;
+    }
+
+    public void setNomTranNakl(String nomTranNakl) {
+        this.nomTranNakl = nomTranNakl;
+    }
+
+    public Date getDateTranNakl() {
+        return dateTranNakl;
+    }
+
+    public void setDateTranNakl(Date dateTranNakl) {
+        this.dateTranNakl = dateTranNakl;
+    }
 }

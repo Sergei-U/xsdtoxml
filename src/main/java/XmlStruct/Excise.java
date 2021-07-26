@@ -9,7 +9,7 @@ import java.math.BigDecimal;
 /**
  *
  */
-@Data
+
 public class Excise {
 
     @XmlElement(name = "СумАкциз",required = true)
@@ -28,4 +28,21 @@ public class Excise {
             "Узел\n" +
             "Принимает значение: без акциза")
     private String nonExcise;
+
+
+    public BigDecimal getSummExcise() {
+        return summExcise;
+    }
+
+    public void setSummExcise(BigDecimal summExcise) {
+        this.summExcise = summExcise;
+    }
+
+    public String getNonExcise() {
+        return nonExcise;
+    }
+
+    public void setNonExcise(String nonExcise) {
+        this.nonExcise = nonExcise;
+    }
 }

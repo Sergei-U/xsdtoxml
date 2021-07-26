@@ -9,7 +9,7 @@ import java.util.Date;
 /**
  *
  */
-@Data
+
 public class DocumentConfirmShipment {
 
     @XmlElement(name = "НаимДокОтгр",required = true)
@@ -32,4 +32,29 @@ public class DocumentConfirmShipment {
             "Тип элемента\n" +
             "Необязательный")
     private Date dateDocumentShipment;
+
+
+    public String getNameDocumentShipment() {
+        return nameDocumentShipment;
+    }
+
+    public void setNameDocumentShipment(String nameDocumentShipment) {
+        this.nameDocumentShipment = nameDocumentShipment;
+    }
+
+    public String getNumberDocumentShipment() {
+        return numberDocumentShipment;
+    }
+
+    public void setNumberDocumentShipment(String numberDocumentShipment) {
+        this.numberDocumentShipment = numberDocumentShipment;
+    }
+
+    public Date getDateDocumentShipment() {
+        return dateDocumentShipment;
+    }
+
+    public void setDateDocumentShipment(Date dateDocumentShipment) {
+        this.dateDocumentShipment = dateDocumentShipment;
+    }
 }

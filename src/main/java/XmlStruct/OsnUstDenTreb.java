@@ -9,7 +9,7 @@ import java.util.Date;
 /**
  *
  */
-@Data
+
 public class OsnUstDenTreb {
 
     @XmlElement(name = "НаимОсн",required = true)
@@ -40,4 +40,36 @@ public class OsnUstDenTreb {
             "Тип элемента\n" +
             "Необязательный")
     private String identityOsn;
+
+    public String getNameOsn() {
+        return nameOsn;
+    }
+
+    public void setNameOsn(String nameOsn) {
+        this.nameOsn = nameOsn;
+    }
+
+    public String getNomOsn() {
+        return nomOsn;
+    }
+
+    public void setNomOsn(String nomOsn) {
+        this.nomOsn = nomOsn;
+    }
+
+    public Date getDateOsn() {
+        return dateOsn;
+    }
+
+    public void setDateOsn(Date dateOsn) {
+        this.dateOsn = dateOsn;
+    }
+
+    public String getIdentityOsn() {
+        return identityOsn;
+    }
+
+    public void setIdentityOsn(String identityOsn) {
+        this.identityOsn = identityOsn;
+    }
 }

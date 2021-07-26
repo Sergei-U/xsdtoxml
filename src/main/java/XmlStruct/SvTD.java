@@ -8,7 +8,7 @@ import javax.xml.bind.annotation.XmlElement;
 /**
  *
  */
-@Data
+
 public class SvTD {
 
 
@@ -33,4 +33,28 @@ public class SvTD {
             "Тип элемента\n" +
             "Необязательный")
     private String numberTD;
+
+    public String getCodeOrigin() {
+        return codeOrigin;
+    }
+
+    public void setCodeOrigin(String codeOrigin) {
+        this.codeOrigin = codeOrigin;
+    }
+
+    public String getDefCodeOrigin() {
+        return defCodeOrigin;
+    }
+
+    public void setDefCodeOrigin(String defCodeOrigin) {
+        this.defCodeOrigin = defCodeOrigin;
+    }
+
+    public String getNumberTD() {
+        return numberTD;
+    }
+
+    public void setNumberTD(String numberTD) {
+        this.numberTD = numberTD;
+    }
 }

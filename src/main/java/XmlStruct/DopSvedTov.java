@@ -10,7 +10,7 @@ import java.util.List;
 /**
  *
  */
-@Data
+
 public class DopSvedTov {
 
 //    @XmlElement(name = "ПрТовРаб")
@@ -106,4 +106,101 @@ public class DopSvedTov {
             "Необязательный\n" +
             "Узел")
     private List<NomSredIndentTov> nomSredIndentTovList;
+
+
+    public String getDopPrizn() {
+        return dopPrizn;
+    }
+
+    public void setDopPrizn(String dopPrizn) {
+        this.dopPrizn = dopPrizn;
+    }
+
+    public String getNameEdIzm() {
+        return nameEdIzm;
+    }
+
+    public void setNameEdIzm(String nameEdIzm) {
+        this.nameEdIzm = nameEdIzm;
+    }
+
+    public String getKrNameStrPr() {
+        return krNameStrPr;
+    }
+
+    public void setKrNameStrPr(String krNameStrPr) {
+        this.krNameStrPr = krNameStrPr;
+    }
+
+    public BigDecimal getNadlOtp() {
+        return nadlOtp;
+    }
+
+    public void setNadlOtp(BigDecimal nadlOtp) {
+        this.nadlOtp = nadlOtp;
+    }
+
+    public String getCharacterProduct() {
+        return characterProduct;
+    }
+
+    public void setCharacterProduct(String characterProduct) {
+        this.characterProduct = characterProduct;
+    }
+
+    public String getSortProduct() {
+        return sortProduct;
+    }
+
+    public void setSortProduct(String sortProduct) {
+        this.sortProduct = sortProduct;
+    }
+
+    public String getArticleProduct() {
+        return articleProduct;
+    }
+
+    public void setArticleProduct(String articleProduct) {
+        this.articleProduct = articleProduct;
+    }
+
+    public String getCodeProduct() {
+        return codeProduct;
+    }
+
+    public void setCodeProduct(String codeProduct) {
+        this.codeProduct = codeProduct;
+    }
+
+    public String getCodeCategory() {
+        return codeCategory;
+    }
+
+    public void setCodeCategory(String codeCategory) {
+        this.codeCategory = codeCategory;
+    }
+
+    public String getCodeViewProduct() {
+        return codeViewProduct;
+    }
+
+    public void setCodeViewProduct(String codeViewProduct) {
+        this.codeViewProduct = codeViewProduct;
+    }
+
+    public List<SvedProslez> getSvedProslezList() {
+        return svedProslezList;
+    }
+
+    public void setSvedProslezList(List<SvedProslez> svedProslezList) {
+        this.svedProslezList = svedProslezList;
+    }
+
+    public List<NomSredIndentTov> getNomSredIndentTovList() {
+        return nomSredIndentTovList;
+    }
+
+    public void setNomSredIndentTovList(List<NomSredIndentTov> nomSredIndentTovList) {
+        this.nomSredIndentTovList = nomSredIndentTovList;
+    }
 }

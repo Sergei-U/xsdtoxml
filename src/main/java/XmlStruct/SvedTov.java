@@ -10,7 +10,7 @@ import java.util.List;
 /**
  *
  */
-@Data
+
 public class SvedTov {
 
     @XmlElement(name = "НомСтр",required = true)
@@ -131,4 +131,115 @@ public class SvedTov {
             "Узел")
     private List<InfPolFXZ2> infPolFXZ2List;
 
+    public int getNomStr() {
+        return nomStr;
+    }
+
+    public void setNomStr(int nomStr) {
+        this.nomStr = nomStr;
+    }
+
+    public String getNameProduct() {
+        return nameProduct;
+    }
+
+    public void setNameProduct(String nameProduct) {
+        this.nameProduct = nameProduct;
+    }
+
+    public String getOkei_product() {
+        return okei_product;
+    }
+
+    public void setOkei_product(String okei_product) {
+        this.okei_product = okei_product;
+    }
+
+    public String getDefOKEI_product() {
+        return defOKEI_product;
+    }
+
+    public void setDefOKEI_product(String defOKEI_product) {
+        this.defOKEI_product = defOKEI_product;
+    }
+
+    public BigDecimal getQuantityProduct() {
+        return quantityProduct;
+    }
+
+    public void setQuantityProduct(BigDecimal quantityProduct) {
+        this.quantityProduct = quantityProduct;
+    }
+
+    public BigDecimal getPriceProduct() {
+        return priceProduct;
+    }
+
+    public void setPriceProduct(BigDecimal priceProduct) {
+        this.priceProduct = priceProduct;
+    }
+
+    public BigDecimal getPriceProductNoNDS() {
+        return priceProductNoNDS;
+    }
+
+    public void setPriceProductNoNDS(BigDecimal priceProductNoNDS) {
+        this.priceProductNoNDS = priceProductNoNDS;
+    }
+
+    public BigDecimal getStTovUcNal() {
+        return stTovUcNal;
+    }
+
+    public void setStTovUcNal(BigDecimal stTovUcNal) {
+        this.stTovUcNal = stTovUcNal;
+    }
+
+    public String getDefStTovUcNal() {
+        return defStTovUcNal;
+    }
+
+    public void setDefStTovUcNal(String defStTovUcNal) {
+        this.defStTovUcNal = defStTovUcNal;
+    }
+
+    public List<Excise> getExciseList() {
+        return exciseList;
+    }
+
+    public void setExciseList(List<Excise> exciseList) {
+        this.exciseList = exciseList;
+    }
+
+    public List<SummNal> getSummNalList() {
+        return summNalList;
+    }
+
+    public void setSummNalList(List<SummNal> summNalList) {
+        this.summNalList = summNalList;
+    }
+
+    public List<SvTD> getSvTDList() {
+        return svTDList;
+    }
+
+    public void setSvTDList(List<SvTD> svTDList) {
+        this.svTDList = svTDList;
+    }
+
+    public List<DopSvedTov> getDopSvedTovList() {
+        return dopSvedTovList;
+    }
+
+    public void setDopSvedTovList(List<DopSvedTov> dopSvedTovList) {
+        this.dopSvedTovList = dopSvedTovList;
+    }
+
+    public List<InfPolFXZ2> getInfPolFXZ2List() {
+        return infPolFXZ2List;
+    }
+
+    public void setInfPolFXZ2List(List<InfPolFXZ2> infPolFXZ2List) {
+        this.infPolFXZ2List = infPolFXZ2List;
+    }
 }

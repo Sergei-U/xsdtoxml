@@ -6,7 +6,7 @@ import lombok.Data;
 import javax.xml.bind.annotation.XmlElement;
 import java.util.List;
 
-@Data
+
 public class FlPer {
 
 
@@ -26,6 +26,36 @@ public class FlPer {
     private String osnDoverFl;
 
 
-
+    @XmlElement(name = "ФИО",required = true)
+    @ApiModelProperty(value = "Формат\n" +
+            "Строка\n" +
+            "Тип элемента\n" +
+            "Обязательный\n" +
+            "Узел")
     private List<FIO> fioList;
+
+
+    public String getOverSved() {
+        return overSved;
+    }
+
+    public void setOverSved(String overSved) {
+        this.overSved = overSved;
+    }
+
+    public String getOsnDoverFl() {
+        return osnDoverFl;
+    }
+
+    public void setOsnDoverFl(String osnDoverFl) {
+        this.osnDoverFl = osnDoverFl;
+    }
+
+    public List<FIO> getFioList() {
+        return fioList;
+    }
+
+    public void setFioList(List<FIO> fioList) {
+        this.fioList = fioList;
+    }
 }

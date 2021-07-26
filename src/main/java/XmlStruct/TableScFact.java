@@ -9,7 +9,7 @@ import java.util.List;
 /**
  *
  */
-@Data
+
 public class TableScFact {
 
     @XmlElement(name = "СведТов",required = true)
@@ -27,4 +27,20 @@ public class TableScFact {
             "Обязательный\n" +
             "Узел")
     private List<TotalOpl> totalOplList;
+
+    public List<SvedTov> getSvedTovList() {
+        return svedTovList;
+    }
+
+    public void setSvedTovList(List<SvedTov> svedTovList) {
+        this.svedTovList = svedTovList;
+    }
+
+    public List<TotalOpl> getTotalOplList() {
+        return totalOplList;
+    }
+
+    public void setTotalOplList(List<TotalOpl> totalOplList) {
+        this.totalOplList = totalOplList;
+    }
 }

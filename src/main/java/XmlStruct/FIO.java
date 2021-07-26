@@ -8,7 +8,7 @@ import javax.xml.bind.annotation.XmlElement;
 /**
  *
  */
-@Data
+
 public class FIO {
 
     public FIO(String firstName, String lastName) {
@@ -42,4 +42,29 @@ public class FIO {
             "Тип элемента\n" +
             "Обязательный")
     private String thirdName;
+
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getThirdName() {
+        return thirdName;
+    }
+
+    public void setThirdName(String thirdName) {
+        this.thirdName = thirdName;
+    }
 }

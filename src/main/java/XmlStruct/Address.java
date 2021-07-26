@@ -9,7 +9,7 @@ import java.util.List;
 /**
  *
  */
-@Data
+
 public class Address {
 
     @XmlElement(name = "АдрРФ")
@@ -35,4 +35,28 @@ public class Address {
             "Обязательный\n" +
             "Узел")
     private String codeGAR;
+
+    public List<AddressRF> getAddressRFList() {
+        return addressRFList;
+    }
+
+    public void setAddressRFList(List<AddressRF> addressRFList) {
+        this.addressRFList = addressRFList;
+    }
+
+    public List<AddressInf> getAddressInfList() {
+        return addressInfList;
+    }
+
+    public void setAddressInfList(List<AddressInf> addressInfList) {
+        this.addressInfList = addressInfList;
+    }
+
+    public String getCodeGAR() {
+        return codeGAR;
+    }
+
+    public void setCodeGAR(String codeGAR) {
+        this.codeGAR = codeGAR;
+    }
 }

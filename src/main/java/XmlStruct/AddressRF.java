@@ -8,7 +8,7 @@ import javax.xml.bind.annotation.XmlElement;
 /**
  *
  */
-@Data
+
 public class AddressRF {
 
     @XmlElement(name = "Индекс")
@@ -73,4 +73,76 @@ public class AddressRF {
             "Тип элемента\n" +
             "Необязательный")
     private String appartment;
+
+    public String getIndex() {
+        return index;
+    }
+
+    public void setIndex(String index) {
+        this.index = index;
+    }
+
+    public String getCodeRegion() {
+        return codeRegion;
+    }
+
+    public void setCodeRegion(String codeRegion) {
+        this.codeRegion = codeRegion;
+    }
+
+    public String getDistrict() {
+        return district;
+    }
+
+    public void setDistrict(String district) {
+        this.district = district;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getLocality() {
+        return locality;
+    }
+
+    public void setLocality(String locality) {
+        this.locality = locality;
+    }
+
+    public String getStreet() {
+        return street;
+    }
+
+    public void setStreet(String street) {
+        this.street = street;
+    }
+
+    public String getHouse() {
+        return house;
+    }
+
+    public void setHouse(String house) {
+        this.house = house;
+    }
+
+    public String getHousing() {
+        return housing;
+    }
+
+    public void setHousing(String housing) {
+        this.housing = housing;
+    }
+
+    public String getAppartment() {
+        return appartment;
+    }
+
+    public void setAppartment(String appartment) {
+        this.appartment = appartment;
+    }
 }

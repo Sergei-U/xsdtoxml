@@ -8,7 +8,7 @@ import javax.xml.bind.annotation.XmlElement;
 /**
  *
  */
-@Data
+
 public class SvInNeUc {
 
     @XmlElement(name = "НаимОрг",required = true)
@@ -31,4 +31,28 @@ public class SvInNeUc {
             "Тип элемента\n" +
             "Необязательный")
     private String overInf;
+
+    public String getNameOrg() {
+        return nameOrg;
+    }
+
+    public void setNameOrg(String nameOrg) {
+        this.nameOrg = nameOrg;
+    }
+
+    public String getOrgId() {
+        return orgId;
+    }
+
+    public void setOrgId(String orgId) {
+        this.orgId = orgId;
+    }
+
+    public String getOverInf() {
+        return overInf;
+    }
+
+    public void setOverInf(String overInf) {
+        this.overInf = overInf;
+    }
 }

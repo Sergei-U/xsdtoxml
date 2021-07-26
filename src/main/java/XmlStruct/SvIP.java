@@ -9,7 +9,7 @@ import java.util.List;
 /**
  *
  */
-@Data
+
 public class SvIP {
 
     @XmlElement(name = "ИННФЛ",required = true)
@@ -49,4 +49,43 @@ public class SvIP {
             "Узел")
     private List<FIO> fioList;
 
+    public String getInnFL() {
+        return innFL;
+    }
+
+    public void setInnFL(String innFL) {
+        this.innFL = innFL;
+    }
+
+    public String getDefInnFL() {
+        return defInnFL;
+    }
+
+    public void setDefInnFL(String defInnFL) {
+        this.defInnFL = defInnFL;
+    }
+
+    public String getSvGosRegIP() {
+        return svGosRegIP;
+    }
+
+    public void setSvGosRegIP(String svGosRegIP) {
+        this.svGosRegIP = svGosRegIP;
+    }
+
+    public String getOverData() {
+        return overData;
+    }
+
+    public void setOverData(String overData) {
+        this.overData = overData;
+    }
+
+    public List<FIO> getFioList() {
+        return fioList;
+    }
+
+    public void setFioList(List<FIO> fioList) {
+        this.fioList = fioList;
+    }
 }

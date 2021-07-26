@@ -8,7 +8,7 @@ import javax.xml.bind.annotation.XmlElement;
 /**
  *
  */
-@Data
+
 public class Contact {
 
     @XmlElement(name = "Тлф")
@@ -24,4 +24,20 @@ public class Contact {
             "Тип элемента\n" +
             "Необязательный")
     private String email;
+
+    public String getTel() {
+        return tel;
+    }
+
+    public void setTel(String tel) {
+        this.tel = tel;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
 }

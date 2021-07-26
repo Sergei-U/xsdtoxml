@@ -9,7 +9,7 @@ import java.util.List;
 /**
  *
  */
-@Data
+
 public class SvProd {
 
 
@@ -72,5 +72,67 @@ public class SvProd {
             "Узел")
     private List<BankReq> bankReqList;
 
+    public String getOkpo() {
+        return okpo;
+    }
 
+    public void setOkpo(String okpo) {
+        this.okpo = okpo;
+    }
+
+    public String getStructuralSubdivision() {
+        return structuralSubdivision;
+    }
+
+    public void setStructuralSubdivision(String structuralSubdivision) {
+        this.structuralSubdivision = structuralSubdivision;
+    }
+
+    public String getInfForParticipant() {
+        return infForParticipant;
+    }
+
+    public void setInfForParticipant(String infForParticipant) {
+        this.infForParticipant = infForParticipant;
+    }
+
+    public String getShortName() {
+        return shortName;
+    }
+
+    public void setShortName(String shortName) {
+        this.shortName = shortName;
+    }
+
+    public List<IdSv> getIdSvList() {
+        return idSvList;
+    }
+
+    public void setIdSvList(List<IdSv> idSvList) {
+        this.idSvList = idSvList;
+    }
+
+    public List<Address> getAdressList() {
+        return adressList;
+    }
+
+    public void setAdressList(List<Address> adressList) {
+        this.adressList = adressList;
+    }
+
+    public List<Contact> getContactList() {
+        return contactList;
+    }
+
+    public void setContactList(List<Contact> contactList) {
+        this.contactList = contactList;
+    }
+
+    public List<BankReq> getBankReqList() {
+        return bankReqList;
+    }
+
+    public void setBankReqList(List<BankReq> bankReqList) {
+        this.bankReqList = bankReqList;
+    }
 }

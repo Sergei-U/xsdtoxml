@@ -8,7 +8,7 @@ import javax.xml.bind.annotation.XmlElement;
 /**
  *
  */
-@Data
+
 public class SvBank {
 
     @XmlElement(name = "НаимБанк")
@@ -31,4 +31,28 @@ public class SvBank {
             "Тип элемента\n" +
             "Необязательный")
     private String corrAcc;
+
+    public String getBankName() {
+        return bankName;
+    }
+
+    public void setBankName(String bankName) {
+        this.bankName = bankName;
+    }
+
+    public String getBic() {
+        return bic;
+    }
+
+    public void setBic(String bic) {
+        this.bic = bic;
+    }
+
+    public String getCorrAcc() {
+        return corrAcc;
+    }
+
+    public void setCorrAcc(String corrAcc) {
+        this.corrAcc = corrAcc;
+    }
 }
