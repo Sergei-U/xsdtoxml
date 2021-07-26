@@ -2,7 +2,7 @@ package XmlStruct;
 
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
-import lombok.Data;
+
 
 import javax.xml.bind.annotation.XmlElement;
 import java.util.List;
@@ -14,23 +14,20 @@ import java.util.List;
 @AllArgsConstructor
 public class SvUcDocObor {
 
+
+    private String idDispatch;
+
+
+    private String idReception;
+
+
+    private List<SvOEDDispatch> svOEDDispatchList;
+
     @XmlElement(name = "ИдОтпр")
     @ApiModelProperty(value = "Формат\n" +
             "T(46) Строка (длина от 4 до 46 знаков)\n" +
             "Тип элемента\n" +
             "Обязательный")
-    private String idDispatch;
-
-    @XmlElement(name = "ИдПол")
-    @ApiModelProperty(value = "Формат\n" +
-            "T(46) Строка (длина от 4 до 46 знаков)\n" +
-            "Тип элемента\n" +
-            "Обязательный")
-    private String idReception;
-
-    @XmlElement(name = "СвОЭДОтпр")
-    private List<SvOEDDispatch> svOEDDispatchList;
-
     public String getIdDispatch() {
         return idDispatch;
     }
@@ -38,7 +35,11 @@ public class SvUcDocObor {
     public void setIdDispatch(String idDispatch) {
         this.idDispatch = idDispatch;
     }
-
+    @XmlElement(name = "ИдПол")
+    @ApiModelProperty(value = "Формат\n" +
+            "T(46) Строка (длина от 4 до 46 знаков)\n" +
+            "Тип элемента\n" +
+            "Обязательный")
     public String getIdReception() {
         return idReception;
     }
@@ -46,7 +47,7 @@ public class SvUcDocObor {
     public void setIdReception(String idReception) {
         this.idReception = idReception;
     }
-
+    @XmlElement(name = "СвОЭДОтпр")
     public List<SvOEDDispatch> getSvOEDDispatchList() {
         return svOEDDispatchList;
     }

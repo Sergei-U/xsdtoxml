@@ -1,7 +1,7 @@
 package XmlStruct;
 
 import io.swagger.annotations.ApiModelProperty;
-import lombok.Data;
+
 
 import javax.xml.bind.annotation.XmlElement;
 
@@ -11,20 +11,15 @@ import javax.xml.bind.annotation.XmlElement;
 
 public class Contact {
 
+    private String tel;
+
+    private String email;
+
     @XmlElement(name = "Тлф")
     @ApiModelProperty(value = "Формат\n" +
             "T(255) Строка (длина от 1 до 255 знаков)\n" +
             "Тип элемента\n" +
             "Необязательный")
-    private String tel;
-
-    @XmlElement(name = "ЭлПочта")
-    @ApiModelProperty(value = "Формат\n" +
-            "T(255) Строка (длина от 1 до 255 знаков)\n" +
-            "Тип элемента\n" +
-            "Необязательный")
-    private String email;
-
     public String getTel() {
         return tel;
     }
@@ -33,6 +28,11 @@ public class Contact {
         this.tel = tel;
     }
 
+    @XmlElement(name = "ЭлПочта")
+    @ApiModelProperty(value = "Формат\n" +
+            "T(255) Строка (длина от 1 до 255 знаков)\n" +
+            "Тип элемента\n" +
+            "Необязательный")
     public String getEmail() {
         return email;
     }

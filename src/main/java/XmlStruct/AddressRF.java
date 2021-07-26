@@ -1,7 +1,7 @@
 package XmlStruct;
 
 import io.swagger.annotations.ApiModelProperty;
-import lombok.Data;
+
 
 import javax.xml.bind.annotation.XmlElement;
 
@@ -11,69 +11,29 @@ import javax.xml.bind.annotation.XmlElement;
 
 public class AddressRF {
 
+    private String index;
+
+    private String codeRegion;
+
+    private String district;
+
+    private String city;
+
+    private String locality;
+
+    private String street;
+
+    private String house;
+
+    private String housing;
+
+    private String appartment;
+
     @XmlElement(name = "Индекс")
     @ApiModelProperty(value = "Формат\n" +
             "T(=6) Строка (фиксированное число знаков 6)\n" +
             "Тип элемента\n" +
             "Необязательный")
-    private String index;
-
-    @XmlElement(name = "КодРегион",required = true)
-    @ApiModelProperty(value = "Формат\n" +
-            "T(=2) Строка (фиксированное число знаков 2)\n" +
-            "Тип элемента\n" +
-            "Обязательный")
-    private String codeRegion;
-
-    @XmlElement(name = "Район")
-    @ApiModelProperty(value = "Формат\n" +
-            "T(50) Строка (длина от 1 до 50 знаков)\n" +
-            "Тип элемента\n" +
-            "Необязательный")
-    private String district;
-
-    @XmlElement(name = "Город")
-    @ApiModelProperty(value = "Формат\n" +
-            "T(50) Строка (длина от 1 до 50 знаков)\n" +
-            "Тип элемента\n" +
-            "Необязательный")
-    private String city;
-
-    @XmlElement(name = "НаселПункт")
-    @ApiModelProperty(value = "Формат\n" +
-            "T(50) Строка (длина от 1 до 50 знаков)\n" +
-            "Тип элемента\n" +
-            "Необязательный")
-    private String locality;
-
-    @XmlElement(name = "Улица")
-    @ApiModelProperty(value = "Формат\n" +
-            "T(50) Строка (длина от 1 до 50 знаков)\n" +
-            "Тип элемента\n" +
-            "Необязательный")
-    private String street;
-
-    @XmlElement(name = "Дом")
-    @ApiModelProperty(value = "Формат\n" +
-            "T(20) Строка (длина от 1 до 20 знаков)\n" +
-            "Тип элемента\n" +
-            "Необязательный")
-    private String house;
-
-    @XmlElement(name = "Корпус")
-    @ApiModelProperty(value = "Формат\n" +
-            "T(20) Строка (длина от 1 до 20 знаков)\n" +
-            "Тип элемента\n" +
-            "Необязательный")
-    private String housing;
-
-    @XmlElement(name = "Кварт")
-    @ApiModelProperty(value = "Формат\n" +
-            "T(20) Строка (длина от 1 до 20 знаков)\n" +
-            "Тип элемента\n" +
-            "Необязательный")
-    private String appartment;
-
     public String getIndex() {
         return index;
     }
@@ -82,6 +42,11 @@ public class AddressRF {
         this.index = index;
     }
 
+    @XmlElement(name = "КодРегион",required = true)
+    @ApiModelProperty(value = "Формат\n" +
+            "T(=2) Строка (фиксированное число знаков 2)\n" +
+            "Тип элемента\n" +
+            "Обязательный")
     public String getCodeRegion() {
         return codeRegion;
     }
@@ -90,6 +55,11 @@ public class AddressRF {
         this.codeRegion = codeRegion;
     }
 
+    @XmlElement(name = "Район")
+    @ApiModelProperty(value = "Формат\n" +
+            "T(50) Строка (длина от 1 до 50 знаков)\n" +
+            "Тип элемента\n" +
+            "Необязательный")
     public String getDistrict() {
         return district;
     }
@@ -98,6 +68,11 @@ public class AddressRF {
         this.district = district;
     }
 
+    @XmlElement(name = "Город")
+    @ApiModelProperty(value = "Формат\n" +
+            "T(50) Строка (длина от 1 до 50 знаков)\n" +
+            "Тип элемента\n" +
+            "Необязательный")
     public String getCity() {
         return city;
     }
@@ -106,6 +81,11 @@ public class AddressRF {
         this.city = city;
     }
 
+    @XmlElement(name = "НаселПункт")
+    @ApiModelProperty(value = "Формат\n" +
+            "T(50) Строка (длина от 1 до 50 знаков)\n" +
+            "Тип элемента\n" +
+            "Необязательный")
     public String getLocality() {
         return locality;
     }
@@ -114,6 +94,11 @@ public class AddressRF {
         this.locality = locality;
     }
 
+    @XmlElement(name = "Улица")
+    @ApiModelProperty(value = "Формат\n" +
+            "T(50) Строка (длина от 1 до 50 знаков)\n" +
+            "Тип элемента\n" +
+            "Необязательный")
     public String getStreet() {
         return street;
     }
@@ -122,6 +107,11 @@ public class AddressRF {
         this.street = street;
     }
 
+    @XmlElement(name = "Дом")
+    @ApiModelProperty(value = "Формат\n" +
+            "T(20) Строка (длина от 1 до 20 знаков)\n" +
+            "Тип элемента\n" +
+            "Необязательный")
     public String getHouse() {
         return house;
     }
@@ -130,6 +120,11 @@ public class AddressRF {
         this.house = house;
     }
 
+    @XmlElement(name = "Корпус")
+    @ApiModelProperty(value = "Формат\n" +
+            "T(20) Строка (длина от 1 до 20 знаков)\n" +
+            "Тип элемента\n" +
+            "Необязательный")
     public String getHousing() {
         return housing;
     }
@@ -138,6 +133,11 @@ public class AddressRF {
         this.housing = housing;
     }
 
+    @XmlElement(name = "Кварт")
+    @ApiModelProperty(value = "Формат\n" +
+            "T(20) Строка (длина от 1 до 20 знаков)\n" +
+            "Тип элемента\n" +
+            "Необязательный")
     public String getAppartment() {
         return appartment;
     }

@@ -1,7 +1,7 @@
 package XmlStruct;
 
 import io.swagger.annotations.ApiModelProperty;
-import lombok.Data;
+
 
 import javax.xml.bind.annotation.XmlElement;
 import java.util.List;
@@ -12,35 +12,19 @@ import java.util.List;
 
 public class SvFLUcastFXZ {
 
+    private String gosRegIPVidDov;
+
+    private String innFL;
+
+    private String overInf;
+
+    private List<FIO> fioList;
+
     @XmlElement(name = "ГосРегИПВыдДов")
     @ApiModelProperty(value = "Формат\n" +
             "T(100) Строка (длина от 1 до 100 знаков)\n" +
             "Тип элемента\n" +
             "Необязательный")
-    private String gosRegIPVidDov;
-
-    @XmlElement(name = "ИННФЛ")
-    @ApiModelProperty(value = "Формат\n" +
-            "T(=12) Строка (фиксированное число знаков 12)\n" +
-            "Тип элемента\n" +
-            "Необязательный")
-    private String innFL;
-
-    @XmlElement(name = "ИныеСвед")
-    @ApiModelProperty(value = "Формат\n" +
-            "T(255) Строка (длина от 1 до 255 знаков)\n" +
-            "Тип элемента\n" +
-            "Необязательный")
-    private String overInf;
-
-    @XmlElement(name = "ФИО",required = true)
-    @ApiModelProperty(value = "Формат\n" +
-            "Строка\n" +
-            "Тип элемента\n" +
-            "Обязательный\n" +
-            "Узел")
-    private List<FIO> fioList;
-
     public String getGosRegIPVidDov() {
         return gosRegIPVidDov;
     }
@@ -49,6 +33,11 @@ public class SvFLUcastFXZ {
         this.gosRegIPVidDov = gosRegIPVidDov;
     }
 
+    @XmlElement(name = "ИННФЛ")
+    @ApiModelProperty(value = "Формат\n" +
+            "T(=12) Строка (фиксированное число знаков 12)\n" +
+            "Тип элемента\n" +
+            "Необязательный")
     public String getInnFL() {
         return innFL;
     }
@@ -57,6 +46,11 @@ public class SvFLUcastFXZ {
         this.innFL = innFL;
     }
 
+    @XmlElement(name = "ИныеСвед")
+    @ApiModelProperty(value = "Формат\n" +
+            "T(255) Строка (длина от 1 до 255 знаков)\n" +
+            "Тип элемента\n" +
+            "Необязательный")
     public String getOverInf() {
         return overInf;
     }
@@ -65,6 +59,12 @@ public class SvFLUcastFXZ {
         this.overInf = overInf;
     }
 
+    @XmlElement(name = "ФИО",required = true)
+    @ApiModelProperty(value = "Формат\n" +
+            "Строка\n" +
+            "Тип элемента\n" +
+            "Обязательный\n" +
+            "Узел")
     public List<FIO> getFioList() {
         return fioList;
     }

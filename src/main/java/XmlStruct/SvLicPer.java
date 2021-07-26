@@ -1,7 +1,7 @@
 package XmlStruct;
 
 import io.swagger.annotations.ApiModelProperty;
-import lombok.Data;
+
 
 import javax.xml.bind.annotation.XmlElement;
 import java.util.List;
@@ -9,6 +9,9 @@ import java.util.List;
 
 public class SvLicPer {
 
+    private List<RabOrgProd> rabOrgProdList;
+
+    private List<InLico> inLicoList;
 
     @XmlElement(name = "РабОргПрод",required = true)
     @ApiModelProperty(value = "Формат\n" +
@@ -16,16 +19,6 @@ public class SvLicPer {
             "Тип элемента\n" +
             "Обязательный\n" +
             "Узел")
-    private List<RabOrgProd> rabOrgProdList;
-
-    @XmlElement(name = "ИнЛицо")
-    @ApiModelProperty(value = "Формат\n" +
-            "Строка\n" +
-            "Тип элемента\n" +
-            "Обязательный\n" +
-            "Узел")
-    private List<InLico> inLicoList;
-
     public List<RabOrgProd> getRabOrgProdList() {
         return rabOrgProdList;
     }
@@ -34,6 +27,12 @@ public class SvLicPer {
         this.rabOrgProdList = rabOrgProdList;
     }
 
+    @XmlElement(name = "ИнЛицо")
+    @ApiModelProperty(value = "Формат\n" +
+            "Строка\n" +
+            "Тип элемента\n" +
+            "Обязательный\n" +
+            "Узел")
     public List<InLico> getInLicoList() {
         return inLicoList;
     }

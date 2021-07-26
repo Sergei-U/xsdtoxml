@@ -1,7 +1,7 @@
 package XmlStruct;
 
 import io.swagger.annotations.ApiModelProperty;
-import lombok.Data;
+
 
 import javax.xml.bind.annotation.XmlElement;
 import java.util.List;
@@ -12,23 +12,16 @@ import java.util.List;
 
 public class CargoSender {
 
+    private String onZ;
+
+    private List<CargoSend> cargoSendList;
+
     @XmlElement(name = "ОнЖе")
     @ApiModelProperty(value = "Формат\n" +
             "Строка (фиксированное число знаков 5)\n" +
             "Тип элемента\n" +
             "Обязательный\n" +
             "Узел")
-    private String onZ;
-
-    @XmlElement(name = "ГрузОтпр",required = true)
-    @ApiModelProperty(value = "\n" +
-            "Формат\n" +
-            "Строка\n" +
-            "Тип элемента\n" +
-            "Обязательный\n" +
-            "Узел")
-    private List<CargoSend> cargoSendList;
-
     public String getOnZ() {
         return onZ;
     }
@@ -37,6 +30,13 @@ public class CargoSender {
         this.onZ = onZ;
     }
 
+    @XmlElement(name = "ГрузОтпр",required = true)
+    @ApiModelProperty(value = "\n" +
+            "Формат\n" +
+            "Строка\n" +
+            "Тип элемента\n" +
+            "Обязательный\n" +
+            "Узел")
     public List<CargoSend> getCargoSendList() {
         return cargoSendList;
     }

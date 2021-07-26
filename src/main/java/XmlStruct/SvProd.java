@@ -1,7 +1,7 @@
 package XmlStruct;
 
 import io.swagger.annotations.ApiModelProperty;
-import lombok.Data;
+
 
 import javax.xml.bind.annotation.XmlElement;
 import java.util.List;
@@ -11,67 +11,28 @@ import java.util.List;
  */
 
 public class SvProd {
+    
+    private String okpo;
 
+    private String structuralSubdivision;
+
+    private String infForParticipant;
+
+    private String shortName;
+
+    private List<IdSv> idSvList;
+
+    private List<Address> adressList;
+
+    private List<Contact> contactList;
+
+    private List<BankReq> bankReqList;
 
     @XmlElement(name = "ОКПО")
     @ApiModelProperty(value = "Формат\n" +
             "T(10) Строка (длина от 1 до 10 знаков)\n" +
             "Тип элемента\n" +
             "Необязательный")
-    private String okpo;
-
-    @XmlElement(name = "СтруктПодр")
-    @ApiModelProperty(value = "Формат\n" +
-            "T(1000) Строка (длина от 1 до 1000 знаков)\n" +
-            "Тип элемента\n" +
-            "Необязательный")
-    private String structuralSubdivision;
-
-    @XmlElement(name = "ИнфДляУчаст")
-    @ApiModelProperty(value = "Формат\n" +
-            "T(255) Строка (длина от 1 до 255 знаков)\n" +
-            "Тип элемента\n" +
-            "Необязательный")
-    private String infForParticipant;
-
-    @XmlElement(name = "КраткНазв")
-    @ApiModelProperty(value = "Формат\n" +
-            "T(255) Строка (длина от 1 до 255 знаков)\n" +
-            "Тип элемента\n" +
-            "Необязательный")
-    private String shortName;
-
-    @XmlElement(name = "ИдСв",required = true)
-    @ApiModelProperty(value = "Строка\n" +
-            "Тип элемента\n" +
-            "Обязательный\n" +
-            "Узел")
-    private List<IdSv> idSvList;
-
-    @XmlElement(name = "Адрес")
-    @ApiModelProperty(value = "Формат\n" +
-            "Строка\n" +
-            "Тип элемента\n" +
-            "Необязательный\n" +
-            "Узел")
-    private List<Address> adressList;
-
-    @XmlElement(name = "Контакт")
-    @ApiModelProperty(value = "Формат\n" +
-            "Строка\n" +
-            "Тип элемента\n" +
-            "Необязательный\n" +
-            "Узел")
-    private List<Contact> contactList;
-
-    @XmlElement(name = "БанкРекв")
-    @ApiModelProperty(value = "Формат\n" +
-            "Строка\n" +
-            "Тип элемента\n" +
-            "Необязательный\n" +
-            "Узел")
-    private List<BankReq> bankReqList;
-
     public String getOkpo() {
         return okpo;
     }
@@ -80,6 +41,11 @@ public class SvProd {
         this.okpo = okpo;
     }
 
+    @XmlElement(name = "СтруктПодр")
+    @ApiModelProperty(value = "Формат\n" +
+            "T(1000) Строка (длина от 1 до 1000 знаков)\n" +
+            "Тип элемента\n" +
+            "Необязательный")
     public String getStructuralSubdivision() {
         return structuralSubdivision;
     }
@@ -88,6 +54,11 @@ public class SvProd {
         this.structuralSubdivision = structuralSubdivision;
     }
 
+    @XmlElement(name = "ИнфДляУчаст")
+    @ApiModelProperty(value = "Формат\n" +
+            "T(255) Строка (длина от 1 до 255 знаков)\n" +
+            "Тип элемента\n" +
+            "Необязательный")
     public String getInfForParticipant() {
         return infForParticipant;
     }
@@ -96,6 +67,11 @@ public class SvProd {
         this.infForParticipant = infForParticipant;
     }
 
+    @XmlElement(name = "КраткНазв")
+    @ApiModelProperty(value = "Формат\n" +
+            "T(255) Строка (длина от 1 до 255 знаков)\n" +
+            "Тип элемента\n" +
+            "Необязательный")
     public String getShortName() {
         return shortName;
     }
@@ -104,6 +80,11 @@ public class SvProd {
         this.shortName = shortName;
     }
 
+    @XmlElement(name = "ИдСв",required = true)
+    @ApiModelProperty(value = "Строка\n" +
+            "Тип элемента\n" +
+            "Обязательный\n" +
+            "Узел")
     public List<IdSv> getIdSvList() {
         return idSvList;
     }
@@ -112,6 +93,12 @@ public class SvProd {
         this.idSvList = idSvList;
     }
 
+    @XmlElement(name = "Адрес")
+    @ApiModelProperty(value = "Формат\n" +
+            "Строка\n" +
+            "Тип элемента\n" +
+            "Необязательный\n" +
+            "Узел")
     public List<Address> getAdressList() {
         return adressList;
     }
@@ -120,6 +107,12 @@ public class SvProd {
         this.adressList = adressList;
     }
 
+    @XmlElement(name = "Контакт")
+    @ApiModelProperty(value = "Формат\n" +
+            "Строка\n" +
+            "Тип элемента\n" +
+            "Необязательный\n" +
+            "Узел")
     public List<Contact> getContactList() {
         return contactList;
     }
@@ -128,6 +121,12 @@ public class SvProd {
         this.contactList = contactList;
     }
 
+    @XmlElement(name = "БанкРекв")
+    @ApiModelProperty(value = "Формат\n" +
+            "Строка\n" +
+            "Тип элемента\n" +
+            "Необязательный\n" +
+            "Узел")
     public List<BankReq> getBankReqList() {
         return bankReqList;
     }

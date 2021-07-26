@@ -1,7 +1,7 @@
 package XmlStruct;
 
 import io.swagger.annotations.ApiModelProperty;
-import lombok.Data;
+
 
 import javax.xml.bind.annotation.XmlElement;
 import java.util.List;
@@ -9,22 +9,16 @@ import java.util.List;
 
 public class InLico {
 
+    private List<PredOrgPer> predOrgPerList;
+
+    private List<FlPer> flPerList;
+
     @XmlElement(name = "ПредОргПер",required = true)
     @ApiModelProperty(value = "Формат\n" +
             "Строка\n" +
             "Тип элемента\n" +
             "Обязательный\n" +
             "Узел")
-    private List<PredOrgPer> predOrgPerList;
-
-    @XmlElement(name = "ФЛПер",required = true)
-    @ApiModelProperty(value = "Формат\n" +
-            "Строка\n" +
-            "Тип элемента\n" +
-            "Обязательный\n" +
-            "Узел")
-    private List<FlPer> flPerList;
-
     public List<PredOrgPer> getPredOrgPerList() {
         return predOrgPerList;
     }
@@ -33,6 +27,12 @@ public class InLico {
         this.predOrgPerList = predOrgPerList;
     }
 
+    @XmlElement(name = "ФЛПер",required = true)
+    @ApiModelProperty(value = "Формат\n" +
+            "Строка\n" +
+            "Тип элемента\n" +
+            "Обязательный\n" +
+            "Узел")
     public List<FlPer> getFlPerList() {
         return flPerList;
     }

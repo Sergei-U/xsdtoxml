@@ -1,7 +1,7 @@
 package XmlStruct;
 
 import io.swagger.annotations.ApiModelProperty;
-import lombok.Data;
+
 
 import javax.xml.bind.annotation.XmlElement;
 import java.math.BigDecimal;
@@ -11,6 +11,17 @@ import java.math.BigDecimal;
  */
 
 public class SummNalAll {
+
+    private BigDecimal summNal;
+
+    private String nonNDS;
+
+    private String defNDS;
+
+    public BigDecimal getSummNal() {
+        return summNal;
+    }
+
     @XmlElement(name = "СумНал")
     @ApiModelProperty(value = "Формат\n" +
             "Вещественное (максимальное число знаков 19, в том числе десятичных 2)\n" +
@@ -18,7 +29,9 @@ public class SummNalAll {
             "Обязательный\n" +
             "Узел\n" +
             "Принимает значение: 0")
-    private BigDecimal summNal;
+    public void setSummNal(BigDecimal summNal) {
+        this.summNal = summNal;
+    }
 
     @XmlElement(name = "БезНДС")
     @ApiModelProperty(value = "Формат\n" +
@@ -27,25 +40,6 @@ public class SummNalAll {
             "Обязательный\n" +
             "Узел\n" +
             "Принимает значение: без НДС")
-    private String nonNDS;
-
-    @XmlElement(name = "ДефНДС")
-    @ApiModelProperty(value = "Формат\n" +
-            "Строка (фиксированное число знаков 1)\n" +
-            "Тип элемента\n" +
-            "Обязательный\n" +
-            "Узел\n" +
-            "Принимает значение: -")
-    private String defNDS;
-
-    public BigDecimal getSummNal() {
-        return summNal;
-    }
-
-    public void setSummNal(BigDecimal summNal) {
-        this.summNal = summNal;
-    }
-
     public String getNonNDS() {
         return nonNDS;
     }
@@ -54,6 +48,13 @@ public class SummNalAll {
         this.nonNDS = nonNDS;
     }
 
+    @XmlElement(name = "ДефНДС",defaultValue = "-")
+    @ApiModelProperty(value = "Формат\n" +
+            "Строка (фиксированное число знаков 1)\n" +
+            "Тип элемента\n" +
+            "Обязательный\n" +
+            "Узел\n" +
+            "Принимает значение: -")
     public String getDefNDS() {
         return defNDS;
     }

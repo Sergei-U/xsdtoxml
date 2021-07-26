@@ -20,10 +20,10 @@ public class XmlCreator {
 
         documentFirst.setKnd("1115131");
         documentFirst.setFunc("СЧФ");
-        documentFirst.setDateInfPr(LocalDate.parse("2020.07.25"));
-        documentFirst.setTimeInfPr(LocalDate.parse("15.13.25"));
+//        documentFirst.setDateInfPr(LocalDate.parse("2020.07.25"));
+//        documentFirst.setTimeInfPr(LocalDate.parse("15.13.25"));
         documentFirst.setNameEconSubCondition("какое то НаимЭконСубСост");
-        documentList.add(documentFirst);
+//        documentList.add(documentFirst);
 
 
         FIO fioOtp = new FIO("Ivaov","Ivan","Ivanovich");

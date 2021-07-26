@@ -1,7 +1,7 @@
 package XmlStruct;
 
 import io.swagger.annotations.ApiModelProperty;
-import lombok.Data;
+
 
 import javax.xml.bind.annotation.XmlElement;
 import java.math.BigDecimal;
@@ -13,27 +13,17 @@ import java.util.Date;
 
 public class SvPRD {
 
+    private String numberPRD;
+
+    private Date datePRD;
+
+    private BigDecimal summPRD;
+
     @XmlElement(name = "НомерПРД",required = true)
     @ApiModelProperty(value = "Формат\n" +
             "T(30) Строка (длина от 1 до 30 знаков)\n" +
             "Тип элемента\n" +
             "Обязательный")
-    private String numberPRD;
-
-    @XmlElement(name = "ДатаПРД",required = true)
-    @ApiModelProperty(value = "Формат\n" +
-            "D(10) Дата (фиксированное число знаков 10)\n" +
-            "Тип элемента\n" +
-            "Обязательный")
-    private Date datePRD;
-
-    @XmlElement(name = "СуммаПРД")
-    @ApiModelProperty(value = "Формат\n" +
-            "N(19.2) Вещественное (максимальное число знаков 19, в том числе десятичных 2)\n" +
-            "Тип элемента\n" +
-            "Необязательный")
-    private BigDecimal summPRD;
-
     public String getNumberPRD() {
         return numberPRD;
     }
@@ -42,6 +32,11 @@ public class SvPRD {
         this.numberPRD = numberPRD;
     }
 
+    @XmlElement(name = "ДатаПРД",required = true)
+    @ApiModelProperty(value = "Формат\n" +
+            "D(10) Дата (фиксированное число знаков 10)\n" +
+            "Тип элемента\n" +
+            "Обязательный")
     public Date getDatePRD() {
         return datePRD;
     }
@@ -50,6 +45,11 @@ public class SvPRD {
         this.datePRD = datePRD;
     }
 
+    @XmlElement(name = "СуммаПРД")
+    @ApiModelProperty(value = "Формат\n" +
+            "N(19.2) Вещественное (максимальное число знаков 19, в том числе десятичных 2)\n" +
+            "Тип элемента\n" +
+            "Необязательный")
     public BigDecimal getSummPRD() {
         return summPRD;
     }

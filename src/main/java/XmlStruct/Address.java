@@ -1,7 +1,7 @@
 package XmlStruct;
 
 import io.swagger.annotations.ApiModelProperty;
-import lombok.Data;
+
 
 import javax.xml.bind.annotation.XmlElement;
 import java.util.List;
@@ -12,30 +12,18 @@ import java.util.List;
 
 public class Address {
 
+    private List<AddressRF> addressRFList;
+
+    private List<AddressInf> addressInfList;
+
+    private String codeGAR;
+
     @XmlElement(name = "АдрРФ")
     @ApiModelProperty(value = "Формат\n" +
             "Строка\n" +
             "Тип элемента\n" +
             "Обязательный\n" +
             "Узел")
-    private List<AddressRF> addressRFList;
-
-    @XmlElement(name = "АдрИнф")
-    @ApiModelProperty(value = "Формат\n" +
-            "Строка\n" +
-            "Тип элемента\n" +
-            "Обязательный\n" +
-            "Узел")
-    private List<AddressInf> addressInfList;
-
-    @XmlElement(name = "КодГАР",required = true)
-    @ApiModelProperty(value = "Формат\n" +
-            "Строка (длина от 1 до 36 знаков)\n" +
-            "Тип элемента\n" +
-            "Обязательный\n" +
-            "Узел")
-    private String codeGAR;
-
     public List<AddressRF> getAddressRFList() {
         return addressRFList;
     }
@@ -44,6 +32,12 @@ public class Address {
         this.addressRFList = addressRFList;
     }
 
+    @XmlElement(name = "АдрИнф")
+    @ApiModelProperty(value = "Формат\n" +
+            "Строка\n" +
+            "Тип элемента\n" +
+            "Обязательный\n" +
+            "Узел")
     public List<AddressInf> getAddressInfList() {
         return addressInfList;
     }
@@ -52,6 +46,12 @@ public class Address {
         this.addressInfList = addressInfList;
     }
 
+    @XmlElement(name = "КодГАР", required = true)
+    @ApiModelProperty(value = "Формат\n" +
+            "Строка (длина от 1 до 36 знаков)\n" +
+            "Тип элемента\n" +
+            "Обязательный\n" +
+            "Узел")
     public String getCodeGAR() {
         return codeGAR;
     }

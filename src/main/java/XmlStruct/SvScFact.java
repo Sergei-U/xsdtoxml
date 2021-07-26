@@ -1,7 +1,7 @@
 package XmlStruct;
 
 import io.swagger.annotations.ApiModelProperty;
-import lombok.Data;
+
 
 import javax.xml.bind.annotation.XmlElement;
 import java.util.Date;
@@ -13,100 +13,36 @@ import java.util.List;
 
 public class SvScFact {
 
+    private String numberScF;
+
+    private Date dateScF;
+
+    private String codeOKV;
+
+    private List<IsprScF> isprScFList;
+
+    private List<SvProd> svProdList;
+
+    private List<CargoSender> cargoSenderList;
+
+    private List<CargoReceiver> cargoReceiverList;
+
+    private List<SvPRD> svPRDList;
+
+    private List<SvBuyer> svBuyerList;
+
+    private List<DopSvFXZ1> dopSvFXZ1List;
+
+    private List<DocumentConfirmShipment> documentConfirmShipmentList;
+
+    private List<InfPolFXZ1> infPolFXZ1List;
+
+
     @XmlElement(name = "НомерСчФ", required = true)
     @ApiModelProperty(value = "Формат\n" +
             "T(1000) Строка (длина от 1 до 1000 знаков)\n" +
             "Тип элемента\n" +
             "Обязательный")
-    private String numberScF;
-
-    @XmlElement(name = "ДатаСчФ", required = true)
-    @ApiModelProperty(value = "Формат\n" +
-            "D(10) Дата (фиксированное число знаков 10)\n" +
-            "Тип элемента\n" +
-            "Обязательный")
-    private Date dateScF;
-
-    @XmlElement(name = "КодОКВ")
-    @ApiModelProperty(value = "Формат\n" +
-            "T(=3) Строка (фиксированное число знаков 3)\n" +
-            "Тип элемента\n" +
-            "Обязательный")
-    private String codeOKV;
-
-    @XmlElement(name = "ИспрСчФ", required = false)
-    @ApiModelProperty(value = "Формат\n" +
-            "Строка\n" +
-            "Тип элемента\n" +
-            "Необязательный\n" +
-            "Узел")
-    private List<IsprScF> isprScFList;
-
-    @XmlElement(name = "СвПрод",required = true)
-    @ApiModelProperty(value = "Формат\n" +
-            "Составной элемент\n" +
-            "Тип элемента\n" +
-            "Обязательный\n" +
-            "Узел")
-    private List<SvProd> svProdList;
-
-    @XmlElement(name = "ГрузОт")
-    @ApiModelProperty(value = "Формат\n" +
-            "Составной элемент\n" +
-            "Тип элемента\n" +
-            "Необязательный\n" +
-            "Узел")
-    private List<CargoSender> cargoSenderList;
-
-    @XmlElement(name = "ГрузПолуч")
-    @ApiModelProperty(value = "Формат\n" +
-            "Составной элемент\n" +
-            "Тип элемента\n" +
-            "Необязательный\n" +
-            "Узел")
-    private List<CargoReceiver> cargoReceiverList;
-
-    @XmlElement(name = "СвПРД")
-    @ApiModelProperty(value = "Формат\n" +
-            "Составной элемент\n" +
-            "Тип элемента\n" +
-            "Необязательный\n" +
-            "Узел")
-    private List<SvPRD> svPRDList;
-
-    @XmlElement(name = "СвПокуп")
-    @ApiModelProperty(value = "Формат\n" +
-            "Составной элемент\n" +
-            "Тип элемента\n" +
-            "Обязательный\n" +
-            "Узел")
-    private List<SvBuyer> svBuyerList;
-
-    @XmlElement(name = "ДопСвФХЖ1")
-    @ApiModelProperty(value = "Формат\n" +
-            "Строка\n" +
-            "Тип элемента\n" +
-            "Необязательный\n" +
-            "Узел")
-    private List<DopSvFXZ1> dopSvFXZ1List;
-
-
-    @XmlElement(name = "ДокПодтвОтгр")
-    @ApiModelProperty(value = "Формат\n" +
-            "Составной элемент\n" +
-            "Тип элемента\n" +
-            "Необязательный\n" +
-            "Узел")
-    private List<DocumentConfirmShipment> documentConfirmShipmentList;
-
-    @XmlElement(name = "ИнфПолФХЖ1")
-    @ApiModelProperty(value = "Формат\n" +
-            "Строка\n" +
-            "Тип элемента\n" +
-            "Необязательный\n" +
-            "Узел")
-    private List<InfPolFXZ1> infPolFXZ1List;
-
     public String getNumberScF() {
         return numberScF;
     }
@@ -115,6 +51,11 @@ public class SvScFact {
         this.numberScF = numberScF;
     }
 
+    @XmlElement(name = "ДатаСчФ", required = true)
+    @ApiModelProperty(value = "Формат\n" +
+            "D(10) Дата (фиксированное число знаков 10)\n" +
+            "Тип элемента\n" +
+            "Обязательный")
     public Date getDateScF() {
         return dateScF;
     }
@@ -123,6 +64,11 @@ public class SvScFact {
         this.dateScF = dateScF;
     }
 
+    @XmlElement(name = "КодОКВ")
+    @ApiModelProperty(value = "Формат\n" +
+            "T(=3) Строка (фиксированное число знаков 3)\n" +
+            "Тип элемента\n" +
+            "Обязательный")
     public String getCodeOKV() {
         return codeOKV;
     }
@@ -131,6 +77,12 @@ public class SvScFact {
         this.codeOKV = codeOKV;
     }
 
+    @XmlElement(name = "ИспрСчФ", required = false)
+    @ApiModelProperty(value = "Формат\n" +
+            "Строка\n" +
+            "Тип элемента\n" +
+            "Необязательный\n" +
+            "Узел")
     public List<IsprScF> getIsprScFList() {
         return isprScFList;
     }
@@ -139,6 +91,12 @@ public class SvScFact {
         this.isprScFList = isprScFList;
     }
 
+    @XmlElement(name = "СвПрод",required = true)
+    @ApiModelProperty(value = "Формат\n" +
+            "Составной элемент\n" +
+            "Тип элемента\n" +
+            "Обязательный\n" +
+            "Узел")
     public List<SvProd> getSvProdList() {
         return svProdList;
     }
@@ -147,6 +105,12 @@ public class SvScFact {
         this.svProdList = svProdList;
     }
 
+    @XmlElement(name = "ГрузОт")
+    @ApiModelProperty(value = "Формат\n" +
+            "Составной элемент\n" +
+            "Тип элемента\n" +
+            "Необязательный\n" +
+            "Узел")
     public List<CargoSender> getCargoSenderList() {
         return cargoSenderList;
     }
@@ -155,6 +119,12 @@ public class SvScFact {
         this.cargoSenderList = cargoSenderList;
     }
 
+    @XmlElement(name = "ГрузПолуч")
+    @ApiModelProperty(value = "Формат\n" +
+            "Составной элемент\n" +
+            "Тип элемента\n" +
+            "Необязательный\n" +
+            "Узел")
     public List<CargoReceiver> getCargoReceiverList() {
         return cargoReceiverList;
     }
@@ -163,6 +133,12 @@ public class SvScFact {
         this.cargoReceiverList = cargoReceiverList;
     }
 
+    @XmlElement(name = "СвПРД")
+    @ApiModelProperty(value = "Формат\n" +
+            "Составной элемент\n" +
+            "Тип элемента\n" +
+            "Необязательный\n" +
+            "Узел")
     public List<SvPRD> getSvPRDList() {
         return svPRDList;
     }
@@ -171,6 +147,12 @@ public class SvScFact {
         this.svPRDList = svPRDList;
     }
 
+    @XmlElement(name = "СвПокуп")
+    @ApiModelProperty(value = "Формат\n" +
+            "Составной элемент\n" +
+            "Тип элемента\n" +
+            "Обязательный\n" +
+            "Узел")
     public List<SvBuyer> getSvBuyerList() {
         return svBuyerList;
     }
@@ -179,6 +161,12 @@ public class SvScFact {
         this.svBuyerList = svBuyerList;
     }
 
+    @XmlElement(name = "ДопСвФХЖ1")
+    @ApiModelProperty(value = "Формат\n" +
+            "Строка\n" +
+            "Тип элемента\n" +
+            "Необязательный\n" +
+            "Узел")
     public List<DopSvFXZ1> getDopSvFXZ1List() {
         return dopSvFXZ1List;
     }
@@ -187,6 +175,13 @@ public class SvScFact {
         this.dopSvFXZ1List = dopSvFXZ1List;
     }
 
+
+    @XmlElement(name = "ДокПодтвОтгр")
+    @ApiModelProperty(value = "Формат\n" +
+            "Составной элемент\n" +
+            "Тип элемента\n" +
+            "Необязательный\n" +
+            "Узел")
     public List<DocumentConfirmShipment> getDocumentConfirmShipmentList() {
         return documentConfirmShipmentList;
     }
@@ -195,6 +190,12 @@ public class SvScFact {
         this.documentConfirmShipmentList = documentConfirmShipmentList;
     }
 
+    @XmlElement(name = "ИнфПолФХЖ1")
+    @ApiModelProperty(value = "Формат\n" +
+            "Строка\n" +
+            "Тип элемента\n" +
+            "Необязательный\n" +
+            "Узел")
     public List<InfPolFXZ1> getInfPolFXZ1List() {
         return infPolFXZ1List;
     }

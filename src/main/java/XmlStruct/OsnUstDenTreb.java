@@ -1,7 +1,7 @@
 package XmlStruct;
 
 import io.swagger.annotations.ApiModelProperty;
-import lombok.Data;
+
 
 import javax.xml.bind.annotation.XmlElement;
 import java.util.Date;
@@ -12,35 +12,20 @@ import java.util.Date;
 
 public class OsnUstDenTreb {
 
+    private String nameOsn;
+
+    private String nomOsn;
+
+    private Date dateOsn;
+
+    private String identityOsn;
+
     @XmlElement(name = "НаимОсн",required = true)
     @ApiModelProperty(value = "Формат\n" +
             "T(255) Строка (длина от 1 до 255 знаков)\n" +
             "Тип элемента\n" +
             "Обязательный\n" +
             "Принимает значение: Без документа-основания")
-    private String nameOsn;
-
-    @XmlElement(name = "НомОсн")
-    @ApiModelProperty(value = "Формат\n" +
-            "T(255) Строка (длина от 1 до 255 знаков)\n" +
-            "Тип элемента\n" +
-            "Необязательный")
-    private String nomOsn;
-
-    @XmlElement(name = "ДатаОсн")
-    @ApiModelProperty(value = "Формат\n" +
-            "D(10) Дата (фиксированное число знаков 10)\n" +
-            "Тип элемента\n" +
-            "Условно-Обязательный")
-    private Date dateOsn;
-
-    @XmlElement(name = "ИдентОсн")
-    @ApiModelProperty(value = "Формат\n" +
-            "T(255) Строка (длина от 1 до 255 знаков)\n" +
-            "Тип элемента\n" +
-            "Необязательный")
-    private String identityOsn;
-
     public String getNameOsn() {
         return nameOsn;
     }
@@ -49,6 +34,11 @@ public class OsnUstDenTreb {
         this.nameOsn = nameOsn;
     }
 
+    @XmlElement(name = "НомОсн")
+    @ApiModelProperty(value = "Формат\n" +
+            "T(255) Строка (длина от 1 до 255 знаков)\n" +
+            "Тип элемента\n" +
+            "Необязательный")
     public String getNomOsn() {
         return nomOsn;
     }
@@ -57,6 +47,11 @@ public class OsnUstDenTreb {
         this.nomOsn = nomOsn;
     }
 
+    @XmlElement(name = "ДатаОсн")
+    @ApiModelProperty(value = "Формат\n" +
+            "D(10) Дата (фиксированное число знаков 10)\n" +
+            "Тип элемента\n" +
+            "Условно-Обязательный")
     public Date getDateOsn() {
         return dateOsn;
     }
@@ -65,6 +60,11 @@ public class OsnUstDenTreb {
         this.dateOsn = dateOsn;
     }
 
+    @XmlElement(name = "ИдентОсн")
+    @ApiModelProperty(value = "Формат\n" +
+            "T(255) Строка (длина от 1 до 255 знаков)\n" +
+            "Тип элемента\n" +
+            "Необязательный")
     public String getIdentityOsn() {
         return identityOsn;
     }

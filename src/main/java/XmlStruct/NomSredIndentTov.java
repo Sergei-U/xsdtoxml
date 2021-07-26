@@ -1,7 +1,7 @@
 package XmlStruct;
 
 import io.swagger.annotations.ApiModelProperty;
-import lombok.Data;
+
 
 import javax.xml.bind.annotation.XmlElement;
 
@@ -11,29 +11,17 @@ import javax.xml.bind.annotation.XmlElement;
 
 public class NomSredIndentTov {
 
+    private String identTransPack;
+
+    private String kiz;
+
+    private String nomPack;
+
     @XmlElement(name = "ИдентТрансУпак")
     @ApiModelProperty(value = "Формат\n" +
             "T(255) Строка (длина от 1 до 255 знаков)\n" +
             "Тип элемента\n" +
             "Условно-Обязательный")
-    private String identTransPack;
-
-    @XmlElement(name = "КИЗ")
-    @ApiModelProperty(value = "Формат\n" +
-            "Строка (длина от 1 до 255 знаков)\n" +
-            "Тип элемента\n" +
-            "Условно-Обязательный\n" +
-            "Узел")
-    private String kiz;
-
-    @XmlElement(name = "НомУпак")
-    @ApiModelProperty(value = "Формат\n" +
-            "Строка (длина от 1 до 255 знаков)\n" +
-            "Тип элемента\n" +
-            "Условно-Обязательный\n" +
-            "Узел")
-    private String nomPack;
-
     public String getIdentTransPack() {
         return identTransPack;
     }
@@ -42,6 +30,12 @@ public class NomSredIndentTov {
         this.identTransPack = identTransPack;
     }
 
+    @XmlElement(name = "КИЗ")
+    @ApiModelProperty(value = "Формат\n" +
+            "Строка (длина от 1 до 255 знаков)\n" +
+            "Тип элемента\n" +
+            "Условно-Обязательный\n" +
+            "Узел")
     public String getKiz() {
         return kiz;
     }
@@ -50,6 +44,12 @@ public class NomSredIndentTov {
         this.kiz = kiz;
     }
 
+    @XmlElement(name = "НомУпак")
+    @ApiModelProperty(value = "Формат\n" +
+            "Строка (длина от 1 до 255 знаков)\n" +
+            "Тип элемента\n" +
+            "Условно-Обязательный\n" +
+            "Узел")
     public String getNomPack() {
         return nomPack;
     }

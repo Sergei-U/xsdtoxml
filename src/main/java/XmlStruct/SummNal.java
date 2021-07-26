@@ -1,7 +1,7 @@
 package XmlStruct;
 
 import io.swagger.annotations.ApiModelProperty;
-import lombok.Data;
+
 
 import javax.xml.bind.annotation.XmlElement;
 import java.math.BigDecimal;
@@ -12,6 +12,12 @@ import java.math.BigDecimal;
 
 public class SummNal {
 
+    private BigDecimal summNal;
+
+    private String nonNDS;
+
+    private String defNDS;
+
     @XmlElement(name = "СумНал")
     @ApiModelProperty(value = "Формат\n" +
             "Вещественное (максимальное число знаков 19, в том числе десятичных 2)\n" +
@@ -19,26 +25,6 @@ public class SummNal {
             "Обязательный\n" +
             "Узел\n" +
             "Принимает значение: 0")
-    private BigDecimal summNal;
-
-    @XmlElement(name = "БезНДС")
-    @ApiModelProperty(value = "Формат\n" +
-            "Строка (длина от 1 до 18 знаков)\n" +
-            "Тип элемента\n" +
-            "Обязательный\n" +
-            "Узел\n" +
-            "Принимает значение: без НДС")
-    private String nonNDS;
-
-    @XmlElement(name = "ДефНДС")
-    @ApiModelProperty(value = "Формат\n" +
-            "Строка (фиксированное число знаков 1)\n" +
-            "Тип элемента\n" +
-            "Обязательный\n" +
-            "Узел\n" +
-            "Принимает значение: -")
-    private String defNDS;
-
     public BigDecimal getSummNal() {
         return summNal;
     }
@@ -47,6 +33,13 @@ public class SummNal {
         this.summNal = summNal;
     }
 
+    @XmlElement(name = "БезНДС")
+    @ApiModelProperty(value = "Формат\n" +
+            "Строка (длина от 1 до 18 знаков)\n" +
+            "Тип элемента\n" +
+            "Обязательный\n" +
+            "Узел\n" +
+            "Принимает значение: без НДС")
     public String getNonNDS() {
         return nonNDS;
     }
@@ -55,6 +48,13 @@ public class SummNal {
         this.nonNDS = nonNDS;
     }
 
+    @XmlElement(name = "ДефНДС",defaultValue = "-")
+    @ApiModelProperty(value = "Формат\n" +
+            "Строка (фиксированное число знаков 1)\n" +
+            "Тип элемента\n" +
+            "Обязательный\n" +
+            "Узел\n" +
+            "Принимает значение: -")
     public String getDefNDS() {
         return defNDS;
     }

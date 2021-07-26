@@ -1,7 +1,7 @@
 package XmlStruct;
 
 import io.swagger.annotations.ApiModelProperty;
-import lombok.Data;
+
 
 import javax.xml.bind.annotation.XmlElement;
 import java.util.List;
@@ -12,38 +12,20 @@ import java.util.List;
 
 public class IdSv {
 
+    private List<SvIP> svIPList;
+
+    private List<SvULUc> svULUcList;
+
+    private List<SvInNeUc> svInNeUcList;
+
+    private List<SvFLUcastFXZ> svFLUcastFXZList;
+
     @XmlElement(name = "СвИП",required = true)
     @ApiModelProperty(value = "Формат\n" +
             "Строка\n" +
             "Тип элемента\n" +
             "Обязательный\n" +
             "Узел")
-    private List<SvIP> svIPList;
-
-    @XmlElement(name = "СвЮЛУч", required = true)
-    @ApiModelProperty(value = "Формат\n" +
-            "Строка\n" +
-            "Тип элемента\n" +
-            "Обязательный\n" +
-            "Узел")
-    private List<SvULUc> svULUcList;
-
-    @XmlElement(name = "СвИнНеУч",required = true)
-    @ApiModelProperty(value = "Формат\n" +
-            "Строка\n" +
-            "Тип элемента\n" +
-            "Обязательный\n" +
-            "Узел")
-    private List<SvInNeUc> svInNeUcList;
-
-    @XmlElement(name = "СвФЛУчастФХЖ",required = true)
-    @ApiModelProperty(value = "Формат\n" +
-            "Строка\n" +
-            "Тип элемента\n" +
-            "Обязательный\n" +
-            "Узел")
-    private List<SvFLUcastFXZ> svFLUcastFXZList;
-
     public List<SvIP> getSvIPList() {
         return svIPList;
     }
@@ -52,6 +34,12 @@ public class IdSv {
         this.svIPList = svIPList;
     }
 
+    @XmlElement(name = "СвЮЛУч", required = true)
+    @ApiModelProperty(value = "Формат\n" +
+            "Строка\n" +
+            "Тип элемента\n" +
+            "Обязательный\n" +
+            "Узел")
     public List<SvULUc> getSvULUcList() {
         return svULUcList;
     }
@@ -60,6 +48,12 @@ public class IdSv {
         this.svULUcList = svULUcList;
     }
 
+    @XmlElement(name = "СвИнНеУч",required = true)
+    @ApiModelProperty(value = "Формат\n" +
+            "Строка\n" +
+            "Тип элемента\n" +
+            "Обязательный\n" +
+            "Узел")
     public List<SvInNeUc> getSvInNeUcList() {
         return svInNeUcList;
     }
@@ -68,6 +62,12 @@ public class IdSv {
         this.svInNeUcList = svInNeUcList;
     }
 
+    @XmlElement(name = "СвФЛУчастФХЖ",required = true)
+    @ApiModelProperty(value = "Формат\n" +
+            "Строка\n" +
+            "Тип элемента\n" +
+            "Обязательный\n" +
+            "Узел")
     public List<SvFLUcastFXZ> getSvFLUcastFXZList() {
         return svFLUcastFXZList;
     }

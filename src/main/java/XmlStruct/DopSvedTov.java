@@ -1,7 +1,7 @@
 package XmlStruct;
 
 import io.swagger.annotations.ApiModelProperty;
-import lombok.Data;
+
 
 import javax.xml.bind.annotation.XmlElement;
 import java.math.BigDecimal;
@@ -20,94 +20,36 @@ public class DopSvedTov {
 //            "Необязательный")
 //    private  Enum<PrTovRab> prTovRabEnum;
 
+
+    private String dopPrizn;
+
+    private String nameEdIzm;
+
+    private String krNameStrPr;
+
+    private BigDecimal nadlOtp;
+
+    private String characterProduct;
+
+    private String sortProduct;
+
+    private String articleProduct;
+
+    private String codeProduct;
+
+    private String codeCategory;
+
+    private String codeViewProduct;
+
+    private List<SvedProslez> svedProslezList;
+
+    private List<NomSredIndentTov> nomSredIndentTovList;
+
     @XmlElement(name = "ДопПризн")
     @ApiModelProperty(value = "Формат\n" +
             "T(4) Строка (длина от 1 до 4 знаков)\n" +
             "Тип элемента\n" +
             "Необязательный")
-    private String dopPrizn;
-
-    @XmlElement(name = "НаимЕдИзм")
-    @ApiModelProperty(value = "Формат\n" +
-            "T(255) Строка (длина от 1 до 255 знаков)\n" +
-            "Тип элемента\n" +
-            "Условно-Обязательный")
-    private String nameEdIzm;
-
-    @XmlElement(name = "КрНаимСтрПр")
-    @ApiModelProperty(value = "Формат\n" +
-            "T(255) Строка (длина от 1 до 255 знаков)\n" +
-            "Тип элемента\n" +
-            "Условно-Обязательный")
-    private String krNameStrPr;
-
-    @XmlElement(name = "НадлОтп")
-    @ApiModelProperty(value = "Формат\n" +
-            "N(26.11) Вещественное (максимальное число знаков 26, в том числе десятичных 11)\n" +
-            "Тип элемента\n" +
-            "Необязательный")
-    private BigDecimal nadlOtp;
-
-    @XmlElement(name = "ХарактерТов")
-    @ApiModelProperty(value = "Формат\n" +
-            "T(1000) Строка (длина от 1 до 1000 знаков)\n" +
-            "Тип элемента\n" +
-            "Условно-Обязательный")
-    private String characterProduct;
-
-    @XmlElement(name = "СортТов")
-    @ApiModelProperty(value = "Формат\n" +
-            "T(10) Строка (длина от 1 до 10 знаков)\n" +
-            "Тип элемента\n" +
-            "Необязательный")
-    private String sortProduct;
-
-    @XmlElement(name = "АртикулТов")
-    @ApiModelProperty(value = "Формат\n" +
-            "T(50) Строка (длина от 1 до 50 знаков)\n" +
-            "Тип элемента\n" +
-            "Условно-Обязательный")
-    private String articleProduct;
-
-    @XmlElement(name = "КодТов")
-    @ApiModelProperty(value = "Формат\n" +
-            "T(100) Строка (длина от 1 до 100 знаков)\n" +
-            "Тип элемента\n" +
-            "Условно-Обязательный")
-    private String codeProduct;
-
-    @XmlElement(name = "КодКат")
-    @ApiModelProperty(value = "Формат\n" +
-            "T(=27) Строка (фиксированное число знаков 27)\n" +
-            "Тип элемента\n" +
-            "Необязательный")
-    private String codeCategory;
-
-    @XmlElement(name = "КодВидТов")
-    @ApiModelProperty(value = "Формат\n" +
-            "T(=10) Строка (фиксированное число знаков 10)\n" +
-            "Тип элемента\n" +
-            "Необязательный")
-    private String codeViewProduct;
-
-    @XmlElement(name = "СведПрослеж")
-    @ApiModelProperty(value = "Формат\n" +
-            "Составной элемент\n" +
-            "Тип элемента\n" +
-            "Необязательный\n" +
-            "Узел")
-    private List<SvedProslez> svedProslezList;
-
-
-    @XmlElement(name = "НомСредИдентТов")
-    @ApiModelProperty(value = "Формат\n" +
-            "Составной элемент\n" +
-            "Тип элемента\n" +
-            "Необязательный\n" +
-            "Узел")
-    private List<NomSredIndentTov> nomSredIndentTovList;
-
-
     public String getDopPrizn() {
         return dopPrizn;
     }
@@ -116,6 +58,11 @@ public class DopSvedTov {
         this.dopPrizn = dopPrizn;
     }
 
+    @XmlElement(name = "НаимЕдИзм")
+    @ApiModelProperty(value = "Формат\n" +
+            "T(255) Строка (длина от 1 до 255 знаков)\n" +
+            "Тип элемента\n" +
+            "Условно-Обязательный")
     public String getNameEdIzm() {
         return nameEdIzm;
     }
@@ -124,6 +71,11 @@ public class DopSvedTov {
         this.nameEdIzm = nameEdIzm;
     }
 
+    @XmlElement(name = "КрНаимСтрПр")
+    @ApiModelProperty(value = "Формат\n" +
+            "T(255) Строка (длина от 1 до 255 знаков)\n" +
+            "Тип элемента\n" +
+            "Условно-Обязательный")
     public String getKrNameStrPr() {
         return krNameStrPr;
     }
@@ -132,6 +84,11 @@ public class DopSvedTov {
         this.krNameStrPr = krNameStrPr;
     }
 
+    @XmlElement(name = "НадлОтп")
+    @ApiModelProperty(value = "Формат\n" +
+            "N(26.11) Вещественное (максимальное число знаков 26, в том числе десятичных 11)\n" +
+            "Тип элемента\n" +
+            "Необязательный")
     public BigDecimal getNadlOtp() {
         return nadlOtp;
     }
@@ -140,6 +97,11 @@ public class DopSvedTov {
         this.nadlOtp = nadlOtp;
     }
 
+    @XmlElement(name = "ХарактерТов")
+    @ApiModelProperty(value = "Формат\n" +
+            "T(1000) Строка (длина от 1 до 1000 знаков)\n" +
+            "Тип элемента\n" +
+            "Условно-Обязательный")
     public String getCharacterProduct() {
         return characterProduct;
     }
@@ -148,6 +110,11 @@ public class DopSvedTov {
         this.characterProduct = characterProduct;
     }
 
+    @XmlElement(name = "СортТов")
+    @ApiModelProperty(value = "Формат\n" +
+            "T(10) Строка (длина от 1 до 10 знаков)\n" +
+            "Тип элемента\n" +
+            "Необязательный")
     public String getSortProduct() {
         return sortProduct;
     }
@@ -156,6 +123,11 @@ public class DopSvedTov {
         this.sortProduct = sortProduct;
     }
 
+    @XmlElement(name = "АртикулТов")
+    @ApiModelProperty(value = "Формат\n" +
+            "T(50) Строка (длина от 1 до 50 знаков)\n" +
+            "Тип элемента\n" +
+            "Условно-Обязательный")
     public String getArticleProduct() {
         return articleProduct;
     }
@@ -164,6 +136,11 @@ public class DopSvedTov {
         this.articleProduct = articleProduct;
     }
 
+    @XmlElement(name = "КодТов")
+    @ApiModelProperty(value = "Формат\n" +
+            "T(100) Строка (длина от 1 до 100 знаков)\n" +
+            "Тип элемента\n" +
+            "Условно-Обязательный")
     public String getCodeProduct() {
         return codeProduct;
     }
@@ -172,6 +149,11 @@ public class DopSvedTov {
         this.codeProduct = codeProduct;
     }
 
+    @XmlElement(name = "КодКат")
+    @ApiModelProperty(value = "Формат\n" +
+            "T(=27) Строка (фиксированное число знаков 27)\n" +
+            "Тип элемента\n" +
+            "Необязательный")
     public String getCodeCategory() {
         return codeCategory;
     }
@@ -180,6 +162,11 @@ public class DopSvedTov {
         this.codeCategory = codeCategory;
     }
 
+    @XmlElement(name = "КодВидТов")
+    @ApiModelProperty(value = "Формат\n" +
+            "T(=10) Строка (фиксированное число знаков 10)\n" +
+            "Тип элемента\n" +
+            "Необязательный")
     public String getCodeViewProduct() {
         return codeViewProduct;
     }
@@ -188,6 +175,12 @@ public class DopSvedTov {
         this.codeViewProduct = codeViewProduct;
     }
 
+    @XmlElement(name = "СведПрослеж")
+    @ApiModelProperty(value = "Формат\n" +
+            "Составной элемент\n" +
+            "Тип элемента\n" +
+            "Необязательный\n" +
+            "Узел")
     public List<SvedProslez> getSvedProslezList() {
         return svedProslezList;
     }
@@ -196,6 +189,12 @@ public class DopSvedTov {
         this.svedProslezList = svedProslezList;
     }
 
+    @XmlElement(name = "НомСредИдентТов")
+    @ApiModelProperty(value = "Формат\n" +
+            "Составной элемент\n" +
+            "Тип элемента\n" +
+            "Необязательный\n" +
+            "Узел")
     public List<NomSredIndentTov> getNomSredIndentTovList() {
         return nomSredIndentTovList;
     }
