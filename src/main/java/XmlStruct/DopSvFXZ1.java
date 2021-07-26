@@ -34,12 +34,12 @@ public class DopSvFXZ1 {
             "Необязательный")
     private BigDecimal cursVal;
 
-    @XmlElement(name = "ОбстФормСЧФ")
-    @ApiModelProperty(value = "Формат\n" +
-            "Перечисление (фиксированное число знаков 1)\n" +
-            "Тип элемента\n" +
-            "Необязательный")
-    private Enum<ObsFormScf> obsFormScfEnum;
+//    @XmlElement(name = "ОбстФормСЧФ")
+//    @ApiModelProperty(value = "Формат\n" +
+//            "Перечисление (фиксированное число знаков 1)\n" +
+//            "Тип элемента\n" +
+//            "Необязательный")
+//    private Enum<ObsFormScf> obsFormScfEnum;
 
 
     @XmlElement(name = "ИнфПродГосЗакКазн")

@@ -1,6 +1,7 @@
 package XmlStruct;
 
 import io.swagger.annotations.ApiModelProperty;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
 import javax.xml.bind.annotation.XmlElement;
@@ -10,6 +11,7 @@ import java.util.List;
  *
  */
 @Data
+@AllArgsConstructor
 public class SvUcDocObor {
 
     @XmlElement(name = "ИдОтпр")

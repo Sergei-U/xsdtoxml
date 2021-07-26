@@ -1,6 +1,7 @@
 package XmlStruct;
 
 import io.swagger.annotations.ApiModelProperty;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
 import javax.xml.bind.annotation.*;
@@ -18,8 +19,8 @@ class ObjectFactory{
     }
 }
 
-@XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "Файл")
+@XmlAccessorType(XmlAccessType.FIELD)
 @Data
 public class File implements Serializable {
 

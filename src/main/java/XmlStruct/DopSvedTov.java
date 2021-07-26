@@ -13,12 +13,12 @@ import java.util.List;
 @Data
 public class DopSvedTov {
 
-    @XmlElement(name = "ПрТовРаб")
-    @ApiModelProperty(value = "Формат\n" +
-            "Перечисление (фиксированное число знаков 1)\n" +
-            "Тип элемента\n" +
-            "Необязательный")
-    private  Enum<PrTovRab> prTovRabEnum;
+//    @XmlElement(name = "ПрТовРаб")
+//    @ApiModelProperty(value = "Формат\n" +
+//            "Перечисление (фиксированное число знаков 1)\n" +
+//            "Тип элемента\n" +
+//            "Необязательный")
+//    private  Enum<PrTovRab> prTovRabEnum;
 
     @XmlElement(name = "ДопПризн")
     @ApiModelProperty(value = "Формат\n" +

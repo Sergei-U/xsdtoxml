@@ -66,12 +66,12 @@ public class SvedTov {
             "Принимает значение: 0")
     private BigDecimal priceProductNoNDS;
 
-    @XmlElement(name = "НалСт")
-    @ApiModelProperty(value = "Формат\n" +
-            "Перечисление (длина от 1 до 35 знаков)\n" +
-            "Тип элемента\n" +
-            "Обязательный")
-    public Enum<NalST> nalSTEnum;
+//    @XmlElement(name = "НалСт")
+//    @ApiModelProperty(value = "Формат\n" +
+//            "Перечисление (длина от 1 до 35 знаков)\n" +
+//            "Тип элемента\n" +
+//            "Обязательный")
+//    public Enum<NalST> nalSTEnum;
 
 
     @XmlElement(name = "СтТовУчНал",required = true)
