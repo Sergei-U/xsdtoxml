@@ -2,9 +2,7 @@ package XmlStruct;
 
 import io.swagger.annotations.ApiModelProperty;
 
-
 import javax.xml.bind.annotation.XmlElement;
-import java.util.List;
 
 /**
  *
@@ -12,9 +10,9 @@ import java.util.List;
 
 public class Address {
 
-    private List<AddressRF> addressRFList;
+    private AddressRF addressRFList;
 
-    private List<AddressInf> addressInfList;
+    private AddressInf addressInfList;
 
     private String codeGAR;
 
@@ -24,11 +22,11 @@ public class Address {
             "Тип элемента\n" +
             "Обязательный\n" +
             "Узел")
-    public List<AddressRF> getAddressRFList() {
+    public AddressRF getAddressRFList() {
         return addressRFList;
     }
 
-    public void setAddressRFList(List<AddressRF> addressRFList) {
+    public void setAddressRFList(AddressRF addressRFList) {
         this.addressRFList = addressRFList;
     }
 
@@ -38,11 +36,11 @@ public class Address {
             "Тип элемента\n" +
             "Обязательный\n" +
             "Узел")
-    public List<AddressInf> getAddressInfList() {
+    public AddressInf getAddressInfList() {
         return addressInfList;
     }
 
-    public void setAddressInfList(List<AddressInf> addressInfList) {
+    public void setAddressInfList(AddressInf addressInfList) {
         this.addressInfList = addressInfList;
     }
 

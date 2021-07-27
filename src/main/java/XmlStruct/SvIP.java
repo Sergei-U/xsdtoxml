@@ -3,6 +3,7 @@ package XmlStruct;
 import io.swagger.annotations.ApiModelProperty;
 
 
+import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import java.util.List;
 
@@ -20,9 +21,9 @@ public class SvIP {
 
     private String overData;
 
-    private List<FIO> fioList;
+    private FIO fioList;
 
-    @XmlElement(name = "ИННФЛ",required = true)
+    @XmlAttribute(name = "ИННФЛ",required = true)
     @ApiModelProperty(value = "Формат\n" +
             "T(=12) Строка (фиксированное число знаков 12)\n" +
             "Тип элемента\n" +
@@ -35,7 +36,7 @@ public class SvIP {
         this.innFL = innFL;
     }
 
-    @XmlElement(name = "ДефИННФЛ", required = true)
+    @XmlAttribute(name = "ДефИННФЛ", required = true)
     @ApiModelProperty(value = "Формат\n" +
             "T(=1) Строка (фиксированное число знаков 1)\n" +
             "Тип элемента\n" +
@@ -49,7 +50,7 @@ public class SvIP {
         this.defInnFL = defInnFL;
     }
 
-    @XmlElement(name = "СвГосРегИП")
+    @XmlAttribute(name = "СвГосРегИП")
     @ApiModelProperty(value = "Формат\n" +
             "T(100) Строка (длина от 1 до 100 знаков)\n" +
             "Тип элемента\n" +
@@ -62,7 +63,7 @@ public class SvIP {
         this.svGosRegIP = svGosRegIP;
     }
 
-    @XmlElement(name = "ИныеСвед")
+    @XmlAttribute(name = "ИныеСвед")
     @ApiModelProperty(value = "Формат\n" +
             "T(255) Строка (длина от 1 до 255 знаков)\n" +
             "Тип элемента\n" +
@@ -81,11 +82,11 @@ public class SvIP {
             "Тип элемента\n" +
             "Обязательный\n" +
             "Узел")
-    public List<FIO> getFioList() {
+    public FIO getFioList() {
         return fioList;
     }
 
-    public void setFioList(List<FIO> fioList) {
+    public void setFioList(FIO fioList) {
         this.fioList = fioList;
     }
 }

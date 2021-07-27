@@ -2,8 +2,7 @@ package XmlStruct;
 
 import io.swagger.annotations.ApiModelProperty;
 
-
-import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlAttribute;
 
 /**
  *
@@ -17,7 +16,7 @@ public class SvBank {
 
     private String corrAcc;
 
-    @XmlElement(name = "НаимБанк")
+    @XmlAttribute(name = "НаимБанк")
     @ApiModelProperty(value = "Формат\n" +
             "T(1000) Строка (длина от 1 до 1000 знаков)\n" +
             "Тип элемента\n" +
@@ -30,7 +29,7 @@ public class SvBank {
         this.bankName = bankName;
     }
 
-    @XmlElement(name = "БИК")
+    @XmlAttribute(name = "БИК")
     @ApiModelProperty(value = "Формат\n" +
             "T(=9) Строка (фиксированное число знаков 9)\n" +
             "Тип элемента\n" +
@@ -43,7 +42,7 @@ public class SvBank {
         this.bic = bic;
     }
 
-    @XmlElement(name = "КорСчет")
+    @XmlAttribute(name = "КорСчет")
     @ApiModelProperty(value = "Формат\n" +
             "T(20) Строка (длина от 1 до 20 знаков)\n" +
             "Тип элемента\n" +

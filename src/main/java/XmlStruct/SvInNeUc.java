@@ -3,7 +3,7 @@ package XmlStruct;
 import io.swagger.annotations.ApiModelProperty;
 
 
-import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlAttribute;
 
 /**
  *
@@ -17,7 +17,7 @@ public class SvInNeUc {
 
     private String overInf;
 
-    @XmlElement(name = "НаимОрг",required = true)
+    @XmlAttribute(name = "НаимОрг",required = true)
     @ApiModelProperty(value = "Формат\n" +
             "T(1000) Строка (длина от 1 до 1000 знаков)\n" +
             "Тип элемента\n" +
@@ -30,7 +30,7 @@ public class SvInNeUc {
         this.nameOrg = nameOrg;
     }
 
-    @XmlElement(name = "Идентиф")
+    @XmlAttribute(name = "Идентиф")
     @ApiModelProperty(value = "Формат\n" +
             "T(255) Строка (длина от 1 до 255 знаков)\n" +
             "Тип элемента\n" +
@@ -43,7 +43,7 @@ public class SvInNeUc {
         this.orgId = orgId;
     }
 
-    @XmlElement(name = "ИныеСвед")
+    @XmlAttribute(name = "ИныеСвед")
     @ApiModelProperty(value = "Формат\n" +
             "T(255) Строка (длина от 1 до 255 знаков)\n" +
             "Тип элемента\n" +

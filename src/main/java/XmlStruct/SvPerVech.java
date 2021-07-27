@@ -4,6 +4,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.util.Date;
 
 
@@ -14,6 +15,7 @@ public class SvPerVech {
     private String svPerVech;
 
     @XmlElement(name = "ДатаПерВещ")
+    @XmlJavaTypeAdapter(DateAdapter.class)
     @ApiModelProperty(value = "Формат\n" +
             "D(10) Дата (фиксированное число знаков 10)\n" +
             "Тип элемента\n" +

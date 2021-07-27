@@ -2,8 +2,7 @@ package XmlStruct;
 
 import io.swagger.annotations.ApiModelProperty;
 
-
-import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlAttribute;
 
 /**
  *
@@ -15,7 +14,7 @@ public class AddressInf {
 
     private String addressText;
 
-    @XmlElement(name = "КодСтр",required = true)
+    @XmlAttribute(name = "КодСтр",required = true)
     @ApiModelProperty(value = "Формат\n" +
             "T(=3) Строка (фиксированное число знаков 3)\n" +
             "Тип элемента\n" +
@@ -28,7 +27,7 @@ public class AddressInf {
         this.countryCode = countryCode;
     }
 
-    @XmlElement(name = "АдрТекст")
+    @XmlAttribute(name = "АдрТекст")
     @ApiModelProperty(value = "Формат\n" +
             "T(1000) Строка (длина от 1 до 1000 знаков)\n" +
             "Тип элемента\n" +

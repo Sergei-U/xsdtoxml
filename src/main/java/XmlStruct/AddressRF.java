@@ -2,8 +2,7 @@ package XmlStruct;
 
 import io.swagger.annotations.ApiModelProperty;
 
-
-import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlAttribute;
 
 /**
  *
@@ -29,7 +28,7 @@ public class AddressRF {
 
     private String appartment;
 
-    @XmlElement(name = "Индекс")
+    @XmlAttribute(name = "Индекс")
     @ApiModelProperty(value = "Формат\n" +
             "T(=6) Строка (фиксированное число знаков 6)\n" +
             "Тип элемента\n" +
@@ -42,7 +41,7 @@ public class AddressRF {
         this.index = index;
     }
 
-    @XmlElement(name = "КодРегион",required = true)
+    @XmlAttribute(name = "КодРегион",required = true)
     @ApiModelProperty(value = "Формат\n" +
             "T(=2) Строка (фиксированное число знаков 2)\n" +
             "Тип элемента\n" +
@@ -55,7 +54,7 @@ public class AddressRF {
         this.codeRegion = codeRegion;
     }
 
-    @XmlElement(name = "Район")
+    @XmlAttribute(name = "Район")
     @ApiModelProperty(value = "Формат\n" +
             "T(50) Строка (длина от 1 до 50 знаков)\n" +
             "Тип элемента\n" +
@@ -68,7 +67,7 @@ public class AddressRF {
         this.district = district;
     }
 
-    @XmlElement(name = "Город")
+    @XmlAttribute(name = "Город")
     @ApiModelProperty(value = "Формат\n" +
             "T(50) Строка (длина от 1 до 50 знаков)\n" +
             "Тип элемента\n" +
@@ -81,7 +80,7 @@ public class AddressRF {
         this.city = city;
     }
 
-    @XmlElement(name = "НаселПункт")
+    @XmlAttribute(name = "НаселПункт")
     @ApiModelProperty(value = "Формат\n" +
             "T(50) Строка (длина от 1 до 50 знаков)\n" +
             "Тип элемента\n" +
@@ -94,7 +93,7 @@ public class AddressRF {
         this.locality = locality;
     }
 
-    @XmlElement(name = "Улица")
+    @XmlAttribute(name = "Улица")
     @ApiModelProperty(value = "Формат\n" +
             "T(50) Строка (длина от 1 до 50 знаков)\n" +
             "Тип элемента\n" +
@@ -107,7 +106,7 @@ public class AddressRF {
         this.street = street;
     }
 
-    @XmlElement(name = "Дом")
+    @XmlAttribute(name = "Дом")
     @ApiModelProperty(value = "Формат\n" +
             "T(20) Строка (длина от 1 до 20 знаков)\n" +
             "Тип элемента\n" +
@@ -120,7 +119,7 @@ public class AddressRF {
         this.house = house;
     }
 
-    @XmlElement(name = "Корпус")
+    @XmlAttribute(name = "Корпус")
     @ApiModelProperty(value = "Формат\n" +
             "T(20) Строка (длина от 1 до 20 знаков)\n" +
             "Тип элемента\n" +
@@ -133,7 +132,7 @@ public class AddressRF {
         this.housing = housing;
     }
 
-    @XmlElement(name = "Кварт")
+    @XmlAttribute(name = "Кварт")
     @ApiModelProperty(value = "Формат\n" +
             "T(20) Строка (длина от 1 до 20 знаков)\n" +
             "Тип элемента\n" +

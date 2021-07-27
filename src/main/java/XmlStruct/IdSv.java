@@ -2,9 +2,7 @@ package XmlStruct;
 
 import io.swagger.annotations.ApiModelProperty;
 
-
 import javax.xml.bind.annotation.XmlElement;
-import java.util.List;
 
 /**
  *
@@ -12,13 +10,13 @@ import java.util.List;
 
 public class IdSv {
 
-    private List<SvIP> svIPList;
+    private SvIP svIPList;
 
-    private List<SvULUc> svULUcList;
+    private SvULUc svULUcList;
 
-    private List<SvInNeUc> svInNeUcList;
+    private SvInNeUc svInNeUcList;
 
-    private List<SvFLUcastFXZ> svFLUcastFXZList;
+    private SvFLUcastFXZ svFLUcastFXZList;
 
     @XmlElement(name = "СвИП",required = true)
     @ApiModelProperty(value = "Формат\n" +
@@ -26,11 +24,11 @@ public class IdSv {
             "Тип элемента\n" +
             "Обязательный\n" +
             "Узел")
-    public List<SvIP> getSvIPList() {
+    public SvIP getSvIPList() {
         return svIPList;
     }
 
-    public void setSvIPList(List<SvIP> svIPList) {
+    public void setSvIPList(SvIP svIPList) {
         this.svIPList = svIPList;
     }
 
@@ -40,11 +38,11 @@ public class IdSv {
             "Тип элемента\n" +
             "Обязательный\n" +
             "Узел")
-    public List<SvULUc> getSvULUcList() {
+    public SvULUc getSvULUcList() {
         return svULUcList;
     }
 
-    public void setSvULUcList(List<SvULUc> svULUcList) {
+    public void setSvULUcList(SvULUc svULUcList) {
         this.svULUcList = svULUcList;
     }
 
@@ -54,11 +52,11 @@ public class IdSv {
             "Тип элемента\n" +
             "Обязательный\n" +
             "Узел")
-    public List<SvInNeUc> getSvInNeUcList() {
+    public SvInNeUc getSvInNeUcList() {
         return svInNeUcList;
     }
 
-    public void setSvInNeUcList(List<SvInNeUc> svInNeUcList) {
+    public void setSvInNeUcList(SvInNeUc svInNeUcList) {
         this.svInNeUcList = svInNeUcList;
     }
 
@@ -68,11 +66,11 @@ public class IdSv {
             "Тип элемента\n" +
             "Обязательный\n" +
             "Узел")
-    public List<SvFLUcastFXZ> getSvFLUcastFXZList() {
+    public SvFLUcastFXZ getSvFLUcastFXZList() {
         return svFLUcastFXZList;
     }
 
-    public void setSvFLUcastFXZList(List<SvFLUcastFXZ> svFLUcastFXZList) {
+    public void setSvFLUcastFXZList(SvFLUcastFXZ svFLUcastFXZList) {
         this.svFLUcastFXZList = svFLUcastFXZList;
     }
 }

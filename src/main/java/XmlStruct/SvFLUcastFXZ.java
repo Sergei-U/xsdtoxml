@@ -3,6 +3,7 @@ package XmlStruct;
 import io.swagger.annotations.ApiModelProperty;
 
 
+import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import java.util.List;
 
@@ -18,9 +19,9 @@ public class SvFLUcastFXZ {
 
     private String overInf;
 
-    private List<FIO> fioList;
+    private FIO fioList;
 
-    @XmlElement(name = "ГосРегИПВыдДов")
+    @XmlAttribute(name = "ГосРегИПВыдДов")
     @ApiModelProperty(value = "Формат\n" +
             "T(100) Строка (длина от 1 до 100 знаков)\n" +
             "Тип элемента\n" +
@@ -33,7 +34,7 @@ public class SvFLUcastFXZ {
         this.gosRegIPVidDov = gosRegIPVidDov;
     }
 
-    @XmlElement(name = "ИННФЛ")
+    @XmlAttribute(name = "ИННФЛ")
     @ApiModelProperty(value = "Формат\n" +
             "T(=12) Строка (фиксированное число знаков 12)\n" +
             "Тип элемента\n" +
@@ -46,7 +47,7 @@ public class SvFLUcastFXZ {
         this.innFL = innFL;
     }
 
-    @XmlElement(name = "ИныеСвед")
+    @XmlAttribute(name = "ИныеСвед")
     @ApiModelProperty(value = "Формат\n" +
             "T(255) Строка (длина от 1 до 255 знаков)\n" +
             "Тип элемента\n" +
@@ -65,11 +66,11 @@ public class SvFLUcastFXZ {
             "Тип элемента\n" +
             "Обязательный\n" +
             "Узел")
-    public List<FIO> getFioList() {
+    public FIO getFioList() {
         return fioList;
     }
 
-    public void setFioList(List<FIO> fioList) {
+    public void setFioList(FIO fioList) {
         this.fioList = fioList;
     }
 }

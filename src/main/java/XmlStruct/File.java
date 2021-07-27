@@ -34,8 +34,27 @@ public class File implements Serializable {
 
     private Document document;
 
+    @XmlAttribute(name = "ВерсПрог", required = true)
+    @ApiModelProperty(name = "Формат\n" +
+            "T(40) Строка (длина от 1 до 40 знаков)\n" +
+            "Тип элемента\n" +
+            "Обязательный\n" +
+            "Принимает значение: СБиС3")
+    public String getVerProgram() {
+        return verProgram;
+    }
 
-    @XmlElement(name = "ИдФайл", required = true)
+    @XmlAttribute(name = "ВерсФорм",required = true)
+    @ApiModelProperty(value = "Формат\n" +
+            "T(5) Строка (длина от 1 до 5 знаков)\n" +
+            "Тип элемента\n" +
+            "Обязательный\n" +
+            "Принимает значение: 5.01")
+    public String getVerForm() {
+        return verForm;
+    }
+
+    @XmlAttribute(name = "ИдФайл", required = true)
     @ApiModelProperty(value = "Формат\n" +
             "T(255) Строка (длина от 1 до 255 знаков)\n" +
             "Тип элемента\n" +
@@ -48,23 +67,10 @@ public class File implements Serializable {
         this.idFile = idFile;
     }
 
-    public String getVerForm() {
-        return verForm;
-    }
-
     public void setVerForm(String verForm) {
         this.verForm = verForm;
     }
 
-    @XmlElement(name = "ВерсПрог", required = true)
-    @ApiModelProperty(name = "Формат\n" +
-            "T(40) Строка (длина от 1 до 40 знаков)\n" +
-            "Тип элемента\n" +
-            "Обязательный\n" +
-            "Принимает значение: СБиС3")
-    public String getVerProgram() {
-        return verProgram;
-    }
 
     public void setVerProgram(String verProgram) {
         this.verProgram = verProgram;

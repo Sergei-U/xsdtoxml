@@ -2,8 +2,7 @@ package XmlStruct;
 
 import io.swagger.annotations.ApiModelProperty;
 
-
-import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlAttribute;
 
 /**
  *
@@ -22,7 +21,7 @@ public class SvULUc {
     private String defKpp;
 
 
-    @XmlElement(name = "НаимОрг",required = true)
+    @XmlAttribute(name = "НаимОрг",required = true)
     @ApiModelProperty(value = "Формат\n" +
             "T(1000) Строка (длина от 1 до 1000 знаков)\n" +
             "Тип элемента\n" +
@@ -35,7 +34,7 @@ public class SvULUc {
         this.nameOrg = nameOrg;
     }
 
-    @XmlElement(name = "ИННЮЛ",required = true)
+    @XmlAttribute(name = "ИННЮЛ",required = true)
     @ApiModelProperty(value = "Формат\n" +
             "T(=10) Строка (фиксированное число знаков 10)\n" +
             "Тип элемента\n" +
@@ -48,7 +47,7 @@ public class SvULUc {
         this.innUL = innUL;
     }
 
-    @XmlElement(name = "ДефИННЮЛ",required = true)
+    @XmlAttribute(name = "ДефИННЮЛ",required = true)
     @ApiModelProperty(value = "Формат\n" +
             "T(=1) Строка (фиксированное число знаков 1)\n" +
             "Тип элемента\n" +
@@ -62,7 +61,7 @@ public class SvULUc {
         this.defInnUL = defInnUL;
     }
 
-    @XmlElement(name = "КПП")
+    @XmlAttribute(name = "КПП")
     @ApiModelProperty(value = "Формат" +
             "T(=9) Строка (фиксированное число знаков 9)\n" +
             "Тип элемента\n" +
@@ -75,7 +74,7 @@ public class SvULUc {
         this.kpp = kpp;
     }
 
-    @XmlElement(name = "ДефКПП")
+    @XmlAttribute(name = "ДефКПП")
     @ApiModelProperty(value = "Формат\n" +
             "T(=1) Строка (фиксированное число знаков 1)\n" +
             "Тип элемента\n" +

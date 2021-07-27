@@ -2,17 +2,13 @@ package XmlStruct;
 
 import io.swagger.annotations.ApiModelProperty;
 
+import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
-import java.time.LocalDate;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import java.util.Date;
 
-;
-
-/**
- *
- */
 
 public class Document  {
-
 
     private String knd;
 
@@ -22,9 +18,9 @@ public class Document  {
 
     private String nameDocReq;
 
-    private LocalDate dateInfPr;
+    private Date dateInfPr;
 
-    private LocalDate timeInfPr;
+    private Date timeInfPr;
 
     private String nameEconSubCondition;
 
@@ -40,7 +36,7 @@ public class Document  {
 
     private Podpisant podpisant;
 
-    @XmlElement(name = "КНД", required = true,defaultValue = "1115131")
+    @XmlAttribute(name = "КНД", required = true)
     @ApiModelProperty(value = "Формат\n" +
             "T(=7) Строка (фиксированное число знаков 7)\n" +
             "Тип элемента\n" +
@@ -54,7 +50,7 @@ public class Document  {
     public void setKnd(String knd) {
         this.knd = knd;
     }
-    @XmlElement(name = "Функция", required = true,defaultValue = "СЧФ")
+    @XmlAttribute(name = "Функция", required = true)
     @ApiModelProperty(value = "Формат\n" +
             "T(6) Строка (длина от 1 до 6 знаков)\n" +
             "Тип элемента\n" +
@@ -69,7 +65,7 @@ public class Document  {
         this.func = func;
     }
 
-    @XmlElement(name = "ПоФактХЖ", required = false)
+    @XmlAttribute(name = "ПоФактХЖ", required = false)
     @ApiModelProperty(value = "Формат\n" +
             "T(255) Строка (длина от 1 до 255 знаков)\n" +
             "Тип элемента\n" +
@@ -82,7 +78,7 @@ public class Document  {
         this.poFactHZ = poFactHZ;
     }
 
-    @XmlElement(name = "НаимДокОпр", required = false)
+    @XmlAttribute(name = "НаимДокОпр", required = false)
     @ApiModelProperty(value = "Формат\n" +
             "T(255) Строка (длина от 1 до 255 знаков)\n" +
             "Тип элемента\n" +
@@ -96,32 +92,34 @@ public class Document  {
     }
 
     @XmlElement(name = "ДатаИнфПр", required = true)
+    @XmlJavaTypeAdapter(DateAdapter.class)
     @ApiModelProperty(value = "Формат\n" +
             "D(10) Дата (фиксированное число знаков 10)\n" +
             "Тип элемента\n" +
             "Обязательный")
-    public LocalDate getDateInfPr() {
+    public Date getDateInfPr() {
         return dateInfPr;
     }
 
-    public void setDateInfPr(LocalDate dateInfPr) {
+    public void setDateInfPr(Date dateInfPr) {
         this.dateInfPr = dateInfPr;
     }
 
     @XmlElement(name = "ВремИнфПр", required = true)
+    @XmlJavaTypeAdapter(TimeAdapter.class)
     @ApiModelProperty(value = "Формат\n" +
             "D(8) Время (фиксированное число знаков 8)\n" +
             "Тип элемента\n" +
             "Обязательный")
-    public LocalDate getTimeInfPr() {
+    public Date getTimeInfPr() {
         return timeInfPr;
     }
 
-    public void setTimeInfPr(LocalDate timeInfPr) {
+    public void setTimeInfPr(Date timeInfPr) {
         this.timeInfPr = timeInfPr;
     }
 
-    @XmlElement(name = "НаимЭконСубСост", required = true)
+    @XmlAttribute(name = "НаимЭконСубСост", required = true)
     @ApiModelProperty(value = "Формат\n" +
             "T(1000) Строка (длина от 1 до 1000 знаков)\n" +
             "Тип элемента\n" +
@@ -134,7 +132,7 @@ public class Document  {
         this.nameEconSubCondition = nameEconSubCondition;
     }
 
-    @XmlElement(name = "ОснДоверОргСост")
+    @XmlAttribute(name = "ОснДоверОргСост")
     @ApiModelProperty(value = "Формат\n" +
             "T(120) Строка (длина от 1 до 120 знаков)\n" +
             "Тип элемента\n" +
@@ -147,7 +145,7 @@ public class Document  {
         this.osnDoverOrgCondition = osnDoverOrgCondition;
     }
 
-    @XmlElement(name = "СоглСтрДопИнф", required = false)
+    @XmlAttribute(name = "СоглСтрДопИнф", required = false)
     @ApiModelProperty(value = "Формат\n" +
             "T(=14) Строка (фиксированное число знаков 14)\n" +
             "Тип элемента\n" +

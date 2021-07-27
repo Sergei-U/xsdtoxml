@@ -2,10 +2,9 @@ package XmlStruct;
 
 import io.swagger.annotations.ApiModelProperty;
 
-
+import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import java.util.Date;
-import java.util.List;
 
 /**
  *
@@ -19,26 +18,26 @@ public class SvScFact {
 
     private String codeOKV;
 
-    private List<IsprScF> isprScFList;
+    private IsprScF isprScFList;
 
-    private List<SvProd> svProdList;
+    private SvProd svProdList;
 
-    private List<CargoSender> cargoSenderList;
+    private CargoSender cargoSenderList;
 
-    private List<CargoReceiver> cargoReceiverList;
+    private CargoReceiver cargoReceiverList;
 
-    private List<SvPRD> svPRDList;
+    private SvPRD svPRDList;
 
-    private List<SvBuyer> svBuyerList;
+    private SvBuyer svBuyerList;
 
-    private List<DopSvFXZ1> dopSvFXZ1List;
+    private DopSvFXZ1 dopSvFXZ1List;
 
-    private List<DocumentConfirmShipment> documentConfirmShipmentList;
+    private DocumentConfirmShipment documentConfirmShipmentList;
 
-    private List<InfPolFXZ1> infPolFXZ1List;
+    private InfPolFXZ1 infPolFXZ1List;
 
 
-    @XmlElement(name = "НомерСчФ", required = true)
+    @XmlAttribute(name = "НомерСчФ", required = true)
     @ApiModelProperty(value = "Формат\n" +
             "T(1000) Строка (длина от 1 до 1000 знаков)\n" +
             "Тип элемента\n" +
@@ -51,7 +50,7 @@ public class SvScFact {
         this.numberScF = numberScF;
     }
 
-    @XmlElement(name = "ДатаСчФ", required = true)
+    @XmlAttribute(name = "ДатаСчФ", required = true)
     @ApiModelProperty(value = "Формат\n" +
             "D(10) Дата (фиксированное число знаков 10)\n" +
             "Тип элемента\n" +
@@ -64,7 +63,7 @@ public class SvScFact {
         this.dateScF = dateScF;
     }
 
-    @XmlElement(name = "КодОКВ")
+    @XmlAttribute(name = "КодОКВ")
     @ApiModelProperty(value = "Формат\n" +
             "T(=3) Строка (фиксированное число знаков 3)\n" +
             "Тип элемента\n" +
@@ -83,11 +82,11 @@ public class SvScFact {
             "Тип элемента\n" +
             "Необязательный\n" +
             "Узел")
-    public List<IsprScF> getIsprScFList() {
+    public IsprScF getIsprScFList() {
         return isprScFList;
     }
 
-    public void setIsprScFList(List<IsprScF> isprScFList) {
+    public void setIsprScFList(IsprScF isprScFList) {
         this.isprScFList = isprScFList;
     }
 
@@ -97,11 +96,11 @@ public class SvScFact {
             "Тип элемента\n" +
             "Обязательный\n" +
             "Узел")
-    public List<SvProd> getSvProdList() {
+    public SvProd getSvProdList() {
         return svProdList;
     }
 
-    public void setSvProdList(List<SvProd> svProdList) {
+    public void setSvProdList(SvProd svProdList) {
         this.svProdList = svProdList;
     }
 
@@ -111,11 +110,11 @@ public class SvScFact {
             "Тип элемента\n" +
             "Необязательный\n" +
             "Узел")
-    public List<CargoSender> getCargoSenderList() {
+    public CargoSender getCargoSenderList() {
         return cargoSenderList;
     }
 
-    public void setCargoSenderList(List<CargoSender> cargoSenderList) {
+    public void setCargoSenderList(CargoSender cargoSenderList) {
         this.cargoSenderList = cargoSenderList;
     }
 
@@ -125,11 +124,11 @@ public class SvScFact {
             "Тип элемента\n" +
             "Необязательный\n" +
             "Узел")
-    public List<CargoReceiver> getCargoReceiverList() {
+    public CargoReceiver getCargoReceiverList() {
         return cargoReceiverList;
     }
 
-    public void setCargoReceiverList(List<CargoReceiver> cargoReceiverList) {
+    public void setCargoReceiverList(CargoReceiver cargoReceiverList) {
         this.cargoReceiverList = cargoReceiverList;
     }
 
@@ -139,11 +138,11 @@ public class SvScFact {
             "Тип элемента\n" +
             "Необязательный\n" +
             "Узел")
-    public List<SvPRD> getSvPRDList() {
+    public SvPRD getSvPRDList() {
         return svPRDList;
     }
 
-    public void setSvPRDList(List<SvPRD> svPRDList) {
+    public void setSvPRDList(SvPRD svPRDList) {
         this.svPRDList = svPRDList;
     }
 
@@ -153,11 +152,11 @@ public class SvScFact {
             "Тип элемента\n" +
             "Обязательный\n" +
             "Узел")
-    public List<SvBuyer> getSvBuyerList() {
+    public SvBuyer getSvBuyerList() {
         return svBuyerList;
     }
 
-    public void setSvBuyerList(List<SvBuyer> svBuyerList) {
+    public void setSvBuyerList(SvBuyer svBuyerList) {
         this.svBuyerList = svBuyerList;
     }
 
@@ -167,11 +166,11 @@ public class SvScFact {
             "Тип элемента\n" +
             "Необязательный\n" +
             "Узел")
-    public List<DopSvFXZ1> getDopSvFXZ1List() {
+    public DopSvFXZ1 getDopSvFXZ1List() {
         return dopSvFXZ1List;
     }
 
-    public void setDopSvFXZ1List(List<DopSvFXZ1> dopSvFXZ1List) {
+    public void setDopSvFXZ1List(DopSvFXZ1 dopSvFXZ1List) {
         this.dopSvFXZ1List = dopSvFXZ1List;
     }
 
@@ -182,11 +181,11 @@ public class SvScFact {
             "Тип элемента\n" +
             "Необязательный\n" +
             "Узел")
-    public List<DocumentConfirmShipment> getDocumentConfirmShipmentList() {
+    public DocumentConfirmShipment getDocumentConfirmShipmentList() {
         return documentConfirmShipmentList;
     }
 
-    public void setDocumentConfirmShipmentList(List<DocumentConfirmShipment> documentConfirmShipmentList) {
+    public void setDocumentConfirmShipmentList(DocumentConfirmShipment documentConfirmShipmentList) {
         this.documentConfirmShipmentList = documentConfirmShipmentList;
     }
 
@@ -196,11 +195,11 @@ public class SvScFact {
             "Тип элемента\n" +
             "Необязательный\n" +
             "Узел")
-    public List<InfPolFXZ1> getInfPolFXZ1List() {
+    public InfPolFXZ1 getInfPolFXZ1List() {
         return infPolFXZ1List;
     }
 
-    public void setInfPolFXZ1List(List<InfPolFXZ1> infPolFXZ1List) {
+    public void setInfPolFXZ1List(InfPolFXZ1 infPolFXZ1List) {
         this.infPolFXZ1List = infPolFXZ1List;
     }
 }

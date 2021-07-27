@@ -3,6 +3,7 @@ package XmlStruct;
 import io.swagger.annotations.ApiModelProperty;
 
 
+import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import java.util.List;
 
@@ -13,9 +14,9 @@ public class FlPer {
 
     private String osnDoverFl;
 
-    private List<FIO> fioList;
+    private FIO fioList;
 
-    @XmlElement(name = "ИныеСвед")
+    @XmlAttribute(name = "ИныеСвед")
     @ApiModelProperty(value = "Формат\n" +
             "T(255) Строка (длина от 1 до 255 знаков)\n" +
             "Тип элемента\n" +
@@ -28,7 +29,7 @@ public class FlPer {
         this.overSved = overSved;
     }
 
-    @XmlElement(name = "ОснДоверФЛ")
+    @XmlAttribute(name = "ОснДоверФЛ")
     @ApiModelProperty(value = "Формат\n" +
             "T(120) Строка (длина от 1 до 120 знаков)\n" +
             "Тип элемента\n" +
@@ -47,11 +48,11 @@ public class FlPer {
             "Тип элемента\n" +
             "Обязательный\n" +
             "Узел")
-    public List<FIO> getFioList() {
+    public FIO getFioList() {
         return fioList;
     }
 
-    public void setFioList(List<FIO> fioList) {
+    public void setFioList(FIO fioList) {
         this.fioList = fioList;
     }
 }

@@ -4,6 +4,7 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 
 
+import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import java.util.List;
 
@@ -23,7 +24,7 @@ public class SvUcDocObor {
 
     private SvOEDDispatch svOEDDispatchList;
 
-    @XmlElement(name = "ИдОтпр")
+    @XmlAttribute(name = "ИдОтпр",required = true)
     @ApiModelProperty(value = "Формат\n" +
             "T(46) Строка (длина от 4 до 46 знаков)\n" +
             "Тип элемента\n" +
@@ -35,7 +36,7 @@ public class SvUcDocObor {
     public void setIdDispatch(String idDispatch) {
         this.idDispatch = idDispatch;
     }
-    @XmlElement(name = "ИдПол")
+    @XmlAttribute(name = "ИдПол",required = true)
     @ApiModelProperty(value = "Формат\n" +
             "T(46) Строка (длина от 4 до 46 знаков)\n" +
             "Тип элемента\n" +

@@ -20,7 +20,7 @@ public class XsdToXmlApp {
                 JAXBContext jaxbContext = JAXBContext.newInstance(File.class);
                 Marshaller marshaller = jaxbContext.createMarshaller();
                 marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
-                marshaller.setProperty(Marshaller.JAXB_ENCODING, "windows-1251");
+                marshaller.setProperty(Marshaller.JAXB_ENCODING, "Windows-1251");
                 marshaller.marshal(xmlCreator.xmlCreator(), new FileOutputStream("javatoxml.xml"));
             } catch (JAXBException e) {
                 e.printStackTrace();

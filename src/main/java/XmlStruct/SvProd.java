@@ -3,6 +3,7 @@ package XmlStruct;
 import io.swagger.annotations.ApiModelProperty;
 
 
+import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import java.util.List;
 
@@ -20,15 +21,15 @@ public class SvProd {
 
     private String shortName;
 
-    private List<IdSv> idSvList;
+    private IdSv idSvList;
 
-    private List<Address> adressList;
+    private Address adressList;
 
-    private List<Contact> contactList;
+    private Contact contactList;
 
-    private List<BankReq> bankReqList;
+    private BankReq bankReqList;
 
-    @XmlElement(name = "ОКПО")
+    @XmlAttribute(name = "ОКПО")
     @ApiModelProperty(value = "Формат\n" +
             "T(10) Строка (длина от 1 до 10 знаков)\n" +
             "Тип элемента\n" +
@@ -41,7 +42,7 @@ public class SvProd {
         this.okpo = okpo;
     }
 
-    @XmlElement(name = "СтруктПодр")
+    @XmlAttribute(name = "СтруктПодр")
     @ApiModelProperty(value = "Формат\n" +
             "T(1000) Строка (длина от 1 до 1000 знаков)\n" +
             "Тип элемента\n" +
@@ -54,7 +55,7 @@ public class SvProd {
         this.structuralSubdivision = structuralSubdivision;
     }
 
-    @XmlElement(name = "ИнфДляУчаст")
+    @XmlAttribute(name = "ИнфДляУчаст")
     @ApiModelProperty(value = "Формат\n" +
             "T(255) Строка (длина от 1 до 255 знаков)\n" +
             "Тип элемента\n" +
@@ -67,7 +68,7 @@ public class SvProd {
         this.infForParticipant = infForParticipant;
     }
 
-    @XmlElement(name = "КраткНазв")
+    @XmlAttribute(name = "КраткНазв")
     @ApiModelProperty(value = "Формат\n" +
             "T(255) Строка (длина от 1 до 255 знаков)\n" +
             "Тип элемента\n" +
@@ -85,11 +86,11 @@ public class SvProd {
             "Тип элемента\n" +
             "Обязательный\n" +
             "Узел")
-    public List<IdSv> getIdSvList() {
+    public IdSv getIdSvList() {
         return idSvList;
     }
 
-    public void setIdSvList(List<IdSv> idSvList) {
+    public void setIdSvList(IdSv idSvList) {
         this.idSvList = idSvList;
     }
 
@@ -99,11 +100,11 @@ public class SvProd {
             "Тип элемента\n" +
             "Необязательный\n" +
             "Узел")
-    public List<Address> getAdressList() {
+    public Address getAdressList() {
         return adressList;
     }
 
-    public void setAdressList(List<Address> adressList) {
+    public void setAdressList(Address adressList) {
         this.adressList = adressList;
     }
 
@@ -113,11 +114,11 @@ public class SvProd {
             "Тип элемента\n" +
             "Необязательный\n" +
             "Узел")
-    public List<Contact> getContactList() {
+    public Contact getContactList() {
         return contactList;
     }
 
-    public void setContactList(List<Contact> contactList) {
+    public void setContactList(Contact contactList) {
         this.contactList = contactList;
     }
 
@@ -127,11 +128,11 @@ public class SvProd {
             "Тип элемента\n" +
             "Необязательный\n" +
             "Узел")
-    public List<BankReq> getBankReqList() {
+    public BankReq getBankReqList() {
         return bankReqList;
     }
 
-    public void setBankReqList(List<BankReq> bankReqList) {
+    public void setBankReqList(BankReq bankReqList) {
         this.bankReqList = bankReqList;
     }
 }

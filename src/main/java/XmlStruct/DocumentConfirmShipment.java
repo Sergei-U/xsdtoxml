@@ -3,6 +3,7 @@ package XmlStruct;
 import io.swagger.annotations.ApiModelProperty;
 
 
+import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import java.util.Date;
 
@@ -18,7 +19,7 @@ public class DocumentConfirmShipment {
 
     private Date dateDocumentShipment;
 
-    @XmlElement(name = "НаимДокОтгр",required = true)
+    @XmlAttribute(name = "НаимДокОтгр",required = true)
     @ApiModelProperty(value = "Формат\n" +
             "T(255) Строка (длина от 1 до 255 знаков)\n" +
             "Тип элемента\n" +
@@ -31,7 +32,7 @@ public class DocumentConfirmShipment {
         this.nameDocumentShipment = nameDocumentShipment;
     }
 
-    @XmlElement(name = "НомДокОтгр",required = true)
+    @XmlAttribute(name = "НомДокОтгр",required = true)
     @ApiModelProperty(value = "Формат\n" +
             "T(255) Строка (длина от 1 до 255 знаков)\n" +
             "Тип элемента\n" +
@@ -44,7 +45,7 @@ public class DocumentConfirmShipment {
         this.numberDocumentShipment = numberDocumentShipment;
     }
 
-    @XmlElement(name = "ДатаДокОтгр")
+    @XmlAttribute(name = "ДатаДокОтгр")
     @ApiModelProperty(value = "Формат\n" +
             "D(10) Дата (фиксированное число знаков 10)\n" +
             "Тип элемента\n" +

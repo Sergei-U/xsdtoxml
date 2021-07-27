@@ -9,9 +9,9 @@ import java.util.List;
 
 public class InLico {
 
-    private List<PredOrgPer> predOrgPerList;
+    private PredOrgPer predOrgPerList;
 
-    private List<FlPer> flPerList;
+    private FlPer flPerList;
 
     @XmlElement(name = "ПредОргПер",required = true)
     @ApiModelProperty(value = "Формат\n" +
@@ -19,11 +19,11 @@ public class InLico {
             "Тип элемента\n" +
             "Обязательный\n" +
             "Узел")
-    public List<PredOrgPer> getPredOrgPerList() {
+    public PredOrgPer getPredOrgPerList() {
         return predOrgPerList;
     }
 
-    public void setPredOrgPerList(List<PredOrgPer> predOrgPerList) {
+    public void setPredOrgPerList(PredOrgPer predOrgPerList) {
         this.predOrgPerList = predOrgPerList;
     }
 
@@ -33,11 +33,11 @@ public class InLico {
             "Тип элемента\n" +
             "Обязательный\n" +
             "Узел")
-    public List<FlPer> getFlPerList() {
+    public FlPer getFlPerList() {
         return flPerList;
     }
 
-    public void setFlPerList(List<FlPer> flPerList) {
+    public void setFlPerList(FlPer flPerList) {
         this.flPerList = flPerList;
     }
 }

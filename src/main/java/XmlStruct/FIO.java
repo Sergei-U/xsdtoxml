@@ -2,8 +2,7 @@ package XmlStruct;
 
 import io.swagger.annotations.ApiModelProperty;
 
-
-import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlAttribute;
 
 /**
  *
@@ -17,7 +16,7 @@ public class FIO {
 
     private String thirdName;
 
-    @XmlElement(name = "Имя",required = true)
+    @XmlAttribute(name = "Имя",required = true)
     @ApiModelProperty(value = "Формат\n" +
             "T(60) Строка (длина от 1 до 60 знаков)\n" +
             "Тип элемента\n" +
@@ -30,7 +29,7 @@ public class FIO {
         this.firstName = firstName;
     }
 
-    @XmlElement(name = "Фамилия",required = true)
+    @XmlAttribute(name = "Фамилия",required = true)
     @ApiModelProperty(value = "Формат\n" +
             "T(60) Строка (длина от 1 до 60 знаков)\n" +
             "Тип элемента\n" +
@@ -43,7 +42,7 @@ public class FIO {
         this.lastName = lastName;
     }
 
-    @XmlElement(name = "Отчество")
+    @XmlAttribute(name = "Отчество")
     @ApiModelProperty(value = "Формат\n" +
             "T(60) Строка (длина от 1 до 60 знаков)\n" +
             "Тип элемента\n" +

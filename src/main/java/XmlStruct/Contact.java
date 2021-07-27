@@ -2,8 +2,7 @@ package XmlStruct;
 
 import io.swagger.annotations.ApiModelProperty;
 
-
-import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlAttribute;
 
 /**
  *
@@ -15,7 +14,7 @@ public class Contact {
 
     private String email;
 
-    @XmlElement(name = "Тлф")
+    @XmlAttribute(name = "Тлф")
     @ApiModelProperty(value = "Формат\n" +
             "T(255) Строка (длина от 1 до 255 знаков)\n" +
             "Тип элемента\n" +
@@ -28,7 +27,7 @@ public class Contact {
         this.tel = tel;
     }
 
-    @XmlElement(name = "ЭлПочта")
+    @XmlAttribute(name = "ЭлПочта")
     @ApiModelProperty(value = "Формат\n" +
             "T(255) Строка (длина от 1 до 255 знаков)\n" +
             "Тип элемента\n" +

@@ -3,6 +3,7 @@ package XmlStruct;
 import io.swagger.annotations.ApiModelProperty;
 
 
+import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import java.math.BigDecimal;
 import java.util.List;
@@ -45,7 +46,7 @@ public class DopSvedTov {
 
     private List<NomSredIndentTov> nomSredIndentTovList;
 
-    @XmlElement(name = "ДопПризн")
+    @XmlAttribute(name = "ДопПризн")
     @ApiModelProperty(value = "Формат\n" +
             "T(4) Строка (длина от 1 до 4 знаков)\n" +
             "Тип элемента\n" +
@@ -58,7 +59,7 @@ public class DopSvedTov {
         this.dopPrizn = dopPrizn;
     }
 
-    @XmlElement(name = "НаимЕдИзм")
+    @XmlAttribute(name = "НаимЕдИзм")
     @ApiModelProperty(value = "Формат\n" +
             "T(255) Строка (длина от 1 до 255 знаков)\n" +
             "Тип элемента\n" +
@@ -71,7 +72,7 @@ public class DopSvedTov {
         this.nameEdIzm = nameEdIzm;
     }
 
-    @XmlElement(name = "КрНаимСтрПр")
+    @XmlAttribute(name = "КрНаимСтрПр")
     @ApiModelProperty(value = "Формат\n" +
             "T(255) Строка (длина от 1 до 255 знаков)\n" +
             "Тип элемента\n" +
@@ -84,7 +85,7 @@ public class DopSvedTov {
         this.krNameStrPr = krNameStrPr;
     }
 
-    @XmlElement(name = "НадлОтп")
+    @XmlAttribute(name = "НадлОтп")
     @ApiModelProperty(value = "Формат\n" +
             "N(26.11) Вещественное (максимальное число знаков 26, в том числе десятичных 11)\n" +
             "Тип элемента\n" +
@@ -97,7 +98,7 @@ public class DopSvedTov {
         this.nadlOtp = nadlOtp;
     }
 
-    @XmlElement(name = "ХарактерТов")
+    @XmlAttribute(name = "ХарактерТов")
     @ApiModelProperty(value = "Формат\n" +
             "T(1000) Строка (длина от 1 до 1000 знаков)\n" +
             "Тип элемента\n" +
