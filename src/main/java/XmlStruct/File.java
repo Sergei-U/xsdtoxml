@@ -30,9 +30,9 @@ public class File implements Serializable {
 
     private String verProgram;
 
-    private List<SvUcDocObor> svUcDocOborList;
+    private SvUcDocObor svUcDocObor;
 
-    private List<Document> documentList;
+    private Document document;
 
 
     @XmlElement(name = "ИдФайл", required = true)
@@ -71,21 +71,21 @@ public class File implements Serializable {
     }
 
     @XmlElement(name = "СвУчДокОбор")
-    public List<SvUcDocObor> getSvUcDocOborList() {
-        return svUcDocOborList;
+    public SvUcDocObor getSvUcDocObor() {
+        return svUcDocObor;
     }
 
-    public void setSvUcDocOborList(List<SvUcDocObor> svUcDocOborList) {
-        this.svUcDocOborList = svUcDocOborList;
+    public void setSvUcDocObor(SvUcDocObor svUcDocObor) {
+        this.svUcDocObor = svUcDocObor;
     }
 
     @XmlElement(name = "Документ")
-    public List<Document> getDocumentList() {
-        return documentList;
+    public Document getDocument() {
+        return document;
     }
 
-    public void setDocumentList(List<Document> documentList) {
-        this.documentList = documentList;
+    public void setDocument(Document document) {
+        this.document = document;
     }
 }
 //@XmlType(name = "", propOrder = {"СвУчДокОбор", "Документ"})

@@ -1,6 +1,7 @@
 package XmlStruct;
 
 import io.swagger.annotations.ApiModelProperty;
+import lombok.AllArgsConstructor;
 
 
 import javax.xml.bind.annotation.XmlElement;
@@ -8,7 +9,7 @@ import javax.xml.bind.annotation.XmlElement;
 /**
  *
  */
-
+@AllArgsConstructor
 public class SvOEDDispatch {
 
 

@@ -21,7 +21,7 @@ public class SvUcDocObor {
     private String idReception;
 
 
-    private List<SvOEDDispatch> svOEDDispatchList;
+    private SvOEDDispatch svOEDDispatchList;
 
     @XmlElement(name = "ИдОтпр")
     @ApiModelProperty(value = "Формат\n" +
@@ -48,11 +48,11 @@ public class SvUcDocObor {
         this.idReception = idReception;
     }
     @XmlElement(name = "СвОЭДОтпр")
-    public List<SvOEDDispatch> getSvOEDDispatchList() {
+    public SvOEDDispatch getSvOEDDispatchList() {
         return svOEDDispatchList;
     }
 
-    public void setSvOEDDispatchList(List<SvOEDDispatch> svOEDDispatchList) {
+    public void setSvOEDDispatchList(SvOEDDispatch svOEDDispatchList) {
         this.svOEDDispatchList = svOEDDispatchList;
     }
 }

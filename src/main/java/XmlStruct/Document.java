@@ -2,12 +2,10 @@ package XmlStruct;
 
 import io.swagger.annotations.ApiModelProperty;
 
-
 import javax.xml.bind.annotation.XmlElement;
-import java.io.Serializable;
 import java.time.LocalDate;
-import java.util.Date;
-import java.util.List;
+
+;
 
 /**
  *
@@ -34,13 +32,13 @@ public class Document  {
 
     private String soglStrDopInf;
 
-    private List<SvScFact> svScFactList;
+    private SvScFact svScFact;
 
-    private List<TableScFact> tableScFactList;
+    private TableScFact tableScFact;
 
-    private List<SvProdPer> svProdPerList;
+    private SvProdPer svProdPer;
 
-    private List<Podpisant> podpisantList;
+    private Podpisant podpisant;
 
     @XmlElement(name = "КНД", required = true,defaultValue = "1115131")
     @ApiModelProperty(value = "Формат\n" +
@@ -168,12 +166,12 @@ public class Document  {
             "Тип элемента\n" +
             "Обязательный\n" +
             "Узел")
-    public List<SvScFact> getSvScFactList() {
-        return svScFactList;
+    public SvScFact getSvScFact() {
+        return svScFact;
     }
 
-    public void setSvScFactList(List<SvScFact> svScFactList) {
-        this.svScFactList = svScFactList;
+    public void setSvScFact(SvScFact svScFact) {
+        this.svScFact = svScFact;
     }
 
     @XmlElement(name = "ТаблСчФакт")
@@ -182,12 +180,12 @@ public class Document  {
             "Тип элемента\n" +
             "Условно-Обязательный\n" +
             "Узел")
-    public List<TableScFact> getTableScFactList() {
-        return tableScFactList;
+    public TableScFact getTableScFact() {
+        return tableScFact;
     }
 
-    public void setTableScFactList(List<TableScFact> tableScFactList) {
-        this.tableScFactList = tableScFactList;
+    public void setTableScFact(TableScFact tableScFact) {
+        this.tableScFact = tableScFact;
     }
 
     @XmlElement(name = "СвПродПер")
@@ -196,12 +194,12 @@ public class Document  {
             "Тип элемента\n" +
             "Условно-Обязательный\n" +
             "Узел")
-    public List<SvProdPer> getSvProdPerList() {
-        return svProdPerList;
+    public SvProdPer getSvProdPer() {
+        return svProdPer;
     }
 
-    public void setSvProdPerList(List<SvProdPer> svProdPerList) {
-        this.svProdPerList = svProdPerList;
+    public void setSvProdPer(SvProdPer svProdPer) {
+        this.svProdPer = svProdPer;
     }
 
     @XmlElement(name = "Подписант",required = true)
@@ -210,11 +208,11 @@ public class Document  {
             "Тип элемента\n" +
             "Обязательный\n" +
             "Узел")
-    public List<Podpisant> getPodpisantList() {
-        return podpisantList;
+    public Podpisant getPodpisant() {
+        return podpisant;
     }
 
-    public void setPodpisantList(List<Podpisant> podpisantList) {
-        this.podpisantList = podpisantList;
+    public void setPodpisant(Podpisant podpisant) {
+        this.podpisant = podpisant;
     }
 }
