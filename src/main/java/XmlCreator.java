@@ -1,6 +1,7 @@
 import XmlStruct.*;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 public class XmlCreator {
     public File xmlCreator() {
@@ -20,7 +21,7 @@ public class XmlCreator {
         documentFirst.setKnd("1115131");
         documentFirst.setFunc("СЧФ");
         documentFirst.setDateInfPr(LocalDate.now());
-        documentFirst.setTimeInfPr(LocalDate.now());
+        documentFirst.setTimeInfPr(LocalDateTime.now());
         documentFirst.setNameEconSubCondition("какое то НаимЭконСубСост");
         documentFirst.setPoFactHZ("по факт ХЖ");
         documentFirst.setNameDocReq("накладная");

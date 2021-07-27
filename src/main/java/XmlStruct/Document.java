@@ -4,8 +4,10 @@ import io.swagger.annotations.ApiModelProperty;
 
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 
 public class Document {
@@ -20,7 +22,7 @@ public class Document {
 
     private LocalDate dateInfPr;
 
-    private LocalDate timeInfPr;
+    private LocalDateTime timeInfPr;
 
     private String nameEconSubCondition;
 
@@ -92,8 +94,9 @@ public class Document {
         this.nameDocReq = nameDocReq;
     }
 
-    @XmlElement(name = "ДатаИнфПр", required = true)
+    @XmlAttribute(name = "ДатаИнфПр", required = true)
     @XmlJavaTypeAdapter(DateAdapter.class)
+    @XmlSchemaType(name = "datetime")
     @ApiModelProperty(value = "Формат\n" +
             "D(10) Дата (фиксированное число знаков 10)\n" +
             "Тип элемента\n" +
@@ -106,17 +109,18 @@ public class Document {
         this.dateInfPr = dateInfPr;
     }
 
-    @XmlElement(name = "ВремИнфПр", required = true)
+    @XmlAttribute(name = "ВремИнфПр", required = true)
     @XmlJavaTypeAdapter(TimeAdapter.class)
+    @XmlSchemaType(name = "datetime")
     @ApiModelProperty(value = "Формат\n" +
             "D(8) Время (фиксированное число знаков 8)\n" +
             "Тип элемента\n" +
             "Обязательный")
-    public LocalDate getTimeInfPr() {
+    public LocalDateTime getTimeInfPr() {
         return timeInfPr;
     }
 
-    public void setTimeInfPr(LocalDate timeInfPr) {
+    public void setTimeInfPr(LocalDateTime timeInfPr) {
         this.timeInfPr = timeInfPr;
     }
 

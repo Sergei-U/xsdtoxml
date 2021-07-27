@@ -3,6 +3,8 @@ package XmlStruct;
 import io.swagger.annotations.ApiModelProperty;
 
 import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.time.LocalDate;
 
 /**
@@ -44,6 +46,8 @@ public class DocumentConfirmShipment {
     }
 
     @XmlAttribute(name = "ДатаДокОтгр")
+    @XmlJavaTypeAdapter(DateAdapter.class)
+    @XmlSchemaType(name = "datetime")
     @ApiModelProperty(value = "Формат\n" +
             "D(10) Дата (фиксированное число знаков 10)\n" +
             "Тип элемента\n" +

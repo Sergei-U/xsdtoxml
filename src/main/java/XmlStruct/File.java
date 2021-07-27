@@ -21,7 +21,7 @@ class ObjectFactory {
 
 @XmlRootElement(name = "Файл")
 @XmlAccessorType(XmlAccessType.NONE)
-@XmlType(name = "")
+@XmlType(name = "File")
 public class File implements Serializable {
 
     UUID uuid = UUID.randomUUID();

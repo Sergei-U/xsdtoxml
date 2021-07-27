@@ -2,20 +2,21 @@ package XmlStruct;
 
 import javax.xml.bind.annotation.adapters.XmlAdapter;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-public class TimeAdapter extends XmlAdapter<String, LocalDate> {
+public class TimeAdapter extends XmlAdapter<String, LocalDateTime> {
 
 
-    private static final DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("HH.mm.ss");
+    private static final DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("HH.mm.ss"); //dd.MM.yyyy
 
     @Override
-    public LocalDate unmarshal(String date) throws Exception {
-        return (LocalDate) dateTimeFormatter.parse(date);
+    public LocalDateTime unmarshal(String date) throws Exception {
+        return LocalDateTime.from(LocalDate.from(dateTimeFormatter.parse(date)));
     }
 
     @Override
-    public String marshal(LocalDate s) throws Exception {
+    public String marshal(LocalDateTime s) throws Exception {
         return dateTimeFormatter.format(s);
 
     }
