@@ -2,15 +2,14 @@ package XmlStruct;
 
 import io.swagger.annotations.ApiModelProperty;
 
-
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
-import java.util.Date;
+import java.time.LocalDate;
 
 
 public class SvPerVech {
 
-    private Date datePerVech;
+    private LocalDate datePerVech;
 
     private String svPerVech;
 
@@ -20,11 +19,11 @@ public class SvPerVech {
             "D(10) Дата (фиксированное число знаков 10)\n" +
             "Тип элемента\n" +
             "Необязательный")
-    public Date getDatePerVech() {
+    public LocalDate getDatePerVech() {
         return datePerVech;
     }
 
-    public void setDatePerVech(Date datePerVech) {
+    public void setDatePerVech(LocalDate datePerVech) {
         this.datePerVech = datePerVech;
     }
 

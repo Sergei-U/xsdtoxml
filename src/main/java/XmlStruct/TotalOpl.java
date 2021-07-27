@@ -2,7 +2,6 @@ package XmlStruct;
 
 import io.swagger.annotations.ApiModelProperty;
 
-
 import javax.xml.bind.annotation.XmlElement;
 import java.math.BigDecimal;
 import java.util.List;
@@ -36,7 +35,7 @@ public class TotalOpl {
         this.stProdNoNDSAll = stProdNoNDSAll;
     }
 
-    @XmlElement(name = "СтТовУчНалВсего",required = true)
+    @XmlElement(name = "СтТовУчНалВсего", required = true)
     @ApiModelProperty(value = "Формат\n" +
             "N(19.2) Вещественное (максимальное число знаков 19, в том числе десятичных 2)\n" +
             "Тип элемента\n" +
@@ -50,7 +49,7 @@ public class TotalOpl {
         this.stProdUcNalAll = stProdUcNalAll;
     }
 
-    @XmlElement(name = "ДефСтТовУчНалВсего",required = true,defaultValue = "-")
+    @XmlElement(name = "ДефСтТовУчНалВсего", required = true, defaultValue = "-")
     @ApiModelProperty(value = "Формат\n" +
             "T(=1) Строка (фиксированное число знаков 1)\n" +
             "Тип элемента\n" +

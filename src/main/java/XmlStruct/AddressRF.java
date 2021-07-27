@@ -41,7 +41,7 @@ public class AddressRF {
         this.index = index;
     }
 
-    @XmlAttribute(name = "КодРегион",required = true)
+    @XmlAttribute(name = "КодРегион", required = true)
     @ApiModelProperty(value = "Формат\n" +
             "T(=2) Строка (фиксированное число знаков 2)\n" +
             "Тип элемента\n" +

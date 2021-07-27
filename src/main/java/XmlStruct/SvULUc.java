@@ -21,7 +21,7 @@ public class SvULUc {
     private String defKpp;
 
 
-    @XmlAttribute(name = "НаимОрг",required = true)
+    @XmlAttribute(name = "НаимОрг", required = true)
     @ApiModelProperty(value = "Формат\n" +
             "T(1000) Строка (длина от 1 до 1000 знаков)\n" +
             "Тип элемента\n" +
@@ -34,7 +34,7 @@ public class SvULUc {
         this.nameOrg = nameOrg;
     }
 
-    @XmlAttribute(name = "ИННЮЛ",required = true)
+    @XmlAttribute(name = "ИННЮЛ", required = true)
     @ApiModelProperty(value = "Формат\n" +
             "T(=10) Строка (фиксированное число знаков 10)\n" +
             "Тип элемента\n" +
@@ -47,7 +47,7 @@ public class SvULUc {
         this.innUL = innUL;
     }
 
-    @XmlAttribute(name = "ДефИННЮЛ",required = true)
+    @XmlAttribute(name = "ДефИННЮЛ", required = true)
     @ApiModelProperty(value = "Формат\n" +
             "T(=1) Строка (фиксированное число знаков 1)\n" +
             "Тип элемента\n" +

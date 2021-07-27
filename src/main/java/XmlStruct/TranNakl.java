@@ -2,19 +2,18 @@ package XmlStruct;
 
 import io.swagger.annotations.ApiModelProperty;
 
-
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
-import java.util.Date;
+import java.time.LocalDate;
 
 
 public class TranNakl {
 
     private String nomTranNakl;
 
-    private Date dateTranNakl;
+    private LocalDate dateTranNakl;
 
-    @XmlElement(name = "НомТранНакл",required = true)
+    @XmlElement(name = "НомТранНакл", required = true)
     @ApiModelProperty(value = "Формат\n" +
             "T(255) Строка (длина от 1 до 255 знаков)\n" +
             "Тип элемента\n" +
@@ -27,17 +26,17 @@ public class TranNakl {
         this.nomTranNakl = nomTranNakl;
     }
 
-    @XmlElement(name = "ДатаТранНакл",required = true)
+    @XmlElement(name = "ДатаТранНакл", required = true)
     @XmlJavaTypeAdapter(DateAdapter.class)
     @ApiModelProperty(value = "Формат\n" +
             "D(10) Дата (фиксированное число знаков 10)\n" +
             "Тип элемента\n" +
             "Обязательный")
-    public Date getDateTranNakl() {
+    public LocalDate getDateTranNakl() {
         return dateTranNakl;
     }
 
-    public void setDateTranNakl(Date dateTranNakl) {
+    public void setDateTranNakl(LocalDate dateTranNakl) {
         this.dateTranNakl = dateTranNakl;
     }
 }

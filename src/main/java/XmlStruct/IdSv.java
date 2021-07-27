@@ -18,7 +18,7 @@ public class IdSv {
 
     private SvFLUcastFXZ svFLUcastFXZList;
 
-    @XmlElement(name = "СвИП",required = true)
+    @XmlElement(name = "СвИП", required = true)
     @ApiModelProperty(value = "Формат\n" +
             "Строка\n" +
             "Тип элемента\n" +
@@ -46,7 +46,7 @@ public class IdSv {
         this.svULUcList = svULUcList;
     }
 
-    @XmlElement(name = "СвИнНеУч",required = true)
+    @XmlElement(name = "СвИнНеУч", required = true)
     @ApiModelProperty(value = "Формат\n" +
             "Строка\n" +
             "Тип элемента\n" +
@@ -60,7 +60,7 @@ public class IdSv {
         this.svInNeUcList = svInNeUcList;
     }
 
-    @XmlElement(name = "СвФЛУчастФХЖ",required = true)
+    @XmlElement(name = "СвФЛУчастФХЖ", required = true)
     @ApiModelProperty(value = "Формат\n" +
             "Строка\n" +
             "Тип элемента\n" +

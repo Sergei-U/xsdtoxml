@@ -2,7 +2,6 @@ package XmlStruct;
 
 import io.swagger.annotations.ApiModelProperty;
 
-
 import javax.xml.bind.annotation.XmlElement;
 
 /**
@@ -31,7 +30,7 @@ public class SvTD {
         this.codeOrigin = codeOrigin;
     }
 
-    @XmlElement(name = "ДефКодПроисх",defaultValue = "-")
+    @XmlElement(name = "ДефКодПроисх", defaultValue = "-")
     @ApiModelProperty(value = "Формат\n" +
             "T(=1) Строка (фиксированное число знаков 1)\n" +
             "Тип элемента\n" +

@@ -2,7 +2,6 @@ package XmlStruct;
 
 import io.swagger.annotations.ApiModelProperty;
 
-
 import javax.xml.bind.annotation.XmlElement;
 import java.util.List;
 
@@ -16,7 +15,7 @@ public class SvProdPer {
 
     private List<InfPolFXZ3> infPolFXZ3List;
 
-    @XmlElement(name ="СвПер",required = true)
+    @XmlElement(name = "СвПер", required = true)
     @ApiModelProperty(value = "Формат\n" +
             "Строка\n" +
             "Тип элемента\n" +

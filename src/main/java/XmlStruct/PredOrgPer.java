@@ -2,7 +2,6 @@ package XmlStruct;
 
 import io.swagger.annotations.ApiModelProperty;
 
-
 import javax.xml.bind.annotation.XmlElement;
 import java.util.List;
 
@@ -21,7 +20,7 @@ public class PredOrgPer {
 
     private List<FIO> fioList;
 
-    @XmlElement(name = "Должность",required = true)
+    @XmlElement(name = "Должность", required = true)
     @ApiModelProperty(value = "Формат\n" +
             "T(128) Строка (длина от 1 до 128 знаков)\n" +
             "Тип элемента\n" +
@@ -47,7 +46,7 @@ public class PredOrgPer {
         this.overSved = overSved;
     }
 
-    @XmlElement(name = "НаимОргПер",required = true)
+    @XmlElement(name = "НаимОргПер", required = true)
     @ApiModelProperty(value = "Формат\n" +
             "T(128) Строка (длина от 1 до 128 знаков)\n" +
             "Тип элемента\n" +
@@ -85,7 +84,8 @@ public class PredOrgPer {
     public void setOsnPolnPredPer(String osnPolnPredPer) {
         this.osnPolnPredPer = osnPolnPredPer;
     }
-    @XmlElement(name = "ФИО",required = true)
+
+    @XmlElement(name = "ФИО", required = true)
     @ApiModelProperty(value = "Формат\n" +
             "Строка\n" +
             "Тип элемента\n" +

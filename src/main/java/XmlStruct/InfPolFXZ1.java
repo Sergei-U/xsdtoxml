@@ -2,7 +2,6 @@ package XmlStruct;
 
 import io.swagger.annotations.ApiModelProperty;
 
-
 import javax.xml.bind.annotation.XmlElement;
 import java.util.List;
 
@@ -20,7 +19,8 @@ public class InfPolFXZ1 {
     @ApiModelProperty(value = "Формат\n" +
             "T(=36) Строка (фиксированное число знаков 36)\n" +
             "Тип элемента\n" +
-            "Необязательный")    public String getIdFileInfPol() {
+            "Необязательный")
+    public String getIdFileInfPol() {
         return idFileInfPol;
     }
 

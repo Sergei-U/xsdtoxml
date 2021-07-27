@@ -2,7 +2,6 @@ package XmlStruct;
 
 import io.swagger.annotations.ApiModelProperty;
 
-
 import javax.xml.bind.annotation.XmlElement;
 import java.math.BigDecimal;
 
@@ -48,7 +47,7 @@ public class SummNalAll {
         this.nonNDS = nonNDS;
     }
 
-    @XmlElement(name = "ДефНДС",defaultValue = "-")
+    @XmlElement(name = "ДефНДС", defaultValue = "-")
     @ApiModelProperty(value = "Формат\n" +
             "Строка (фиксированное число знаков 1)\n" +
             "Тип элемента\n" +

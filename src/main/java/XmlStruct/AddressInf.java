@@ -14,7 +14,7 @@ public class AddressInf {
 
     private String addressText;
 
-    @XmlAttribute(name = "КодСтр",required = true)
+    @XmlAttribute(name = "КодСтр", required = true)
     @ApiModelProperty(value = "Формат\n" +
             "T(=3) Строка (фиксированное число знаков 3)\n" +
             "Тип элемента\n" +

@@ -16,7 +16,7 @@ public class FIO {
 
     private String thirdName;
 
-    @XmlAttribute(name = "Имя",required = true)
+    @XmlAttribute(name = "Имя", required = true)
     @ApiModelProperty(value = "Формат\n" +
             "T(60) Строка (длина от 1 до 60 знаков)\n" +
             "Тип элемента\n" +
@@ -29,7 +29,7 @@ public class FIO {
         this.firstName = firstName;
     }
 
-    @XmlAttribute(name = "Фамилия",required = true)
+    @XmlAttribute(name = "Фамилия", required = true)
     @ApiModelProperty(value = "Формат\n" +
             "T(60) Строка (длина от 1 до 60 знаков)\n" +
             "Тип элемента\n" +

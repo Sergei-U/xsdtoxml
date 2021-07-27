@@ -2,10 +2,9 @@ package XmlStruct;
 
 import io.swagger.annotations.ApiModelProperty;
 
-
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.List;
 
 
@@ -15,11 +14,11 @@ public class SvPer {
 
     private String vidOper;
 
-    private Date datePer;
+    private LocalDate datePer;
 
-    private Date dateStart;
+    private LocalDate dateStart;
 
-    private Date dateEnd;
+    private LocalDate dateEnd;
 
     private List<OsnPer> osnPerList;
 
@@ -30,7 +29,7 @@ public class SvPer {
     private List<SvPerVech> svPerVechList;
 
 
-    @XmlElement(name = "СодОпер",required = true)
+    @XmlElement(name = "СодОпер", required = true)
     @ApiModelProperty(value = "Формат\n" +
             "T(255) Строка (длина от 1 до 255 знаков)\n" +
             "Тип элемента\n" +
@@ -62,11 +61,11 @@ public class SvPer {
             "D(10) Дата (фиксированное число знаков 10)\n" +
             "Тип элемента\n" +
             "Необязательный")
-    public Date getDatePer() {
+    public LocalDate getDatePer() {
         return datePer;
     }
 
-    public void setDatePer(Date datePer) {
+    public void setDatePer(LocalDate datePer) {
         this.datePer = datePer;
     }
 
@@ -76,11 +75,11 @@ public class SvPer {
             "D(10) Дата (фиксированное число знаков 10)\n" +
             "Тип элемента\n" +
             "Необязательный")
-    public Date getDateStart() {
+    public LocalDate getDateStart() {
         return dateStart;
     }
 
-    public void setDateStart(Date dateStart) {
+    public void setDateStart(LocalDate dateStart) {
         this.dateStart = dateStart;
     }
 
@@ -89,11 +88,11 @@ public class SvPer {
             "D(10) Дата (фиксированное число знаков 10)\n" +
             "Тип элемента\n" +
             "Необязательный")
-    public Date getDateEnd() {
+    public LocalDate getDateEnd() {
         return dateEnd;
     }
 
-    public void setDateEnd(Date dateEnd) {
+    public void setDateEnd(LocalDate dateEnd) {
         this.dateEnd = dateEnd;
     }
 

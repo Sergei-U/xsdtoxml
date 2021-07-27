@@ -2,10 +2,8 @@ package XmlStruct;
 
 import io.swagger.annotations.ApiModelProperty;
 
-
 import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import java.util.Date;
+import java.time.LocalDate;
 
 /**
  *
@@ -17,9 +15,9 @@ public class DocumentConfirmShipment {
 
     private String numberDocumentShipment;
 
-    private Date dateDocumentShipment;
+    private LocalDate dateDocumentShipment;
 
-    @XmlAttribute(name = "НаимДокОтгр",required = true)
+    @XmlAttribute(name = "НаимДокОтгр", required = true)
     @ApiModelProperty(value = "Формат\n" +
             "T(255) Строка (длина от 1 до 255 знаков)\n" +
             "Тип элемента\n" +
@@ -32,7 +30,7 @@ public class DocumentConfirmShipment {
         this.nameDocumentShipment = nameDocumentShipment;
     }
 
-    @XmlAttribute(name = "НомДокОтгр",required = true)
+    @XmlAttribute(name = "НомДокОтгр", required = true)
     @ApiModelProperty(value = "Формат\n" +
             "T(255) Строка (длина от 1 до 255 знаков)\n" +
             "Тип элемента\n" +
@@ -50,11 +48,11 @@ public class DocumentConfirmShipment {
             "D(10) Дата (фиксированное число знаков 10)\n" +
             "Тип элемента\n" +
             "Необязательный")
-    public Date getDateDocumentShipment() {
+    public LocalDate getDateDocumentShipment() {
         return dateDocumentShipment;
     }
 
-    public void setDateDocumentShipment(Date dateDocumentShipment) {
+    public void setDateDocumentShipment(LocalDate dateDocumentShipment) {
         this.dateDocumentShipment = dateDocumentShipment;
     }
 }

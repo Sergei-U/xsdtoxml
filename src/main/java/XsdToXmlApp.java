@@ -15,20 +15,21 @@ public class XsdToXmlApp {
         XmlCreator xmlCreator = new XmlCreator();
 
 
-            try {
+        try {
 
-                JAXBContext jaxbContext = JAXBContext.newInstance(File.class);
-                Marshaller marshaller = jaxbContext.createMarshaller();
-                marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
-                marshaller.setProperty(Marshaller.JAXB_ENCODING, "Windows-1251");
-                marshaller.marshal(xmlCreator.xmlCreator(), new FileOutputStream("javatoxml.xml"));
-            } catch (JAXBException e) {
-                e.printStackTrace();
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
-            }
+            JAXBContext jaxbContext = JAXBContext.newInstance(File.class);
+            Marshaller marshaller = jaxbContext.createMarshaller();
+            marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
+            marshaller.setProperty(Marshaller.JAXB_ENCODING, "Windows-1251");
 
-
+            marshaller.marshal(xmlCreator.xmlCreator(), new FileOutputStream("javatoxml.xml"));
+        } catch (JAXBException e) {
+            e.printStackTrace();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
         }
+
+
     }
+}
 

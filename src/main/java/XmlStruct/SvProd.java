@@ -2,17 +2,15 @@ package XmlStruct;
 
 import io.swagger.annotations.ApiModelProperty;
 
-
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
-import java.util.List;
 
 /**
  *
  */
 
 public class SvProd {
-    
+
     private String okpo;
 
     private String structuralSubdivision;
@@ -81,7 +79,7 @@ public class SvProd {
         this.shortName = shortName;
     }
 
-    @XmlElement(name = "ИдСв",required = true)
+    @XmlElement(name = "ИдСв", required = true)
     @ApiModelProperty(value = "Строка\n" +
             "Тип элемента\n" +
             "Обязательный\n" +

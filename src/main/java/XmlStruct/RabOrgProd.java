@@ -2,7 +2,6 @@ package XmlStruct;
 
 import io.swagger.annotations.ApiModelProperty;
 
-
 import javax.xml.bind.annotation.XmlElement;
 import java.util.List;
 
@@ -17,7 +16,7 @@ public class RabOrgProd {
 
     private List<FIO> fioList;
 
-    @XmlElement(name = "РабОргПрод",required = true)
+    @XmlElement(name = "РабОргПрод", required = true)
     @ApiModelProperty(value = "Формат\n" +
             "Строка\n" +
             "Тип элемента\n" +
@@ -57,7 +56,7 @@ public class RabOrgProd {
         this.osnSved = osnSved;
     }
 
-    @XmlElement(name = "ФИО",required = true)
+    @XmlElement(name = "ФИО", required = true)
     @ApiModelProperty(value = "Формат\n" +
             "Строка\n" +
             "Тип элемента\n" +

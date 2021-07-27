@@ -2,7 +2,6 @@ package XmlStruct;
 
 import io.swagger.annotations.ApiModelProperty;
 
-
 import javax.xml.bind.annotation.XmlElement;
 
 /**
@@ -22,7 +21,7 @@ public class SvedProslez {
     private String dopProsl;
 
 
-    @XmlElement(name = "НомТовПрослеж",required = true)
+    @XmlElement(name = "НомТовПрослеж", required = true)
     @ApiModelProperty(value = "Формат\n" +
             "T(29) Строка (длина от 1 до 29 знаков)\n" +
             "Тип элемента\n" +
@@ -35,7 +34,7 @@ public class SvedProslez {
         this.nominalProductProsl = nominalProductProsl;
     }
 
-    @XmlElement(name = "ЕдИзмПрослеж",required = true)
+    @XmlElement(name = "ЕдИзмПрослеж", required = true)
     @ApiModelProperty(value = "Формат\n" +
             "T(4) Строка (длина от 3 до 4 знаков)\n" +
             "Тип элемента\n" +
@@ -48,7 +47,7 @@ public class SvedProslez {
         this.edIzmProsl = edIzmProsl;
     }
 
-    @XmlElement(name = "НаимЕдИзмПрослеж",required = true)
+    @XmlElement(name = "НаимЕдИзмПрослеж", required = true)
     @ApiModelProperty(value = "Формат\n" +
             "T(255) Строка (длина от 1 до 255 знаков)\n" +
             "Тип элемента\n" +
@@ -61,7 +60,7 @@ public class SvedProslez {
         this.nameEdIzmProsl = nameEdIzmProsl;
     }
 
-    @XmlElement(name = "КолВЕдПрослеж",required = true)
+    @XmlElement(name = "КолВЕдПрослеж", required = true)
     @ApiModelProperty(value = "Формат\n" +
             "N(26.11) Вещественное (максимальное число знаков 26, в том числе десятичных 11)\n" +
             "Тип элемента\n" +

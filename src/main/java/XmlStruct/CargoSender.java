@@ -29,7 +29,7 @@ public class CargoSender {
         this.onZ = onZ;
     }
 
-    @XmlElement(name = "ГрузОтпр",required = true)
+    @XmlElement(name = "ГрузОтпр", required = true)
     @ApiModelProperty(value = "\n" +
             "Формат\n" +
             "Строка\n" +

@@ -2,7 +2,6 @@ package XmlStruct;
 
 import io.swagger.annotations.ApiModelProperty;
 
-
 import javax.xml.bind.annotation.XmlElement;
 import java.math.BigDecimal;
 import java.util.List;
@@ -49,7 +48,7 @@ public class SvedTov {
 
     private List<InfPolFXZ2> infPolFXZ2List;
 
-    @XmlElement(name = "НомСтр",required = true)
+    @XmlElement(name = "НомСтр", required = true)
     @ApiModelProperty(value = "Формат\n" +
             "N(6) Целое (максимальное число знаков 6)\n" +
             "Тип элемента\n" +
@@ -144,7 +143,7 @@ public class SvedTov {
         this.priceProductNoNDS = priceProductNoNDS;
     }
 
-    @XmlElement(name = "СтТовУчНал",required = true)
+    @XmlElement(name = "СтТовУчНал", required = true)
     @ApiModelProperty(value = "Формат\n" +
             "N(19.2) Вещественное (максимальное число знаков 19, в том числе десятичных 2)\n" +
             "Тип элемента\n" +
@@ -158,7 +157,7 @@ public class SvedTov {
         this.stTovUcNal = stTovUcNal;
     }
 
-    @XmlElement(name = "ДефСтТовУчНал",required = true)
+    @XmlElement(name = "ДефСтТовУчНал", required = true)
     @ApiModelProperty(value = "Формат\n" +
             "T(=1) Строка (фиксированное число знаков 1)\n" +
             "Тип элемента\n" +
@@ -172,7 +171,7 @@ public class SvedTov {
         this.defStTovUcNal = defStTovUcNal;
     }
 
-    @XmlElement(name = "Акциз",required = true)
+    @XmlElement(name = "Акциз", required = true)
     @ApiModelProperty(value = "Формат\n" +
             "Строка\n" +
             "Тип элемента\n" +
@@ -186,7 +185,7 @@ public class SvedTov {
         this.exciseList = exciseList;
     }
 
-    @XmlElement(name = "СумНал",required = true)
+    @XmlElement(name = "СумНал", required = true)
     @ApiModelProperty(value = "Формат\n" +
             "Строка\n" +
             "Тип элемента\n" +

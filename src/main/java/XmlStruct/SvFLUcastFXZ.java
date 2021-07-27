@@ -2,10 +2,8 @@ package XmlStruct;
 
 import io.swagger.annotations.ApiModelProperty;
 
-
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
-import java.util.List;
 
 /**
  *
@@ -60,7 +58,7 @@ public class SvFLUcastFXZ {
         this.overInf = overInf;
     }
 
-    @XmlElement(name = "ФИО",required = true)
+    @XmlElement(name = "ФИО", required = true)
     @ApiModelProperty(value = "Формат\n" +
             "Строка\n" +
             "Тип элемента\n" +

@@ -5,10 +5,10 @@ import io.swagger.annotations.ApiModelProperty;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
-import java.util.Date;
+import java.time.LocalDate;
 
 
-public class Document  {
+public class Document {
 
     private String knd;
 
@@ -18,9 +18,9 @@ public class Document  {
 
     private String nameDocReq;
 
-    private Date dateInfPr;
+    private LocalDate dateInfPr;
 
-    private Date timeInfPr;
+    private LocalDate timeInfPr;
 
     private String nameEconSubCondition;
 
@@ -50,6 +50,7 @@ public class Document  {
     public void setKnd(String knd) {
         this.knd = knd;
     }
+
     @XmlAttribute(name = "Функция", required = true)
     @ApiModelProperty(value = "Формат\n" +
             "T(6) Строка (длина от 1 до 6 знаков)\n" +
@@ -97,11 +98,11 @@ public class Document  {
             "D(10) Дата (фиксированное число знаков 10)\n" +
             "Тип элемента\n" +
             "Обязательный")
-    public Date getDateInfPr() {
+    public LocalDate getDateInfPr() {
         return dateInfPr;
     }
 
-    public void setDateInfPr(Date dateInfPr) {
+    public void setDateInfPr(LocalDate dateInfPr) {
         this.dateInfPr = dateInfPr;
     }
 
@@ -111,11 +112,11 @@ public class Document  {
             "D(8) Время (фиксированное число знаков 8)\n" +
             "Тип элемента\n" +
             "Обязательный")
-    public Date getTimeInfPr() {
+    public LocalDate getTimeInfPr() {
         return timeInfPr;
     }
 
-    public void setTimeInfPr(Date timeInfPr) {
+    public void setTimeInfPr(LocalDate timeInfPr) {
         this.timeInfPr = timeInfPr;
     }
 
@@ -200,7 +201,7 @@ public class Document  {
         this.svProdPer = svProdPer;
     }
 
-    @XmlElement(name = "Подписант",required = true)
+    @XmlElement(name = "Подписант", required = true)
     @ApiModelProperty(value = "Формат\n" +
             "Составной элемент\n" +
             "Тип элемента\n" +

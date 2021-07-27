@@ -2,11 +2,9 @@ package XmlStruct;
 
 import io.swagger.annotations.ApiModelProperty;
 
-
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
-import java.util.Date;
-import java.util.List;
+import java.time.LocalDate;
 
 /**
  *
@@ -14,7 +12,7 @@ import java.util.List;
 
 public class InfProdGosZakKazn {
 
-    private Date dateContract;
+    private LocalDate dateContract;
 
     private String numberGosContract;
 
@@ -28,25 +26,25 @@ public class InfProdGosZakKazn {
 
     private String nameKaznacProd;
 
-    private List<SvFactor> svFactorList;
+    private SvFactor svFactorList;
 
-    private List<OsnUstDenTreb> osnUstDenTrebList;
+    private OsnUstDenTreb osnUstDenTrebList;
 
-    @XmlElement(name = "ДатаГосКонт",required = true)
+    @XmlElement(name = "ДатаГосКонт", required = true)
     @XmlJavaTypeAdapter(DateAdapter.class)
     @ApiModelProperty(value = "Формат\n" +
             "D(10) Дата (фиксированное число знаков 10)\n" +
             "Тип элемента\n" +
             "Обязательный")
-    public Date getDateContract() {
+    public LocalDate getDateContract() {
         return dateContract;
     }
 
-    public void setDateContract(Date dateContract) {
+    public void setDateContract(LocalDate dateContract) {
         this.dateContract = dateContract;
     }
 
-    @XmlElement(name = "НомерГосКонт",required = true)
+    @XmlElement(name = "НомерГосКонт", required = true)
     @ApiModelProperty(value = "Формат\n" +
             "T(100) Строка (длина от 1 до 100 знаков)\n" +
             "Тип элемента\n" +
@@ -130,11 +128,11 @@ public class InfProdGosZakKazn {
             "Тип элемента\n" +
             "Необязательный\n" +
             "Узел")
-    public List<SvFactor> getSvFactorList() {
+    public SvFactor getSvFactorList() {
         return svFactorList;
     }
 
-    public void setSvFactorList(List<SvFactor> svFactorList) {
+    public void setSvFactorList(SvFactor svFactorList) {
         this.svFactorList = svFactorList;
     }
 
@@ -144,11 +142,11 @@ public class InfProdGosZakKazn {
             "Тип элемента\n" +
             "Необязательный\n" +
             "Узел")
-    public List<OsnUstDenTreb> getOsnUstDenTrebList() {
+    public OsnUstDenTreb getOsnUstDenTrebList() {
         return osnUstDenTrebList;
     }
 
-    public void setOsnUstDenTrebList(List<OsnUstDenTreb> osnUstDenTrebList) {
+    public void setOsnUstDenTrebList(OsnUstDenTreb osnUstDenTrebList) {
         this.osnUstDenTrebList = osnUstDenTrebList;
     }
 }

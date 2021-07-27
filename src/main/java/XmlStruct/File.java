@@ -4,7 +4,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 import javax.xml.bind.annotation.*;
 import java.io.Serializable;
-import java.util.List;
+import java.util.UUID;
 
 /**
  *
@@ -23,6 +23,8 @@ class ObjectFactory {
 @XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "")
 public class File implements Serializable {
+
+    UUID uuid = UUID.randomUUID();
 
     private String idFile;
 
@@ -44,7 +46,7 @@ public class File implements Serializable {
         return verProgram;
     }
 
-    @XmlAttribute(name = "ВерсФорм",required = true)
+    @XmlAttribute(name = "ВерсФорм", required = true)
     @ApiModelProperty(value = "Формат\n" +
             "T(5) Строка (длина от 1 до 5 знаков)\n" +
             "Тип элемента\n" +
@@ -92,6 +94,14 @@ public class File implements Serializable {
 
     public void setDocument(Document document) {
         this.document = document;
+    }
+
+    public UUID getUuid() {
+        return uuid;
+    }
+
+    public void setUuid(UUID uuid) {
+        this.uuid = uuid;
     }
 }
 //@XmlType(name = "", propOrder = {"СвУчДокОбор", "Документ"})

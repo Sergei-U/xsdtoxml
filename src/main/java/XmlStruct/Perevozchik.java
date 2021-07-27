@@ -2,7 +2,6 @@ package XmlStruct;
 
 import io.swagger.annotations.ApiModelProperty;
 
-
 import javax.xml.bind.annotation.XmlElement;
 import java.util.List;
 
@@ -77,7 +76,7 @@ public class Perevozchik {
         this.shortName = shortName;
     }
 
-    @XmlElement(name = "ИдСв",required = true)
+    @XmlElement(name = "ИдСв", required = true)
     @ApiModelProperty(value = "Формат\n" +
             "Строка\n" +
             "Тип элемента\n" +

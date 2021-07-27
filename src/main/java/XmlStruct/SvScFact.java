@@ -4,7 +4,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
-import java.util.Date;
+import java.time.LocalDate;
 
 /**
  *
@@ -14,7 +14,7 @@ public class SvScFact {
 
     private String numberScF;
 
-    private Date dateScF;
+    private LocalDate dateScF;
 
     private String codeOKV;
 
@@ -55,11 +55,11 @@ public class SvScFact {
             "D(10) Дата (фиксированное число знаков 10)\n" +
             "Тип элемента\n" +
             "Обязательный")
-    public Date getDateScF() {
+    public LocalDate getDateScF() {
         return dateScF;
     }
 
-    public void setDateScF(Date dateScF) {
+    public void setDateScF(LocalDate dateScF) {
         this.dateScF = dateScF;
     }
 
@@ -90,7 +90,7 @@ public class SvScFact {
         this.isprScFList = isprScFList;
     }
 
-    @XmlElement(name = "СвПрод",required = true)
+    @XmlElement(name = "СвПрод", required = true)
     @ApiModelProperty(value = "Формат\n" +
             "Составной элемент\n" +
             "Тип элемента\n" +

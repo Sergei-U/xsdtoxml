@@ -2,10 +2,9 @@ package XmlStruct;
 
 import io.swagger.annotations.ApiModelProperty;
 
-
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
-import java.util.Date;
+import java.time.LocalDate;
 
 
 public class OsnPer {
@@ -14,13 +13,13 @@ public class OsnPer {
 
     private String nomOns;
 
-    private Date dateOsn;
+    private LocalDate dateOsn;
 
     private String dopSvOsn;
 
     private String identOsn;
 
-    @XmlElement(name = "НаимОсн",required = true)
+    @XmlElement(name = "НаимОсн", required = true)
     @ApiModelProperty(value = "Формат\n" +
             "T(255) Строка (длина от 1 до 255 знаков)\n" +
             "Тип элемента\n" +
@@ -53,11 +52,11 @@ public class OsnPer {
             "D(10) Дата (фиксированное число знаков 10)\n" +
             "Тип элемента\n" +
             "Условно-Обязательный")
-    public Date getDateOsn() {
+    public LocalDate getDateOsn() {
         return dateOsn;
     }
 
-    public void setDateOsn(Date dateOsn) {
+    public void setDateOsn(LocalDate dateOsn) {
         this.dateOsn = dateOsn;
     }
 

@@ -80,7 +80,7 @@ public class CargoSend {
         this.shortName = shortName;
     }
 
-    @XmlElement(name = "ИдСв",required = true)
+    @XmlElement(name = "ИдСв", required = true)
     @ApiModelProperty(value = "Формат\n" +
             "Строка\n" +
             "Тип элемента\n" +

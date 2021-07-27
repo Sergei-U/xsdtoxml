@@ -2,10 +2,9 @@ package XmlStruct;
 
 import io.swagger.annotations.ApiModelProperty;
 
-
 import javax.xml.bind.annotation.XmlElement;
 import java.math.BigDecimal;
-import java.util.Date;
+import java.time.LocalDate;
 
 /**
  *
@@ -15,11 +14,11 @@ public class SvPRD {
 
     private String numberPRD;
 
-    private Date datePRD;
+    private LocalDate datePRD;
 
     private BigDecimal summPRD;
 
-    @XmlElement(name = "НомерПРД",required = true)
+    @XmlElement(name = "НомерПРД", required = true)
     @ApiModelProperty(value = "Формат\n" +
             "T(30) Строка (длина от 1 до 30 знаков)\n" +
             "Тип элемента\n" +
@@ -32,16 +31,16 @@ public class SvPRD {
         this.numberPRD = numberPRD;
     }
 
-    @XmlElement(name = "ДатаПРД",required = true)
+    @XmlElement(name = "ДатаПРД", required = true)
     @ApiModelProperty(value = "Формат\n" +
             "D(10) Дата (фиксированное число знаков 10)\n" +
             "Тип элемента\n" +
             "Обязательный")
-    public Date getDatePRD() {
+    public LocalDate getDatePRD() {
         return datePRD;
     }
 
-    public void setDatePRD(Date datePRD) {
+    public void setDatePRD(LocalDate datePRD) {
         this.datePRD = datePRD;
     }
 

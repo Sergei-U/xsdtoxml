@@ -2,7 +2,6 @@ package XmlStruct;
 
 import io.swagger.annotations.ApiModelProperty;
 
-
 import javax.xml.bind.annotation.XmlElement;
 import java.util.List;
 
@@ -13,7 +12,7 @@ public class SvLicPer {
 
     private List<InLico> inLicoList;
 
-    @XmlElement(name = "РабОргПрод",required = true)
+    @XmlElement(name = "РабОргПрод", required = true)
     @ApiModelProperty(value = "Формат\n" +
             "Строка\n" +
             "Тип элемента\n" +

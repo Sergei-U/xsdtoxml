@@ -2,7 +2,6 @@ package XmlStruct;
 
 import io.swagger.annotations.ApiModelProperty;
 
-
 import javax.xml.bind.annotation.XmlAttribute;
 
 /**
@@ -17,7 +16,7 @@ public class SvInNeUc {
 
     private String overInf;
 
-    @XmlAttribute(name = "НаимОрг",required = true)
+    @XmlAttribute(name = "НаимОрг", required = true)
     @ApiModelProperty(value = "Формат\n" +
             "T(1000) Строка (длина от 1 до 1000 знаков)\n" +
             "Тип элемента\n" +
