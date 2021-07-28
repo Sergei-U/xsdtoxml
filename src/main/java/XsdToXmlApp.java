@@ -1,16 +1,22 @@
-import XmlStruct.File;
+import Entity.File;
+import Service.XmlCreator;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.sql.SQLException;
 
 /**
  *
  */
+
 public class XsdToXmlApp {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException, ClassNotFoundException {
+        DrManager drManager = new DrManager();
+        drManager.manager();
+
 
         XmlCreator xmlCreator = new XmlCreator();
 
