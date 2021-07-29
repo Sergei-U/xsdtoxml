@@ -1,5 +1,4 @@
 import Entity.File;
-import Service.DrManager;
 import Service.XmlCreator;
 
 import javax.xml.bind.JAXBContext;
@@ -14,13 +13,8 @@ import java.io.FileOutputStream;
 
 public class XsdToXmlApp {
     public static void main(String[] args) {
-        DrManager drManager = new DrManager();
-        drManager.manager();
-
 
         XmlCreator xmlCreator = new XmlCreator();
-
-
         try {
 
             JAXBContext jaxbContext = JAXBContext.newInstance(File.class);

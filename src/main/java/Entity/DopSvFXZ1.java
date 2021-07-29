@@ -4,7 +4,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 import javax.xml.bind.annotation.XmlElement;
 import java.math.BigDecimal;
-import java.util.List;
 
 /**
  *
@@ -26,9 +25,9 @@ public class DopSvFXZ1 {
     private ObsFormScf obsFormScfEnum;
 //    @XmlElement(name = "ОбстФормСЧФ")
 
-    private List<InfProdGosZakKazn> infProdGosZakKaznList;
+    private InfProdGosZakKazn infProdGosZakKaznList;
 
-    private List<SvFactor> svFactorList;
+    private SvFactor svFactorList;
 
     @XmlElement(name = "ИдГосКон")
     @ApiModelProperty(value = "Формат\n" +
@@ -75,11 +74,11 @@ public class DopSvFXZ1 {
             "Тип элемента\n" +
             "Необязательный\n" +
             "Узел")
-    public List<InfProdGosZakKazn> getInfProdGosZakKaznList() {
+    public InfProdGosZakKazn getInfProdGosZakKaznList() {
         return infProdGosZakKaznList;
     }
 
-    public void setInfProdGosZakKaznList(List<InfProdGosZakKazn> infProdGosZakKaznList) {
+    public void setInfProdGosZakKaznList(InfProdGosZakKazn infProdGosZakKaznList) {
         this.infProdGosZakKaznList = infProdGosZakKaznList;
     }
 
@@ -89,11 +88,11 @@ public class DopSvFXZ1 {
             "Тип элемента\n" +
             "Необязательный\n" +
             "Узел")
-    public List<SvFactor> getSvFactorList() {
+    public SvFactor getSvFactorList() {
         return svFactorList;
     }
 
-    public void setSvFactorList(List<SvFactor> svFactorList) {
+    public void setSvFactorList(SvFactor svFactorList) {
         this.svFactorList = svFactorList;
     }
 }

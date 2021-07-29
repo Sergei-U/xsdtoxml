@@ -3,7 +3,6 @@ package Entity;
 import io.swagger.annotations.ApiModelProperty;
 
 import javax.xml.bind.annotation.XmlElement;
-import java.util.List;
 
 
 public class Perevozchik {
@@ -16,13 +15,13 @@ public class Perevozchik {
 
     private String shortName;
 
-    private List<IdSv> idSvList;
+    private IdSv idSvList;
 
-    private List<Address> addressList;
+    private Address addressList;
 
-    private List<Contact> contactList;
+    private Contact contactList;
 
-    private List<BankReq> bankReqList;
+    private BankReq bankReqList;
 
     @XmlElement(name = "ОКПО")
     @ApiModelProperty(value = "Формат\n" +
@@ -82,11 +81,11 @@ public class Perevozchik {
             "Тип элемента\n" +
             "Обязательный\n" +
             "Узел")
-    public List<IdSv> getIdSvList() {
+    public IdSv getIdSvList() {
         return idSvList;
     }
 
-    public void setIdSvList(List<IdSv> idSvList) {
+    public void setIdSvList(IdSv idSvList) {
         this.idSvList = idSvList;
     }
 
@@ -96,11 +95,11 @@ public class Perevozchik {
             "Тип элемента\n" +
             "Необязательный\n" +
             "Узел")
-    public List<Address> getAddressList() {
+    public Address getAddressList() {
         return addressList;
     }
 
-    public void setAddressList(List<Address> addressList) {
+    public void setAddressList(Address addressList) {
         this.addressList = addressList;
     }
 
@@ -110,11 +109,11 @@ public class Perevozchik {
             "Тип элемента\n" +
             "Необязательный\n" +
             "Узел")
-    public List<Contact> getContactList() {
+    public Contact getContactList() {
         return contactList;
     }
 
-    public void setContactList(List<Contact> contactList) {
+    public void setContactList(Contact contactList) {
         this.contactList = contactList;
     }
 
@@ -124,11 +123,11 @@ public class Perevozchik {
             "Тип элемента\n" +
             "Необязательный\n" +
             "Узел")
-    public List<BankReq> getBankReqList() {
+    public BankReq getBankReqList() {
         return bankReqList;
     }
 
-    public void setBankReqList(List<BankReq> bankReqList) {
+    public void setBankReqList(BankReq bankReqList) {
         this.bankReqList = bankReqList;
     }
 }

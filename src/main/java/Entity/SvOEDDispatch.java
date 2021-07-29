@@ -1,7 +1,6 @@
 package Entity;
 
 import io.swagger.annotations.ApiModelProperty;
-import lombok.AllArgsConstructor;
 
 import javax.xml.bind.annotation.XmlAttribute;
 

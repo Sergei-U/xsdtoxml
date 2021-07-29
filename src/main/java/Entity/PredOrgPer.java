@@ -3,7 +3,6 @@ package Entity;
 import io.swagger.annotations.ApiModelProperty;
 
 import javax.xml.bind.annotation.XmlElement;
-import java.util.List;
 
 
 public class PredOrgPer {
@@ -18,7 +17,7 @@ public class PredOrgPer {
 
     private String osnPolnPredPer;
 
-    private List<FIO> fioList;
+    private FIO fioList;
 
     @XmlElement(name = "Должность", required = true)
     @ApiModelProperty(value = "Формат\n" +
@@ -91,11 +90,11 @@ public class PredOrgPer {
             "Тип элемента\n" +
             "Обязательный\n" +
             "Узел")
-    public List<FIO> getFioList() {
+    public FIO getFioList() {
         return fioList;
     }
 
-    public void setFioList(List<FIO> fioList) {
+    public void setFioList(FIO fioList) {
         this.fioList = fioList;
     }
 }

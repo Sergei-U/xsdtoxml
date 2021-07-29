@@ -1,7 +1,6 @@
 package Entity;
 
 import io.swagger.annotations.ApiModelProperty;
-import lombok.AllArgsConstructor;
 
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
@@ -17,7 +16,7 @@ public class SvUcDocObor {
 
     private String idReception;
 
-    private SvOEDDispatch svOEDDispatchList;
+    private SvOEDDispatch svOEDDispatch;
 
     @XmlAttribute(name = "ИдОтпр", required = true)
     @ApiModelProperty(value = "Формат\n" +
@@ -46,11 +45,11 @@ public class SvUcDocObor {
     }
 
     @XmlElement(name = "СвОЭДОтпр")
-    public SvOEDDispatch getSvOEDDispatchList() {
-        return svOEDDispatchList;
+    public SvOEDDispatch getsvOEDDispatch() {
+        return svOEDDispatch;
     }
 
-    public void setSvOEDDispatchList(SvOEDDispatch svOEDDispatchList) {
-        this.svOEDDispatchList = svOEDDispatchList;
+    public void setsvOEDDispatch(SvOEDDispatch svOEDDispatch) {
+        this.svOEDDispatch = svOEDDispatch;
     }
 }

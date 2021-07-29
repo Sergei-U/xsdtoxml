@@ -3,16 +3,15 @@ package Entity;
 import io.swagger.annotations.ApiModelProperty;
 
 import javax.xml.bind.annotation.XmlElement;
-import java.util.List;
 
 
 public class TranGruz {
 
     private String svTranGruz;
 
-    private List<TranNakl> tranNaklList;
+    private TranNakl tranNaklList;
 
-    private List<Perevozchik> perevozchikList;
+    private Perevozchik perevozchikList;
 
     @XmlElement(name = "СвТранГруз")
     @ApiModelProperty(value = "Формат\n" +
@@ -33,11 +32,11 @@ public class TranGruz {
             "Тип элемента\n" +
             "Необязательный\n" +
             "Узел")
-    public List<TranNakl> getTranNaklList() {
+    public TranNakl getTranNaklList() {
         return tranNaklList;
     }
 
-    public void setTranNaklList(List<TranNakl> tranNaklList) {
+    public void setTranNaklList(TranNakl tranNaklList) {
         this.tranNaklList = tranNaklList;
     }
 
@@ -47,11 +46,11 @@ public class TranGruz {
             "Тип элемента\n" +
             "Необязательный\n" +
             "Узел")
-    public List<Perevozchik> getPerevozchikList() {
+    public Perevozchik getPerevozchikList() {
         return perevozchikList;
     }
 
-    public void setPerevozchikList(List<Perevozchik> perevozchikList) {
+    public void setPerevozchikList(Perevozchik perevozchikList) {
         this.perevozchikList = perevozchikList;
     }
 }

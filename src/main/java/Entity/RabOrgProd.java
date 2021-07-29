@@ -3,7 +3,6 @@ package Entity;
 import io.swagger.annotations.ApiModelProperty;
 
 import javax.xml.bind.annotation.XmlElement;
-import java.util.List;
 
 
 public class RabOrgProd {
@@ -14,7 +13,7 @@ public class RabOrgProd {
 
     private String osnSved;
 
-    private List<FIO> fioList;
+    private FIO fioList;
 
     @XmlElement(name = "РабОргПрод", required = true)
     @ApiModelProperty(value = "Формат\n" +
@@ -62,11 +61,11 @@ public class RabOrgProd {
             "Тип элемента\n" +
             "Обязательный\n" +
             "Узел")
-    public List<FIO> getFioList() {
+    public FIO getFioList() {
         return fioList;
     }
 
-    public void setFioList(List<FIO> fioList) {
+    public void setFioList(FIO fioList) {
         this.fioList = fioList;
     }
 }

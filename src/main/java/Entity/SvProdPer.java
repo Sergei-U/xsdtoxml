@@ -3,7 +3,6 @@ package Entity;
 import io.swagger.annotations.ApiModelProperty;
 
 import javax.xml.bind.annotation.XmlElement;
-import java.util.List;
 
 /**
  *
@@ -11,9 +10,9 @@ import java.util.List;
 
 public class SvProdPer {
 
-    private List<SvPer> svPerList;
+    private SvPer svPerList;
 
-    private List<InfPolFXZ3> infPolFXZ3List;
+    private InfPolFXZ3 infPolFXZ3List;
 
     @XmlElement(name = "СвПер", required = true)
     @ApiModelProperty(value = "Формат\n" +
@@ -21,11 +20,11 @@ public class SvProdPer {
             "Тип элемента\n" +
             "Обязательный\n" +
             "Узел")
-    public List<SvPer> getSvPerList() {
+    public SvPer getSvPerList() {
         return svPerList;
     }
 
-    public void setSvPerList(List<SvPer> svPerList) {
+    public void setSvPerList(SvPer svPerList) {
         this.svPerList = svPerList;
     }
 
@@ -35,11 +34,11 @@ public class SvProdPer {
             "Тип элемента\n" +
             "Необязательный\n" +
             "Узел")
-    public List<InfPolFXZ3> getInfPolFXZ3List() {
+    public InfPolFXZ3 getInfPolFXZ3List() {
         return infPolFXZ3List;
     }
 
-    public void setInfPolFXZ3List(List<InfPolFXZ3> infPolFXZ3List) {
+    public void setInfPolFXZ3List(InfPolFXZ3 infPolFXZ3List) {
         this.infPolFXZ3List = infPolFXZ3List;
     }
 }

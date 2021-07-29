@@ -4,7 +4,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 import javax.xml.bind.annotation.XmlElement;
 import java.math.BigDecimal;
-import java.util.List;
 
 /**
  *
@@ -38,15 +37,15 @@ public class SvedTov {
 
     private String defStTovUcNal;
 
-    private List<Excise> exciseList;
+    private Excise exciseList;
 
-    private List<SummNal> summNalList;
+    private SummNal summNalList;
 
-    private List<SvTD> svTDList;
+    private SvTD svTDList;
 
-    private List<DopSvedTov> dopSvedTovList;
+    private DopSvedTov dopSvedTovList;
 
-    private List<InfPolFXZ2> infPolFXZ2List;
+    private InfPolFXZ2 infPolFXZ2List;
 
     @XmlElement(name = "НомСтр", required = true)
     @ApiModelProperty(value = "Формат\n" +
@@ -177,11 +176,11 @@ public class SvedTov {
             "Тип элемента\n" +
             "Обязательный\n" +
             "Узел")
-    public List<Excise> getExciseList() {
+    public Excise getExciseList() {
         return exciseList;
     }
 
-    public void setExciseList(List<Excise> exciseList) {
+    public void setExciseList(Excise exciseList) {
         this.exciseList = exciseList;
     }
 
@@ -191,11 +190,11 @@ public class SvedTov {
             "Тип элемента\n" +
             "Обязательный\n" +
             "Узел")
-    public List<SummNal> getSummNalList() {
+    public SummNal getSummNalList() {
         return summNalList;
     }
 
-    public void setSummNalList(List<SummNal> summNalList) {
+    public void setSummNalList(SummNal summNalList) {
         this.summNalList = summNalList;
     }
 
@@ -205,11 +204,11 @@ public class SvedTov {
             "Тип элемента\n" +
             "Необязательный\n" +
             "Узел")
-    public List<SvTD> getSvTDList() {
+    public SvTD getSvTDList() {
         return svTDList;
     }
 
-    public void setSvTDList(List<SvTD> svTDList) {
+    public void setSvTDList(SvTD svTDList) {
         this.svTDList = svTDList;
     }
 
@@ -219,11 +218,11 @@ public class SvedTov {
             "Тип элемента\n" +
             "Необязательный\n" +
             "Узел")
-    public List<DopSvedTov> getDopSvedTovList() {
+    public DopSvedTov getDopSvedTovList() {
         return dopSvedTovList;
     }
 
-    public void setDopSvedTovList(List<DopSvedTov> dopSvedTovList) {
+    public void setDopSvedTovList(DopSvedTov dopSvedTovList) {
         this.dopSvedTovList = dopSvedTovList;
     }
 
@@ -233,11 +232,11 @@ public class SvedTov {
             "Тип элемента\n" +
             "Необязательный\n" +
             "Узел")
-    public List<InfPolFXZ2> getInfPolFXZ2List() {
+    public InfPolFXZ2 getInfPolFXZ2List() {
         return infPolFXZ2List;
     }
 
-    public void setInfPolFXZ2List(List<InfPolFXZ2> infPolFXZ2List) {
+    public void setInfPolFXZ2List(InfPolFXZ2 infPolFXZ2List) {
         this.infPolFXZ2List = infPolFXZ2List;
     }
 }

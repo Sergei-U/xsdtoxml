@@ -17,10 +17,6 @@ public class SummNalAll {
 
     private String defNDS;
 
-    public BigDecimal getSummNal() {
-        return summNal;
-    }
-
     @XmlElement(name = "СумНал")
     @ApiModelProperty(value = "Формат\n" +
             "Вещественное (максимальное число знаков 19, в том числе десятичных 2)\n" +
@@ -28,6 +24,10 @@ public class SummNalAll {
             "Обязательный\n" +
             "Узел\n" +
             "Принимает значение: 0")
+    public BigDecimal getSummNal() {
+        return summNal;
+    }
+
     public void setSummNal(BigDecimal summNal) {
         this.summNal = summNal;
     }

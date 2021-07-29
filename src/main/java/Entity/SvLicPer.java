@@ -3,14 +3,13 @@ package Entity;
 import io.swagger.annotations.ApiModelProperty;
 
 import javax.xml.bind.annotation.XmlElement;
-import java.util.List;
 
 
 public class SvLicPer {
 
-    private List<RabOrgProd> rabOrgProdList;
+    private RabOrgProd rabOrgProdList;
 
-    private List<InLico> inLicoList;
+    private InLico inLicoList;
 
     @XmlElement(name = "РабОргПрод", required = true)
     @ApiModelProperty(value = "Формат\n" +
@@ -18,11 +17,11 @@ public class SvLicPer {
             "Тип элемента\n" +
             "Обязательный\n" +
             "Узел")
-    public List<RabOrgProd> getRabOrgProdList() {
+    public RabOrgProd getRabOrgProdList() {
         return rabOrgProdList;
     }
 
-    public void setRabOrgProdList(List<RabOrgProd> rabOrgProdList) {
+    public void setRabOrgProdList(RabOrgProd rabOrgProdList) {
         this.rabOrgProdList = rabOrgProdList;
     }
 
@@ -32,11 +31,11 @@ public class SvLicPer {
             "Тип элемента\n" +
             "Обязательный\n" +
             "Узел")
-    public List<InLico> getInLicoList() {
+    public InLico getInLicoList() {
         return inLicoList;
     }
 
-    public void setInLicoList(List<InLico> inLicoList) {
+    public void setInLicoList(InLico inLicoList) {
         this.inLicoList = inLicoList;
     }
 }

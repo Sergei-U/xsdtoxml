@@ -5,7 +5,6 @@ import io.swagger.annotations.ApiModelProperty;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import java.math.BigDecimal;
-import java.util.List;
 
 /**
  *
@@ -41,9 +40,9 @@ public class DopSvedTov {
 
     private String codeViewProduct;
 
-    private List<SvedProslez> svedProslezList;
+    private SvedProslez svedProslezList;
 
-    private List<NomSredIndentTov> nomSredIndentTovList;
+    private NomSredIndentTov nomSredIndentTovList;
 
     @XmlAttribute(name = "ДопПризн")
     @ApiModelProperty(value = "Формат\n" +
@@ -181,11 +180,11 @@ public class DopSvedTov {
             "Тип элемента\n" +
             "Необязательный\n" +
             "Узел")
-    public List<SvedProslez> getSvedProslezList() {
+    public SvedProslez getSvedProslezList() {
         return svedProslezList;
     }
 
-    public void setSvedProslezList(List<SvedProslez> svedProslezList) {
+    public void setSvedProslezList(SvedProslez svedProslezList) {
         this.svedProslezList = svedProslezList;
     }
 
@@ -195,11 +194,11 @@ public class DopSvedTov {
             "Тип элемента\n" +
             "Необязательный\n" +
             "Узел")
-    public List<NomSredIndentTov> getNomSredIndentTovList() {
+    public NomSredIndentTov getNomSredIndentTovList() {
         return nomSredIndentTovList;
     }
 
-    public void setNomSredIndentTovList(List<NomSredIndentTov> nomSredIndentTovList) {
+    public void setNomSredIndentTovList(NomSredIndentTov nomSredIndentTovList) {
         this.nomSredIndentTovList = nomSredIndentTovList;
     }
 }

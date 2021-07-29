@@ -6,7 +6,6 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.time.LocalDate;
-import java.util.List;
 
 
 public class SvPer {
@@ -21,13 +20,13 @@ public class SvPer {
 
     private LocalDate dateEnd;
 
-    private List<OsnPer> osnPerList;
+    private OsnPer osnPerList;
 
-    private List<SvLicPer> svLicPerList;
+    private SvLicPer svLicPerList;
 
-    private List<TranGruz> tranGruzList;
+    private TranGruz tranGruzList;
 
-    private List<SvPerVech> svPerVechList;
+    private SvPerVech svPerVechList;
 
 
     @XmlElement(name = "СодОпер", required = true)
@@ -107,11 +106,11 @@ public class SvPer {
             "Тип элемента\n" +
             "Обязательный\n" +
             "Узел")
-    public List<OsnPer> getOsnPerList() {
+    public OsnPer getOsnPerList() {
         return osnPerList;
     }
 
-    public void setOsnPerList(List<OsnPer> osnPerList) {
+    public void setOsnPerList(OsnPer osnPerList) {
         this.osnPerList = osnPerList;
     }
 
@@ -121,11 +120,11 @@ public class SvPer {
             "Тип элемента\n" +
             "Необязательный\n" +
             "Узел")
-    public List<SvLicPer> getSvLicPerList() {
+    public SvLicPer getSvLicPerList() {
         return svLicPerList;
     }
 
-    public void setSvLicPerList(List<SvLicPer> svLicPerList) {
+    public void setSvLicPerList(SvLicPer svLicPerList) {
         this.svLicPerList = svLicPerList;
     }
 
@@ -135,11 +134,11 @@ public class SvPer {
             "Тип элемента\n" +
             "Необязательный\n" +
             "Узел")
-    public List<TranGruz> getTranGruzList() {
+    public TranGruz getTranGruzList() {
         return tranGruzList;
     }
 
-    public void setTranGruzList(List<TranGruz> tranGruzList) {
+    public void setTranGruzList(TranGruz tranGruzList) {
         this.tranGruzList = tranGruzList;
     }
 
@@ -149,11 +148,11 @@ public class SvPer {
             "Тип элемента\n" +
             "Необязательный\n" +
             "Узел")
-    public List<SvPerVech> getSvPerVechList() {
+    public SvPerVech getSvPerVechList() {
         return svPerVechList;
     }
 
-    public void setSvPerVechList(List<SvPerVech> svPerVechList) {
+    public void setSvPerVechList(SvPerVech svPerVechList) {
         this.svPerVechList = svPerVechList;
     }
 }

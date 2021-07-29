@@ -3,7 +3,6 @@ package Entity;
 import io.swagger.annotations.ApiModelProperty;
 
 import javax.xml.bind.annotation.XmlElement;
-import java.util.List;
 
 /**
  *
@@ -13,7 +12,7 @@ public class InfPolFXZ1 {
 
     private String idFileInfPol;
 
-    private List<TextInf> textInfList;
+    private TextInf textInfList;
 
     @XmlElement(name = "ИдФайлИнфПол")
     @ApiModelProperty(value = "Формат\n" +
@@ -34,11 +33,11 @@ public class InfPolFXZ1 {
             "Тип элемента\n" +
             "Необязательный\n" +
             "Узел")
-    public List<TextInf> getTextInfList() {
+    public TextInf getTextInfList() {
         return textInfList;
     }
 
-    public void setTextInfList(List<TextInf> textInfList) {
+    public void setTextInfList(TextInf textInfList) {
         this.textInfList = textInfList;
     }
 }

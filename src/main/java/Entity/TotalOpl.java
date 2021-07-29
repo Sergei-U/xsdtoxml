@@ -4,7 +4,6 @@ import io.swagger.annotations.ApiModelProperty;
 
 import javax.xml.bind.annotation.XmlElement;
 import java.math.BigDecimal;
-import java.util.List;
 
 /**
  *
@@ -12,15 +11,15 @@ import java.util.List;
 
 public class TotalOpl {
 
+    private String defStProdUcNalAll;
+
     private BigDecimal stProdNoNDSAll;
 
     private BigDecimal stProdUcNalAll;
 
-    private String defStProdUcNalAll;
-
-    private List<SummNalAll> summNalAllList;
-
     private BigDecimal summNetAll;
+
+    private SummNalAll summNalAllList;
 
     @XmlElement(name = "СтТовБезНДСВсего")
     @ApiModelProperty(value = "Формат\n" +
@@ -69,11 +68,11 @@ public class TotalOpl {
             "Тип элемента\n" +
             "Обязательный\n" +
             "Узел")
-    public List<SummNalAll> getSummNalAllList() {
+    public SummNalAll getSummNalAllList() {
         return summNalAllList;
     }
 
-    public void setSummNalAllList(List<SummNalAll> summNalAllList) {
+    public void setSummNalAllList(SummNalAll summNalAllList) {
         this.summNalAllList = summNalAllList;
     }
 
