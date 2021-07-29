@@ -10,7 +10,7 @@ public class DataProcedureManager {
 
     private String connectionUrl = "jdbc:jtds:sqlserver://SWEBAP01:1433;databaseName=REFIRA_COM;domain=REKSOFT;USENTLMV2=true";
     private String userName = "usov";
-    private String pass = "Swizze2010%%";
+    private String pass = "S";
 
     private HikariConfig config = new HikariConfig();
 
