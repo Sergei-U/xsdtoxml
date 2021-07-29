@@ -10,7 +10,7 @@ import javax.xml.bind.annotation.XmlElement;
  *
  */
 
-@AllArgsConstructor
+
 public class SvUcDocObor {
 
     private String idDispatch;

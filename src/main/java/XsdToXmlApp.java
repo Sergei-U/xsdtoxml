@@ -1,4 +1,5 @@
 import Entity.File;
+import Service.DrManager;
 import Service.XmlCreator;
 
 import javax.xml.bind.JAXBContext;
@@ -6,14 +7,13 @@ import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
-import java.sql.SQLException;
 
 /**
  *
  */
 
 public class XsdToXmlApp {
-    public static void main(String[] args) throws SQLException, ClassNotFoundException {
+    public static void main(String[] args) {
         DrManager drManager = new DrManager();
         drManager.manager();
 

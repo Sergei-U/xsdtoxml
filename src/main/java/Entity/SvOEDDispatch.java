@@ -8,7 +8,7 @@ import javax.xml.bind.annotation.XmlAttribute;
 /**
  *
  */
-@AllArgsConstructor
+
 public class SvOEDDispatch {
 
 

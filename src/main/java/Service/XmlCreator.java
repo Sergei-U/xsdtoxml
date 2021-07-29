@@ -8,6 +8,7 @@ import java.time.LocalDateTime;
 public class XmlCreator {
     public File xmlCreator() {
 
+        DrManager drManager = new DrManager();
 
         Entity.File file = new Entity.File();
         Document documentFirst = new Document();
