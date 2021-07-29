@@ -1,7 +1,5 @@
 package Entity;
 
-import io.swagger.annotations.ApiModelProperty;
-
 import javax.xml.bind.annotation.XmlAttribute;
 
 /**
@@ -15,10 +13,10 @@ public class AddressInf {
     private String addressText;
 
     @XmlAttribute(name = "КодСтр", required = true)
-    @ApiModelProperty(value = "Формат\n" +
-            "T(=3) Строка (фиксированное число знаков 3)\n" +
-            "Тип элемента\n" +
-            "Обязательный")
+    /** "Формат\n" +
+     "T(=3) Строка (фиксированное число знаков 3)\n" +
+     "Тип элемента\n" +
+     "Обязательный") */
     public String getCountryCode() {
         return countryCode;
     }
@@ -28,10 +26,10 @@ public class AddressInf {
     }
 
     @XmlAttribute(name = "АдрТекст")
-    @ApiModelProperty(value = "Формат\n" +
-            "T(1000) Строка (длина от 1 до 1000 знаков)\n" +
-            "Тип элемента\n" +
-            "Обязательный")
+    /** "Формат\n" +
+     "T(1000) Строка (длина от 1 до 1000 знаков)\n" +
+     "Тип элемента\n" +
+     "Обязательный") */
     public String getAddressText() {
         return addressText;
     }

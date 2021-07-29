@@ -1,7 +1,5 @@
 package Entity;
 
-import io.swagger.annotations.ApiModelProperty;
-
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
@@ -20,10 +18,10 @@ public class DocumentConfirmShipment {
     private LocalDate dateDocumentShipment;
 
     @XmlAttribute(name = "НаимДокОтгр", required = true)
-    @ApiModelProperty(value = "Формат\n" +
-            "T(255) Строка (длина от 1 до 255 знаков)\n" +
-            "Тип элемента\n" +
-            "Обязательный")
+    /** "Формат\n" +
+     "T(255) Строка (длина от 1 до 255 знаков)\n" +
+     "Тип элемента\n" +
+     "Обязательный") */
     public String getNameDocumentShipment() {
         return nameDocumentShipment;
     }
@@ -33,10 +31,10 @@ public class DocumentConfirmShipment {
     }
 
     @XmlAttribute(name = "НомДокОтгр", required = true)
-    @ApiModelProperty(value = "Формат\n" +
-            "T(255) Строка (длина от 1 до 255 знаков)\n" +
-            "Тип элемента\n" +
-            "Обязательный")
+    /** "Формат\n" +
+     "T(255) Строка (длина от 1 до 255 знаков)\n" +
+     "Тип элемента\n" +
+     "Обязательный") */
     public String getNumberDocumentShipment() {
         return numberDocumentShipment;
     }
@@ -48,10 +46,10 @@ public class DocumentConfirmShipment {
     @XmlAttribute(name = "ДатаДокОтгр")
     @XmlJavaTypeAdapter(DateAdapter.class)
     @XmlSchemaType(name = "datetime")
-    @ApiModelProperty(value = "Формат\n" +
-            "D(10) Дата (фиксированное число знаков 10)\n" +
-            "Тип элемента\n" +
-            "Необязательный")
+    /** "Формат\n" +
+     "D(10) Дата (фиксированное число знаков 10)\n" +
+     "Тип элемента\n" +
+     "Необязательный") */
     public LocalDate getDateDocumentShipment() {
         return dateDocumentShipment;
     }

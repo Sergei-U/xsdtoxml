@@ -1,7 +1,5 @@
 package Entity;
 
-import io.swagger.annotations.ApiModelProperty;
-
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
@@ -15,10 +13,10 @@ public class TranNakl {
     private LocalDate dateTranNakl;
 
     @XmlElement(name = "НомТранНакл", required = true)
-    @ApiModelProperty(value = "Формат\n" +
-            "T(255) Строка (длина от 1 до 255 знаков)\n" +
-            "Тип элемента\n" +
-            "Обязательный")
+    /** "Формат\n" +
+     "T(255) Строка (длина от 1 до 255 знаков)\n" +
+     "Тип элемента\n" +
+     "Обязательный") */
     public String getNomTranNakl() {
         return nomTranNakl;
     }
@@ -30,10 +28,10 @@ public class TranNakl {
     @XmlElement(name = "ДатаТранНакл", required = true)
     @XmlJavaTypeAdapter(DateAdapter.class)
     @XmlSchemaType(name = "datetime")
-    @ApiModelProperty(value = "Формат\n" +
-            "D(10) Дата (фиксированное число знаков 10)\n" +
-            "Тип элемента\n" +
-            "Обязательный")
+    /** "Формат\n" +
+     "D(10) Дата (фиксированное число знаков 10)\n" +
+     "Тип элемента\n" +
+     "Обязательный") */
     public LocalDate getDateTranNakl() {
         return dateTranNakl;
     }

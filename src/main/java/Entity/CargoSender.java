@@ -1,7 +1,5 @@
 package Entity;
 
-import io.swagger.annotations.ApiModelProperty;
-
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 
@@ -16,11 +14,11 @@ public class CargoSender {
     private CargoSend cargoSendList;
 
     @XmlAttribute(name = "ОнЖе")
-    @ApiModelProperty(value = "Формат\n" +
-            "Строка (фиксированное число знаков 5)\n" +
-            "Тип элемента\n" +
-            "Обязательный\n" +
-            "Узел")
+    /** "Формат\n" +
+     "Строка (фиксированное число знаков 5)\n" +
+     "Тип элемента\n" +
+     "Обязательный\n" +
+     "Узел") */
     public String getOnZ() {
         return onZ;
     }
@@ -30,12 +28,12 @@ public class CargoSender {
     }
 
     @XmlElement(name = "ГрузОтпр", required = true)
-    @ApiModelProperty(value = "\n" +
-            "Формат\n" +
-            "Строка\n" +
-            "Тип элемента\n" +
-            "Обязательный\n" +
-            "Узел")
+    /** "\n" +
+     "Формат\n" +
+     "Строка\n" +
+     "Тип элемента\n" +
+     "Обязательный\n" +
+     "Узел") */
     public CargoSend getCargoSendList() {
         return cargoSendList;
     }

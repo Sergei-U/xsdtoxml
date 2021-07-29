@@ -1,7 +1,5 @@
 package Entity;
 
-import io.swagger.annotations.ApiModelProperty;
-
 import javax.xml.bind.annotation.XmlElement;
 
 
@@ -12,11 +10,11 @@ public class InLico {
     private FlPer flPerList;
 
     @XmlElement(name = "ПредОргПер", required = true)
-    @ApiModelProperty(value = "Формат\n" +
-            "Строка\n" +
-            "Тип элемента\n" +
-            "Обязательный\n" +
-            "Узел")
+    /** "Формат\n" +
+     "Строка\n" +
+     "Тип элемента\n" +
+     "Обязательный\n" +
+     "Узел") */
     public PredOrgPer getPredOrgPerList() {
         return predOrgPerList;
     }
@@ -26,11 +24,11 @@ public class InLico {
     }
 
     @XmlElement(name = "ФЛПер", required = true)
-    @ApiModelProperty(value = "Формат\n" +
-            "Строка\n" +
-            "Тип элемента\n" +
-            "Обязательный\n" +
-            "Узел")
+    /** "Формат\n" +
+     "Строка\n" +
+     "Тип элемента\n" +
+     "Обязательный\n" +
+     "Узел") */
     public FlPer getFlPerList() {
         return flPerList;
     }

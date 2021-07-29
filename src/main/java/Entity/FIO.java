@@ -1,7 +1,5 @@
 package Entity;
 
-import io.swagger.annotations.ApiModelProperty;
-
 import javax.xml.bind.annotation.XmlAttribute;
 
 /**
@@ -17,10 +15,10 @@ public class FIO {
     private String thirdName;
 
     @XmlAttribute(name = "Имя", required = true)
-    @ApiModelProperty(value = "Формат\n" +
-            "T(60) Строка (длина от 1 до 60 знаков)\n" +
-            "Тип элемента\n" +
-            "Обязательный")
+    /** "Формат\n" +
+     "T(60) Строка (длина от 1 до 60 знаков)\n" +
+     "Тип элемента\n" +
+     "Обязательный") */
     public String getFirstName() {
         return firstName;
     }
@@ -30,10 +28,10 @@ public class FIO {
     }
 
     @XmlAttribute(name = "Фамилия", required = true)
-    @ApiModelProperty(value = "Формат\n" +
-            "T(60) Строка (длина от 1 до 60 знаков)\n" +
-            "Тип элемента\n" +
-            "Обязательный")
+    /** "Формат\n" +
+     "T(60) Строка (длина от 1 до 60 знаков)\n" +
+     "Тип элемента\n" +
+     "Обязательный") */
     public String getLastName() {
         return lastName;
     }
@@ -43,10 +41,10 @@ public class FIO {
     }
 
     @XmlAttribute(name = "Отчество")
-    @ApiModelProperty(value = "Формат\n" +
-            "T(60) Строка (длина от 1 до 60 знаков)\n" +
-            "Тип элемента\n" +
-            "Обязательный")
+    /** "Формат\n" +
+     "T(60) Строка (длина от 1 до 60 знаков)\n" +
+     "Тип элемента\n" +
+     "Обязательный") */
     public String getThirdName() {
         return thirdName;
     }

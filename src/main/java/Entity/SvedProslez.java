@@ -1,7 +1,5 @@
 package Entity;
 
-import io.swagger.annotations.ApiModelProperty;
-
 import javax.xml.bind.annotation.XmlElement;
 
 /**
@@ -22,10 +20,10 @@ public class SvedProslez {
 
 
     @XmlElement(name = "НомТовПрослеж", required = true)
-    @ApiModelProperty(value = "Формат\n" +
-            "T(29) Строка (длина от 1 до 29 знаков)\n" +
-            "Тип элемента\n" +
-            "Обязательный")
+    /** "Формат\n" +
+     "T(29) Строка (длина от 1 до 29 знаков)\n" +
+     "Тип элемента\n" +
+     "Обязательный") */
     public String getNominalProductProsl() {
         return nominalProductProsl;
     }
@@ -35,10 +33,10 @@ public class SvedProslez {
     }
 
     @XmlElement(name = "ЕдИзмПрослеж", required = true)
-    @ApiModelProperty(value = "Формат\n" +
-            "T(4) Строка (длина от 3 до 4 знаков)\n" +
-            "Тип элемента\n" +
-            "Обязательный")
+    /** "Формат\n" +
+     "T(4) Строка (длина от 3 до 4 знаков)\n" +
+     "Тип элемента\n" +
+     "Обязательный") */
     public String getEdIzmProsl() {
         return edIzmProsl;
     }
@@ -48,10 +46,10 @@ public class SvedProslez {
     }
 
     @XmlElement(name = "НаимЕдИзмПрослеж", required = true)
-    @ApiModelProperty(value = "Формат\n" +
-            "T(255) Строка (длина от 1 до 255 знаков)\n" +
-            "Тип элемента\n" +
-            "Обязательный")
+    /** "Формат\n" +
+     "T(255) Строка (длина от 1 до 255 знаков)\n" +
+     "Тип элемента\n" +
+     "Обязательный") */
     public String getNameEdIzmProsl() {
         return nameEdIzmProsl;
     }
@@ -61,11 +59,11 @@ public class SvedProslez {
     }
 
     @XmlElement(name = "КолВЕдПрослеж", required = true)
-    @ApiModelProperty(value = "Формат\n" +
-            "N(26.11) Вещественное (максимальное число знаков 26, в том числе десятичных 11)\n" +
-            "Тип элемента\n" +
-            "Обязательный\n" +
-            "Принимает значение: 0")
+    /** "Формат\n" +
+     "N(26.11) Вещественное (максимальное число знаков 26, в том числе десятичных 11)\n" +
+     "Тип элемента\n" +
+     "Обязательный\n" +
+     "Принимает значение: 0")*/
     public String getQuantityVedProsl() {
         return quantityVedProsl;
     }
@@ -75,10 +73,10 @@ public class SvedProslez {
     }
 
     @XmlElement(name = "ДопПрослеж")
-    @ApiModelProperty(value = "Формат\n" +
-            "T(255) Строка (длина от 1 до 255 знаков)\n" +
-            "Тип элемента\n" +
-            "Необязательный")
+    /** "Формат\n" +
+     "T(255) Строка (длина от 1 до 255 знаков)\n" +
+     "Тип элемента\n" +
+     "Необязательный") */
     public String getDopProsl() {
         return dopProsl;
     }

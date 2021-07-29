@@ -1,7 +1,5 @@
 package Entity;
 
-import io.swagger.annotations.ApiModelProperty;
-
 import javax.xml.bind.annotation.XmlAttribute;
 
 /**
@@ -29,10 +27,10 @@ public class AddressRF {
     private String appartment;
 
     @XmlAttribute(name = "Индекс")
-    @ApiModelProperty(value = "Формат\n" +
-            "T(=6) Строка (фиксированное число знаков 6)\n" +
-            "Тип элемента\n" +
-            "Необязательный")
+    /** "Формат\n" +
+     "T(=6) Строка (фиксированное число знаков 6)\n" +
+     "Тип элемента\n" +
+     "Необязательный") */
     public String getIndex() {
         return index;
     }
@@ -42,10 +40,10 @@ public class AddressRF {
     }
 
     @XmlAttribute(name = "КодРегион", required = true)
-    @ApiModelProperty(value = "Формат\n" +
-            "T(=2) Строка (фиксированное число знаков 2)\n" +
-            "Тип элемента\n" +
-            "Обязательный")
+    /** "Формат\n" +
+     "T(=2) Строка (фиксированное число знаков 2)\n" +
+     "Тип элемента\n" +
+     "Обязательный") */
     public String getCodeRegion() {
         return codeRegion;
     }
@@ -55,10 +53,10 @@ public class AddressRF {
     }
 
     @XmlAttribute(name = "Район")
-    @ApiModelProperty(value = "Формат\n" +
-            "T(50) Строка (длина от 1 до 50 знаков)\n" +
-            "Тип элемента\n" +
-            "Необязательный")
+    /** "Формат\n" +
+     "T(50) Строка (длина от 1 до 50 знаков)\n" +
+     "Тип элемента\n" +
+     "Необязательный") */
     public String getDistrict() {
         return district;
     }
@@ -68,10 +66,10 @@ public class AddressRF {
     }
 
     @XmlAttribute(name = "Город")
-    @ApiModelProperty(value = "Формат\n" +
-            "T(50) Строка (длина от 1 до 50 знаков)\n" +
-            "Тип элемента\n" +
-            "Необязательный")
+    /** "Формат\n" +
+     "T(50) Строка (длина от 1 до 50 знаков)\n" +
+     "Тип элемента\n" +
+     "Необязательный") */
     public String getCity() {
         return city;
     }
@@ -81,10 +79,10 @@ public class AddressRF {
     }
 
     @XmlAttribute(name = "НаселПункт")
-    @ApiModelProperty(value = "Формат\n" +
-            "T(50) Строка (длина от 1 до 50 знаков)\n" +
-            "Тип элемента\n" +
-            "Необязательный")
+    /** "Формат\n" +
+     "T(50) Строка (длина от 1 до 50 знаков)\n" +
+     "Тип элемента\n" +
+     "Необязательный") */
     public String getLocality() {
         return locality;
     }
@@ -94,10 +92,10 @@ public class AddressRF {
     }
 
     @XmlAttribute(name = "Улица")
-    @ApiModelProperty(value = "Формат\n" +
-            "T(50) Строка (длина от 1 до 50 знаков)\n" +
-            "Тип элемента\n" +
-            "Необязательный")
+    /** "Формат\n" +
+     "T(50) Строка (длина от 1 до 50 знаков)\n" +
+     "Тип элемента\n" +
+     "Необязательный") */
     public String getStreet() {
         return street;
     }
@@ -107,10 +105,10 @@ public class AddressRF {
     }
 
     @XmlAttribute(name = "Дом")
-    @ApiModelProperty(value = "Формат\n" +
-            "T(20) Строка (длина от 1 до 20 знаков)\n" +
-            "Тип элемента\n" +
-            "Необязательный")
+    /** "Формат\n" +
+     "T(20) Строка (длина от 1 до 20 знаков)\n" +
+     "Тип элемента\n" +
+     "Необязательный") */
     public String getHouse() {
         return house;
     }
@@ -120,10 +118,10 @@ public class AddressRF {
     }
 
     @XmlAttribute(name = "Корпус")
-    @ApiModelProperty(value = "Формат\n" +
-            "T(20) Строка (длина от 1 до 20 знаков)\n" +
-            "Тип элемента\n" +
-            "Необязательный")
+    /** "Формат\n" +
+     "T(20) Строка (длина от 1 до 20 знаков)\n" +
+     "Тип элемента\n" +
+     "Необязательный") */
     public String getHousing() {
         return housing;
     }
@@ -133,10 +131,10 @@ public class AddressRF {
     }
 
     @XmlAttribute(name = "Кварт")
-    @ApiModelProperty(value = "Формат\n" +
-            "T(20) Строка (длина от 1 до 20 знаков)\n" +
-            "Тип элемента\n" +
-            "Необязательный")
+    /** "Формат\n" +
+     "T(20) Строка (длина от 1 до 20 знаков)\n" +
+     "Тип элемента\n" +
+     "Необязательный") */
     public String getAppartment() {
         return appartment;
     }

@@ -1,7 +1,5 @@
 package Entity;
 
-import io.swagger.annotations.ApiModelProperty;
-
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
@@ -30,10 +28,10 @@ public class SvPer {
 
 
     @XmlElement(name = "СодОпер", required = true)
-    @ApiModelProperty(value = "Формат\n" +
-            "T(255) Строка (длина от 1 до 255 знаков)\n" +
-            "Тип элемента\n" +
-            "Обязательный")
+    /** "Формат\n" +
+     "T(255) Строка (длина от 1 до 255 знаков)\n" +
+     "Тип элемента\n" +
+     "Обязательный") */
     public String getSodOper() {
         return sodOper;
     }
@@ -43,10 +41,10 @@ public class SvPer {
     }
 
     @XmlElement(name = "ВидОпер")
-    @ApiModelProperty(value = "Формат\n" +
-            "T(255) Строка (длина от 1 до 255 знаков)\n" +
-            "Тип элемента\n" +
-            "Необязательный")
+    /** "Формат\n" +
+     "T(255) Строка (длина от 1 до 255 знаков)\n" +
+     "Тип элемента\n" +
+     "Необязательный") */
     public String getVidOper() {
         return vidOper;
     }
@@ -58,10 +56,10 @@ public class SvPer {
     @XmlElement(name = "ДатаПер")
     @XmlJavaTypeAdapter(DateAdapter.class)
     @XmlSchemaType(name = "datetime")
-    @ApiModelProperty(value = "Формат\n" +
-            "D(10) Дата (фиксированное число знаков 10)\n" +
-            "Тип элемента\n" +
-            "Необязательный")
+    /** "Формат\n" +
+     "D(10) Дата (фиксированное число знаков 10)\n" +
+     "Тип элемента\n" +
+     "Необязательный") */
     public LocalDate getDatePer() {
         return datePer;
     }
@@ -73,10 +71,10 @@ public class SvPer {
     @XmlElement(name = "ДатаНач")
     @XmlJavaTypeAdapter(DateAdapter.class)
     @XmlSchemaType(name = "datetime")
-    @ApiModelProperty(value = "Формат\n" +
-            "D(10) Дата (фиксированное число знаков 10)\n" +
-            "Тип элемента\n" +
-            "Необязательный")
+    /** "Формат\n" +
+     "D(10) Дата (фиксированное число знаков 10)\n" +
+     "Тип элемента\n" +
+     "Необязательный") */
     public LocalDate getDateStart() {
         return dateStart;
     }
@@ -88,10 +86,10 @@ public class SvPer {
     @XmlElement(name = "ДатаОкон")
     @XmlJavaTypeAdapter(DateAdapter.class)
     @XmlSchemaType(name = "datetime")
-    @ApiModelProperty(value = "Формат\n" +
-            "D(10) Дата (фиксированное число знаков 10)\n" +
-            "Тип элемента\n" +
-            "Необязательный")
+    /** "Формат\n" +
+     "D(10) Дата (фиксированное число знаков 10)\n" +
+     "Тип элемента\n" +
+     "Необязательный") */
     public LocalDate getDateEnd() {
         return dateEnd;
     }
@@ -101,11 +99,11 @@ public class SvPer {
     }
 
     @XmlElement(name = "ОснПер")
-    @ApiModelProperty(value = "Формат\n" +
-            "Составной элемент\n" +
-            "Тип элемента\n" +
-            "Обязательный\n" +
-            "Узел")
+    /** "Формат\n" +
+     "Составной элемент\n" +
+     "Тип элемента\n" +
+     "Обязательный\n" +
+     "Узел") */
     public OsnPer getOsnPerList() {
         return osnPerList;
     }
@@ -115,11 +113,11 @@ public class SvPer {
     }
 
     @XmlElement(name = "СвЛицПер")
-    @ApiModelProperty(value = "Формат\n" +
-            "Строка\n" +
-            "Тип элемента\n" +
-            "Необязательный\n" +
-            "Узел")
+    /** "Формат\n" +
+     "Строка\n" +
+     "Тип элемента\n" +
+     "Необязательный\n" +
+     "Узел") */
     public SvLicPer getSvLicPerList() {
         return svLicPerList;
     }
@@ -129,11 +127,11 @@ public class SvPer {
     }
 
     @XmlElement(name = "ТранГруз")
-    @ApiModelProperty(value = "Формат\n" +
-            "Строка\n" +
-            "Тип элемента\n" +
-            "Необязательный\n" +
-            "Узел")
+    /** "Формат\n" +
+     "Строка\n" +
+     "Тип элемента\n" +
+     "Необязательный\n" +
+     "Узел") */
     public TranGruz getTranGruzList() {
         return tranGruzList;
     }
@@ -143,11 +141,11 @@ public class SvPer {
     }
 
     @XmlElement(name = "СвПерВещи")
-    @ApiModelProperty(value = "Формат\n" +
-            "Строка\n" +
-            "Тип элемента\n" +
-            "Необязательный\n" +
-            "Узел")
+    /** "Формат\n" +
+     "Строка\n" +
+     "Тип элемента\n" +
+     "Необязательный\n" +
+     "Узел") */
     public SvPerVech getSvPerVechList() {
         return svPerVechList;
     }

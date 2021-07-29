@@ -10,7 +10,7 @@ public class DataProcedureManager {
 
     private String connectionUrl = "jdbc:jtds:sqlserver://SWEBAP01:1433;databaseName=REFIRA_COM;domain=REKSOFT;USENTLMV2=true";
     private String userName = "usov";
-    private String pass = "S";
+    private String pass = "Swizze2010%%";
 
     private HikariConfig config = new HikariConfig();
 
@@ -30,17 +30,10 @@ public class DataProcedureManager {
                      ResultSet resultSet = statement.executeQuery(sql)) {
                     ResultSetMetaData resultSetMetaData = resultSet.getMetaData();
                     int column = resultSetMetaData.getColumnCount();
-//                    for (int i = 1; i < column; i++) {
-//                        String name = resultSetMetaData.getColumnName(i);
-//                        int typeColumn = resultSetMetaData.getColumnType(i);
-//                        System.out.println("Name column #" + i + " = " + name + " | typeColumn: " + typeColumn);
-//                    }
                     while (resultSet.next()) {
 
                         for (int j = 1; j < column; j++) {
-
                             mapDataProcedure.put(resultSetMetaData.getColumnName(j), resultSet.getObject(j));
-
                         }
                     }
 

@@ -1,7 +1,5 @@
 package Entity;
 
-import io.swagger.annotations.ApiModelProperty;
-
 import javax.xml.bind.annotation.XmlAttribute;
 
 /**
@@ -17,10 +15,10 @@ public class SvInNeUc {
     private String overInf;
 
     @XmlAttribute(name = "НаимОрг", required = true)
-    @ApiModelProperty(value = "Формат\n" +
-            "T(1000) Строка (длина от 1 до 1000 знаков)\n" +
-            "Тип элемента\n" +
-            "Обязательный")
+    /** "Формат\n" +
+     "T(1000) Строка (длина от 1 до 1000 знаков)\n" +
+     "Тип элемента\n" +
+     "Обязательный") */
     public String getNameOrg() {
         return nameOrg;
     }
@@ -30,10 +28,10 @@ public class SvInNeUc {
     }
 
     @XmlAttribute(name = "Идентиф")
-    @ApiModelProperty(value = "Формат\n" +
-            "T(255) Строка (длина от 1 до 255 знаков)\n" +
-            "Тип элемента\n" +
-            "Необязательный")
+    /** "Формат\n" +
+     "T(255) Строка (длина от 1 до 255 знаков)\n" +
+     "Тип элемента\n" +
+     "Необязательный") */
     public String getOrgId() {
         return orgId;
     }
@@ -43,10 +41,10 @@ public class SvInNeUc {
     }
 
     @XmlAttribute(name = "ИныеСвед")
-    @ApiModelProperty(value = "Формат\n" +
-            "T(255) Строка (длина от 1 до 255 знаков)\n" +
-            "Тип элемента\n" +
-            "Необязательный")
+    /** "Формат\n" +
+     "T(255) Строка (длина от 1 до 255 знаков)\n" +
+     "Тип элемента\n" +
+     "Необязательный") */
     public String getOverInf() {
         return overInf;
     }

@@ -1,7 +1,5 @@
 package Entity;
 
-import io.swagger.annotations.ApiModelProperty;
-
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
@@ -39,40 +37,40 @@ public class Document {
     private Podpisant podpisant;
 
     @XmlAttribute(name = "КНД", required = true)
-    @ApiModelProperty(value = "Формат\n" +
-            "T(=7) Строка (фиксированное число знаков 7)\n" +
-            "Тип элемента\n" +
-            "Обязательный\n" +
-            "'Ключевой'\n" +
-            "Принимает значение: 1115131")
-    public String getKnd() {
-        return knd;
-    }
+    /** "Формат\n" +
+     "T(=7) Строка (фиксированное число знаков 7)\n" +
+     "Тип элемента\n" +
+     "Обязательный\n" +
+     "'Ключевой'\n" +
+     "Принимает значение: 1115131")*/
+     public String getKnd() {
+     return knd;
+     }
 
-    public void setKnd(String knd) {
-        this.knd = knd;
-    }
+     public void setKnd(String knd) {
+     this.knd = knd;
+     }
 
-    @XmlAttribute(name = "Функция", required = true)
-    @ApiModelProperty(value = "Формат\n" +
-            "T(6) Строка (длина от 1 до 6 знаков)\n" +
-            "Тип элемента\n" +
-            "Обязательный\n" +
-            "'Ключевой'\n" +
-            "Принимает значение: СЧФ")
-    public String getFunc() {
-        return func;
-    }
+     @XmlAttribute(name = "Функция", required = true)
+     /** "Формат\n" +
+     "T(6) Строка (длина от 1 до 6 знаков)\n" +
+     "Тип элемента\n" +
+     "Обязательный\n" +
+     "'Ключевой'\n" +
+     "Принимает значение: СЧФ")*/
+     public String getFunc() {
+     return func;
+     }
 
-    public void setFunc(String func) {
-        this.func = func;
-    }
+     public void setFunc(String func) {
+     this.func = func;
+     }
 
-    @XmlAttribute(name = "ПоФактХЖ", required = false)
-    @ApiModelProperty(value = "Формат\n" +
-            "T(255) Строка (длина от 1 до 255 знаков)\n" +
-            "Тип элемента\n" +
-            "Необязательный")
+     @XmlAttribute(name = "ПоФактХЖ", required = false)
+     /** "Формат\n" +
+     "T(255) Строка (длина от 1 до 255 знаков)\n" +
+     "Тип элемента\n" +
+     "Необязательный") */
     public String getPoFactHZ() {
         return poFactHZ;
     }
@@ -82,10 +80,10 @@ public class Document {
     }
 
     @XmlAttribute(name = "НаимДокОпр", required = false)
-    @ApiModelProperty(value = "Формат\n" +
-            "T(255) Строка (длина от 1 до 255 знаков)\n" +
-            "Тип элемента\n" +
-            "Необязательный")
+    /** "Формат\n" +
+     "T(255) Строка (длина от 1 до 255 знаков)\n" +
+     "Тип элемента\n" +
+     "Необязательный") */
     public String getNameDocReq() {
         return nameDocReq;
     }
@@ -97,10 +95,10 @@ public class Document {
     @XmlAttribute(name = "ДатаИнфПр", required = true)
     @XmlJavaTypeAdapter(DateAdapter.class)
     @XmlSchemaType(name = "datetime")
-    @ApiModelProperty(value = "Формат\n" +
-            "D(10) Дата (фиксированное число знаков 10)\n" +
-            "Тип элемента\n" +
-            "Обязательный")
+    /** "Формат\n" +
+     "D(10) Дата (фиксированное число знаков 10)\n" +
+     "Тип элемента\n" +
+     "Обязательный") */
     public LocalDate getDateInfPr() {
         return dateInfPr;
     }
@@ -112,10 +110,10 @@ public class Document {
     @XmlAttribute(name = "ВремИнфПр", required = true)
     @XmlJavaTypeAdapter(TimeAdapter.class)
     @XmlSchemaType(name = "datetime")
-    @ApiModelProperty(value = "Формат\n" +
-            "D(8) Время (фиксированное число знаков 8)\n" +
-            "Тип элемента\n" +
-            "Обязательный")
+    /** "Формат\n" +
+     "D(8) Время (фиксированное число знаков 8)\n" +
+     "Тип элемента\n" +
+     "Обязательный") */
     public LocalDateTime getTimeInfPr() {
         return timeInfPr;
     }
@@ -125,10 +123,10 @@ public class Document {
     }
 
     @XmlAttribute(name = "НаимЭконСубСост", required = true)
-    @ApiModelProperty(value = "Формат\n" +
-            "T(1000) Строка (длина от 1 до 1000 знаков)\n" +
-            "Тип элемента\n" +
-            "Обязательный")
+    /** "Формат\n" +
+     "T(1000) Строка (длина от 1 до 1000 знаков)\n" +
+     "Тип элемента\n" +
+     "Обязательный") */
     public String getNameEconSubCondition() {
         return nameEconSubCondition;
     }
@@ -138,10 +136,10 @@ public class Document {
     }
 
     @XmlAttribute(name = "ОснДоверОргСост")
-    @ApiModelProperty(value = "Формат\n" +
-            "T(120) Строка (длина от 1 до 120 знаков)\n" +
-            "Тип элемента\n" +
-            "Необязательный")
+    /** "Формат\n" +
+     "T(120) Строка (длина от 1 до 120 знаков)\n" +
+     "Тип элемента\n" +
+     "Необязательный") */
     public String getOsnDoverOrgCondition() {
         return osnDoverOrgCondition;
     }
@@ -151,10 +149,10 @@ public class Document {
     }
 
     @XmlAttribute(name = "СоглСтрДопИнф", required = false)
-    @ApiModelProperty(value = "Формат\n" +
-            "T(=14) Строка (фиксированное число знаков 14)\n" +
-            "Тип элемента\n" +
-            "Необязательный")
+    /** "Формат\n" +
+     "T(=14) Строка (фиксированное число знаков 14)\n" +
+     "Тип элемента\n" +
+     "Необязательный") */
     public String getSoglStrDopInf() {
         return soglStrDopInf;
     }
@@ -164,11 +162,11 @@ public class Document {
     }
 
     @XmlElement(name = "СвСчФакт")
-    @ApiModelProperty(value = "Формат\n" +
-            "Строка\n" +
-            "Тип элемента\n" +
-            "Обязательный\n" +
-            "Узел")
+    /** "Формат\n" +
+     "Строка\n" +
+     "Тип элемента\n" +
+     "Обязательный\n" +
+     "Узел") */
     public SvScFact getSvScFact() {
         return svScFact;
     }
@@ -178,11 +176,11 @@ public class Document {
     }
 
     @XmlElement(name = "ТаблСчФакт")
-    @ApiModelProperty(value = "Формат\n" +
-            "Строка\n" +
-            "Тип элемента\n" +
-            "Условно-Обязательный\n" +
-            "Узел")
+    /** "Формат\n" +
+     "Строка\n" +
+     "Тип элемента\n" +
+     "Условно-Обязательный\n" +
+     "Узел") */
     public TableScFact getTableScFact() {
         return tableScFact;
     }
@@ -192,11 +190,11 @@ public class Document {
     }
 
     @XmlElement(name = "СвПродПер")
-    @ApiModelProperty(value = "Формат\n" +
-            "Строка\n" +
-            "Тип элемента\n" +
-            "Условно-Обязательный\n" +
-            "Узел")
+    /** "Формат\n" +
+     "Строка\n" +
+     "Тип элемента\n" +
+     "Условно-Обязательный\n" +
+     "Узел") */
     public SvProdPer getSvProdPer() {
         return svProdPer;
     }
@@ -206,11 +204,11 @@ public class Document {
     }
 
     @XmlElement(name = "Подписант")
-    @ApiModelProperty(value = "Формат\n" +
-            "Составной элемент\n" +
-            "Тип элемента\n" +
-            "Обязательный\n" +
-            "Узел")
+    /** "Формат\n" +
+     "Составной элемент\n" +
+     "Тип элемента\n" +
+     "Обязательный\n" +
+     "Узел") */
     public Podpisant getPodpisant() {
         return podpisant;
     }

@@ -1,7 +1,5 @@
 package Entity;
 
-import io.swagger.annotations.ApiModelProperty;
-
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
@@ -21,10 +19,10 @@ public class SvPRD {
     private BigDecimal summPRD;
 
     @XmlElement(name = "НомерПРД", required = true)
-    @ApiModelProperty(value = "Формат\n" +
-            "T(30) Строка (длина от 1 до 30 знаков)\n" +
-            "Тип элемента\n" +
-            "Обязательный")
+    /** "Формат\n" +
+     "T(30) Строка (длина от 1 до 30 знаков)\n" +
+     "Тип элемента\n" +
+     "Обязательный") */
     public String getNumberPRD() {
         return numberPRD;
     }
@@ -36,10 +34,10 @@ public class SvPRD {
     @XmlElement(name = "ДатаПРД", required = true)
     @XmlJavaTypeAdapter(DateAdapter.class)
     @XmlSchemaType(name = "datetime")
-    @ApiModelProperty(value = "Формат\n" +
-            "D(10) Дата (фиксированное число знаков 10)\n" +
-            "Тип элемента\n" +
-            "Обязательный")
+    /** "Формат\n" +
+     "D(10) Дата (фиксированное число знаков 10)\n" +
+     "Тип элемента\n" +
+     "Обязательный") */
     public LocalDate getDatePRD() {
         return datePRD;
     }
@@ -49,10 +47,10 @@ public class SvPRD {
     }
 
     @XmlElement(name = "СуммаПРД")
-    @ApiModelProperty(value = "Формат\n" +
-            "N(19.2) Вещественное (максимальное число знаков 19, в том числе десятичных 2)\n" +
-            "Тип элемента\n" +
-            "Необязательный")
+    /** "Формат\n" +
+     "N(19.2) Вещественное (максимальное число знаков 19, в том числе десятичных 2)\n" +
+     "Тип элемента\n" +
+     "Необязательный") */
     public BigDecimal getSummPRD() {
         return summPRD;
     }

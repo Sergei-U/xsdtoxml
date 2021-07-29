@@ -1,7 +1,5 @@
 package Entity;
 
-import io.swagger.annotations.ApiModelProperty;
-
 import javax.xml.bind.annotation.XmlElement;
 
 /**
@@ -17,11 +15,12 @@ public class Address {
     private String codeGAR;
 
     @XmlElement(name = "АдрРФ")
-    @ApiModelProperty(value = "Формат\n" +
-            "Строка\n" +
-            "Тип элемента\n" +
-            "Обязательный\n" +
-            "Узел")
+/**    /** "Формат\n" +
+ "Строка\n" +
+ "Тип элемента\n" +
+ "Обязательный\n" +
+ "Узел") */
+
     public AddressRF getAddressRFList() {
         return addressRFList;
     }
@@ -31,11 +30,11 @@ public class Address {
     }
 
     @XmlElement(name = "АдрИнф")
-    @ApiModelProperty(value = "Формат\n" +
-            "Строка\n" +
-            "Тип элемента\n" +
-            "Обязательный\n" +
-            "Узел")
+    /** "Формат\n" +
+     "Строка\n" +
+     "Тип элемента\n" +
+     "Обязательный\n" +
+     "Узел") */
     public AddressInf getAddressInfList() {
         return addressInfList;
     }
@@ -45,11 +44,11 @@ public class Address {
     }
 
     @XmlElement(name = "КодГАР", required = true)
-    @ApiModelProperty(value = "Формат\n" +
-            "Строка (длина от 1 до 36 знаков)\n" +
-            "Тип элемента\n" +
-            "Обязательный\n" +
-            "Узел")
+    /** "Формат\n" +
+     "Строка (длина от 1 до 36 знаков)\n" +
+     "Тип элемента\n" +
+     "Обязательный\n" +
+     "Узел") */
     public String getCodeGAR() {
         return codeGAR;
     }

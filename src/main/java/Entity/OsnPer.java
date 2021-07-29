@@ -1,7 +1,5 @@
 package Entity;
 
-import io.swagger.annotations.ApiModelProperty;
-
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
@@ -21,11 +19,11 @@ public class OsnPer {
     private String identOsn;
 
     @XmlElement(name = "НаимОсн", required = true)
-    @ApiModelProperty(value = "Формат\n" +
-            "T(255) Строка (длина от 1 до 255 знаков)\n" +
-            "Тип элемента\n" +
-            "Обязательный\n" +
-            "Принимает значение: Без документа-основания")
+    /** "Формат\n" +
+     "T(255) Строка (длина от 1 до 255 знаков)\n" +
+     "Тип элемента\n" +
+     "Обязательный\n" +
+     "Принимает значение: Без документа-основания")*/
     public String getNameOsn() {
         return nameOsn;
     }
@@ -35,10 +33,10 @@ public class OsnPer {
     }
 
     @XmlElement(name = "НомОсн")
-    @ApiModelProperty(value = "Формат\n" +
-            "T(255) Строка (длина от 1 до 255 знаков)\n" +
-            "Тип элемента\n" +
-            "Необязательный")
+    /** "Формат\n" +
+     "T(255) Строка (длина от 1 до 255 знаков)\n" +
+     "Тип элемента\n" +
+     "Необязательный") */
     public String getNomOns() {
         return nomOns;
     }
@@ -50,10 +48,10 @@ public class OsnPer {
     @XmlElement(name = "ДатаОсн")
     @XmlJavaTypeAdapter(DateAdapter.class)
     @XmlSchemaType(name = "datetime")
-    @ApiModelProperty(value = "Формат\n" +
-            "D(10) Дата (фиксированное число знаков 10)\n" +
-            "Тип элемента\n" +
-            "Условно-Обязательный")
+    /** "Формат\n" +
+     "D(10) Дата (фиксированное число знаков 10)\n" +
+     "Тип элемента\n" +
+     "Условно-Обязательный") */
     public LocalDate getDateOsn() {
         return dateOsn;
     }
@@ -63,10 +61,10 @@ public class OsnPer {
     }
 
     @XmlElement(name = "ДопСвОсн")
-    @ApiModelProperty(value = "Формат\n" +
-            "T(1000) Строка (длина от 1 до 1000 знаков)\n" +
-            "Тип элемента\n" +
-            "Необязательный")
+    /** "Формат\n" +
+     "T(1000) Строка (длина от 1 до 1000 знаков)\n" +
+     "Тип элемента\n" +
+     "Необязательный") */
     public String getDopSvOsn() {
         return dopSvOsn;
     }
@@ -76,10 +74,10 @@ public class OsnPer {
     }
 
     @XmlElement(name = "ИдентОсн")
-    @ApiModelProperty(value = "Формат\n" +
-            "T(255) Строка (длина от 1 до 255 знаков)\n" +
-            "Тип элемента\n" +
-            "Необязательный")
+    /** "Формат\n" +
+     "T(255) Строка (длина от 1 до 255 знаков)\n" +
+     "Тип элемента\n" +
+     "Необязательный") */
     public String getIdentOsn() {
         return identOsn;
     }

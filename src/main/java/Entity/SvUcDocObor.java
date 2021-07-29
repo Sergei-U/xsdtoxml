@@ -1,7 +1,5 @@
 package Entity;
 
-import io.swagger.annotations.ApiModelProperty;
-
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 
@@ -19,10 +17,10 @@ public class SvUcDocObor {
     private SvOEDDispatch svOEDDispatch;
 
     @XmlAttribute(name = "ИдОтпр", required = true)
-    @ApiModelProperty(value = "Формат\n" +
-            "T(46) Строка (длина от 4 до 46 знаков)\n" +
-            "Тип элемента\n" +
-            "Обязательный")
+    /** "Формат\n" +
+     "T(46) Строка (длина от 4 до 46 знаков)\n" +
+     "Тип элемента\n" +
+     "Обязательный") */
     public String getIdDispatch() {
         return idDispatch;
     }
@@ -32,10 +30,10 @@ public class SvUcDocObor {
     }
 
     @XmlAttribute(name = "ИдПол", required = true)
-    @ApiModelProperty(value = "Формат\n" +
-            "T(46) Строка (длина от 4 до 46 знаков)\n" +
-            "Тип элемента\n" +
-            "Обязательный")
+    /** "Формат\n" +
+     "T(46) Строка (длина от 4 до 46 знаков)\n" +
+     "Тип элемента\n" +
+     "Обязательный") */
     public String getIdReception() {
         return idReception;
     }

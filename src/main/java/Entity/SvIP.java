@@ -1,7 +1,5 @@
 package Entity;
 
-import io.swagger.annotations.ApiModelProperty;
-
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 
@@ -22,10 +20,10 @@ public class SvIP {
     private FIO fioList;
 
     @XmlAttribute(name = "ИННФЛ", required = true)
-    @ApiModelProperty(value = "Формат\n" +
-            "T(=12) Строка (фиксированное число знаков 12)\n" +
-            "Тип элемента\n" +
-            "Обязательный")
+    /** "Формат\n" +
+     "T(=12) Строка (фиксированное число знаков 12)\n" +
+     "Тип элемента\n" +
+     "Обязательный") */
     public String getInnFL() {
         return innFL;
     }
@@ -35,11 +33,11 @@ public class SvIP {
     }
 
     @XmlAttribute(name = "ДефИННФЛ", required = true)
-    @ApiModelProperty(value = "Формат\n" +
-            "T(=1) Строка (фиксированное число знаков 1)\n" +
-            "Тип элемента\n" +
-            "Обязательный\n" +
-            "Принимает значение: -")
+    /** "Формат\n" +
+     "T(=1) Строка (фиксированное число знаков 1)\n" +
+     "Тип элемента\n" +
+     "Обязательный\n" +
+     "Принимает значение: -")*/
     public String getDefInnFL() {
         return defInnFL;
     }
@@ -49,10 +47,10 @@ public class SvIP {
     }
 
     @XmlAttribute(name = "СвГосРегИП")
-    @ApiModelProperty(value = "Формат\n" +
-            "T(100) Строка (длина от 1 до 100 знаков)\n" +
-            "Тип элемента\n" +
-            "Необязательный")
+    /** "Формат\n" +
+     "T(100) Строка (длина от 1 до 100 знаков)\n" +
+     "Тип элемента\n" +
+     "Необязательный") */
     public String getSvGosRegIP() {
         return svGosRegIP;
     }
@@ -62,10 +60,10 @@ public class SvIP {
     }
 
     @XmlAttribute(name = "ИныеСвед")
-    @ApiModelProperty(value = "Формат\n" +
-            "T(255) Строка (длина от 1 до 255 знаков)\n" +
-            "Тип элемента\n" +
-            "Необязательный")
+    /** "Формат\n" +
+     "T(255) Строка (длина от 1 до 255 знаков)\n" +
+     "Тип элемента\n" +
+     "Необязательный") */
     public String getOverData() {
         return overData;
     }
@@ -75,11 +73,11 @@ public class SvIP {
     }
 
     @XmlElement(name = "ФИО")
-    @ApiModelProperty(value = "Формат\n" +
-            "Строка\n" +
-            "Тип элемента\n" +
-            "Обязательный\n" +
-            "Узел")
+    /** "Формат\n" +
+     "Строка\n" +
+     "Тип элемента\n" +
+     "Обязательный\n" +
+     "Узел") */
     public FIO getFioList() {
         return fioList;
     }

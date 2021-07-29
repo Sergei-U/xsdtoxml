@@ -1,7 +1,5 @@
 package Entity;
 
-import io.swagger.annotations.ApiModelProperty;
-
 import javax.xml.bind.annotation.XmlElement;
 
 /**
@@ -18,10 +16,10 @@ public class SvTD {
     private String numberTD;
 
     @XmlElement(name = "КодПроисх")
-    @ApiModelProperty(value = "Формат\n" +
-            "T(=3) Строка (фиксированное число знаков 3)\n" +
-            "Тип элемента\n" +
-            "Необязательный")
+    /** "Формат\n" +
+     "T(=3) Строка (фиксированное число знаков 3)\n" +
+     "Тип элемента\n" +
+     "Необязательный") */
     public String getCodeOrigin() {
         return codeOrigin;
     }
@@ -31,11 +29,11 @@ public class SvTD {
     }
 
     @XmlElement(name = "ДефКодПроисх", defaultValue = "-")
-    @ApiModelProperty(value = "Формат\n" +
-            "T(=1) Строка (фиксированное число знаков 1)\n" +
-            "Тип элемента\n" +
-            "Необязательный\n" +
-            "Принимает значение: -")
+    /** "Формат\n" +
+     "T(=1) Строка (фиксированное число знаков 1)\n" +
+     "Тип элемента\n" +
+     "Необязательный\n" +
+     "Принимает значение: -")*/
     public String getDefCodeOrigin() {
         return defCodeOrigin;
     }
@@ -45,10 +43,10 @@ public class SvTD {
     }
 
     @XmlElement(name = "НомерТД")
-    @ApiModelProperty(value = "Формат\n" +
-            "T(29) Строка (длина от 1 до 29 знаков)\n" +
-            "Тип элемента\n" +
-            "Необязательный")
+    /** "Формат\n" +
+     "T(29) Строка (длина от 1 до 29 знаков)\n" +
+     "Тип элемента\n" +
+     "Необязательный") */
     public String getNumberTD() {
         return numberTD;
     }

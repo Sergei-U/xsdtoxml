@@ -1,7 +1,5 @@
 package Entity;
 
-import io.swagger.annotations.ApiModelProperty;
-
 import javax.xml.bind.annotation.XmlElement;
 
 /**
@@ -17,10 +15,10 @@ public class NomSredIndentTov {
     private String nomPack;
 
     @XmlElement(name = "ИдентТрансУпак")
-    @ApiModelProperty(value = "Формат\n" +
-            "T(255) Строка (длина от 1 до 255 знаков)\n" +
-            "Тип элемента\n" +
-            "Условно-Обязательный")
+    /** "Формат\n" +
+     "T(255) Строка (длина от 1 до 255 знаков)\n" +
+     "Тип элемента\n" +
+     "Условно-Обязательный") */
     public String getIdentTransPack() {
         return identTransPack;
     }
@@ -30,11 +28,11 @@ public class NomSredIndentTov {
     }
 
     @XmlElement(name = "КИЗ")
-    @ApiModelProperty(value = "Формат\n" +
-            "Строка (длина от 1 до 255 знаков)\n" +
-            "Тип элемента\n" +
-            "Условно-Обязательный\n" +
-            "Узел")
+    /** "Формат\n" +
+     "Строка (длина от 1 до 255 знаков)\n" +
+     "Тип элемента\n" +
+     "Условно-Обязательный\n" +
+     "Узел") */
     public String getKiz() {
         return kiz;
     }
@@ -44,11 +42,11 @@ public class NomSredIndentTov {
     }
 
     @XmlElement(name = "НомУпак")
-    @ApiModelProperty(value = "Формат\n" +
-            "Строка (длина от 1 до 255 знаков)\n" +
-            "Тип элемента\n" +
-            "Условно-Обязательный\n" +
-            "Узел")
+    /** "Формат\n" +
+     "Строка (длина от 1 до 255 знаков)\n" +
+     "Тип элемента\n" +
+     "Условно-Обязательный\n" +
+     "Узел") */
     public String getNomPack() {
         return nomPack;
     }

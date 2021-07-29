@@ -1,7 +1,5 @@
 package Entity;
 
-import io.swagger.annotations.ApiModelProperty;
-
 import javax.xml.bind.annotation.XmlElement;
 
 
@@ -20,10 +18,10 @@ public class PredOrgPer {
     private FIO fioList;
 
     @XmlElement(name = "Должность", required = true)
-    @ApiModelProperty(value = "Формат\n" +
-            "T(128) Строка (длина от 1 до 128 знаков)\n" +
-            "Тип элемента\n" +
-            "Обязательный")
+    /** "Формат\n" +
+     "T(128) Строка (длина от 1 до 128 знаков)\n" +
+     "Тип элемента\n" +
+     "Обязательный") */
     public String getDolznost() {
         return dolznost;
     }
@@ -33,10 +31,10 @@ public class PredOrgPer {
     }
 
     @XmlElement(name = "ИныеСвед")
-    @ApiModelProperty(value = "Формат\n" +
-            "T(255) Строка (длина от 1 до 255 знаков)\n" +
-            "Тип элемента\n" +
-            "Необязательный")
+    /** "Формат\n" +
+     "T(255) Строка (длина от 1 до 255 знаков)\n" +
+     "Тип элемента\n" +
+     "Необязательный") */
     public String getOverSved() {
         return overSved;
     }
@@ -46,10 +44,10 @@ public class PredOrgPer {
     }
 
     @XmlElement(name = "НаимОргПер", required = true)
-    @ApiModelProperty(value = "Формат\n" +
-            "T(128) Строка (длина от 1 до 128 знаков)\n" +
-            "Тип элемента\n" +
-            "Обязательный")
+    /** "Формат\n" +
+     "T(128) Строка (длина от 1 до 128 знаков)\n" +
+     "Тип элемента\n" +
+     "Обязательный") */
     public String getNameOrgPer() {
         return nameOrgPer;
     }
@@ -59,10 +57,10 @@ public class PredOrgPer {
     }
 
     @XmlElement(name = "ОснДоверОргПер")
-    @ApiModelProperty(value = "Формат\n" +
-            "T(120) Строка (длина от 1 до 120 знаков)\n" +
-            "Тип элемента\n" +
-            "Необязательный")
+    /** "Формат\n" +
+     "T(120) Строка (длина от 1 до 120 знаков)\n" +
+     "Тип элемента\n" +
+     "Необязательный") */
     public String getOsnDoverOrgPer() {
         return osnDoverOrgPer;
     }
@@ -72,10 +70,10 @@ public class PredOrgPer {
     }
 
     @XmlElement(name = "ОснПолнПредПер")
-    @ApiModelProperty(value = "Формат\n" +
-            "T(120) Строка (длина от 1 до 120 знаков)\n" +
-            "Тип элемента\n" +
-            "Необязательный")
+    /** "Формат\n" +
+     "T(120) Строка (длина от 1 до 120 знаков)\n" +
+     "Тип элемента\n" +
+     "Необязательный") */
     public String getOsnPolnPredPer() {
         return osnPolnPredPer;
     }
@@ -85,11 +83,11 @@ public class PredOrgPer {
     }
 
     @XmlElement(name = "ФИО", required = true)
-    @ApiModelProperty(value = "Формат\n" +
-            "Строка\n" +
-            "Тип элемента\n" +
-            "Обязательный\n" +
-            "Узел")
+    /** "Формат\n" +
+     "Строка\n" +
+     "Тип элемента\n" +
+     "Обязательный\n" +
+     "Узел") */
     public FIO getFioList() {
         return fioList;
     }

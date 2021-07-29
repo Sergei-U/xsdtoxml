@@ -1,7 +1,5 @@
 package Entity;
 
-import io.swagger.annotations.ApiModelProperty;
-
 import javax.xml.bind.annotation.XmlElement;
 
 /**
@@ -19,11 +17,12 @@ public class IdSv {
     private SvFLUcastFXZ svFLUcastFXZList;
 
     @XmlElement(name = "СвИП", required = true)
-    @ApiModelProperty(value = "Формат\n" +
-            "Строка\n" +
-            "Тип элемента\n" +
-            "Обязательный\n" +
-            "Узел")
+    /** "Формат\n" +
+     "Строка\n" +
+     "Тип элемента\n" +
+     "Обязательный\n" +
+     "Узел")
+     */
     public SvIP getSvIPList() {
         return svIPList;
     }
@@ -33,11 +32,12 @@ public class IdSv {
     }
 
     @XmlElement(name = "СвЮЛУч", required = true)
-    @ApiModelProperty(value = "Формат\n" +
-            "Строка\n" +
-            "Тип элемента\n" +
-            "Обязательный\n" +
-            "Узел")
+    /** "Формат\n" +
+     "Строка\n" +
+     "Тип элемента\n" +
+     "Обязательный\n" +
+     "Узел")
+     */
     public SvULUc getSvULUcList() {
         return svULUcList;
     }
@@ -47,11 +47,11 @@ public class IdSv {
     }
 
     @XmlElement(name = "СвИнНеУч", required = true)
-    @ApiModelProperty(value = "Формат\n" +
-            "Строка\n" +
-            "Тип элемента\n" +
-            "Обязательный\n" +
-            "Узел")
+    /** "Формат\n" +
+     "Строка\n" +
+     "Тип элемента\n" +
+     "Обязательный\n" +
+     "Узел") */
     public SvInNeUc getSvInNeUcList() {
         return svInNeUcList;
     }
@@ -61,11 +61,11 @@ public class IdSv {
     }
 
     @XmlElement(name = "СвФЛУчастФХЖ", required = true)
-    @ApiModelProperty(value = "Формат\n" +
-            "Строка\n" +
-            "Тип элемента\n" +
-            "Обязательный\n" +
-            "Узел")
+    /** "Формат\n" +
+     "Строка\n" +
+     "Тип элемента\n" +
+     "Обязательный\n" +
+     "Узел") */
     public SvFLUcastFXZ getSvFLUcastFXZList() {
         return svFLUcastFXZList;
     }

@@ -1,7 +1,5 @@
 package Entity;
 
-import io.swagger.annotations.ApiModelProperty;
-
 import javax.xml.bind.annotation.XmlElement;
 
 
@@ -24,10 +22,10 @@ public class Perevozchik {
     private BankReq bankReqList;
 
     @XmlElement(name = "ОКПО")
-    @ApiModelProperty(value = "Формат\n" +
-            "T(10) Строка (длина от 1 до 10 знаков)\n" +
-            "Тип элемента\n" +
-            "Необязательный")
+    /** "Формат\n" +
+     "T(10) Строка (длина от 1 до 10 знаков)\n" +
+     "Тип элемента\n" +
+     "Необязательный") */
     public String getOkpo() {
         return okpo;
     }
@@ -37,10 +35,10 @@ public class Perevozchik {
     }
 
     @XmlElement(name = "СтруктПодр")
-    @ApiModelProperty(value = "Формат\n" +
-            "T(1000) Строка (длина от 1 до 1000 знаков)\n" +
-            "Тип элемента\n" +
-            "Необязательный")
+    /** "Формат\n" +
+     "T(1000) Строка (длина от 1 до 1000 знаков)\n" +
+     "Тип элемента\n" +
+     "Необязательный") */
     public String getStructSubdivision() {
         return structSubdivision;
     }
@@ -50,10 +48,10 @@ public class Perevozchik {
     }
 
     @XmlElement(name = "ИнфДляУчаст")
-    @ApiModelProperty(value = "Формат\n" +
-            "T(255) Строка (длина от 1 до 255 знаков)\n" +
-            "Тип элемента\n" +
-            "Необязательный")
+    /** "Формат\n" +
+     "T(255) Строка (длина от 1 до 255 знаков)\n" +
+     "Тип элемента\n" +
+     "Необязательный") */
     public String getInfForParticipation() {
         return infForParticipation;
     }
@@ -63,10 +61,10 @@ public class Perevozchik {
     }
 
     @XmlElement(name = "КраткНазв")
-    @ApiModelProperty(value = "Формат\n" +
-            "T(255) Строка (длина от 1 до 255 знаков)\n" +
-            "Тип элемента\n" +
-            "Необязательный")
+    /** "Формат\n" +
+     "T(255) Строка (длина от 1 до 255 знаков)\n" +
+     "Тип элемента\n" +
+     "Необязательный") */
     public String getShortName() {
         return shortName;
     }
@@ -76,11 +74,11 @@ public class Perevozchik {
     }
 
     @XmlElement(name = "ИдСв", required = true)
-    @ApiModelProperty(value = "Формат\n" +
-            "Строка\n" +
-            "Тип элемента\n" +
-            "Обязательный\n" +
-            "Узел")
+    /** "Формат\n" +
+     "Строка\n" +
+     "Тип элемента\n" +
+     "Обязательный\n" +
+     "Узел") */
     public IdSv getIdSvList() {
         return idSvList;
     }
@@ -90,11 +88,11 @@ public class Perevozchik {
     }
 
     @XmlElement(name = "Адрес")
-    @ApiModelProperty(value = "Формат\n" +
-            "Строка\n" +
-            "Тип элемента\n" +
-            "Необязательный\n" +
-            "Узел")
+    /** "Формат\n" +
+     "Строка\n" +
+     "Тип элемента\n" +
+     "Необязательный\n" +
+     "Узел") */
     public Address getAddressList() {
         return addressList;
     }
@@ -104,11 +102,11 @@ public class Perevozchik {
     }
 
     @XmlElement(name = "Контакт")
-    @ApiModelProperty(value = "Формат\n" +
-            "Строка\n" +
-            "Тип элемента\n" +
-            "Необязательный\n" +
-            "Узел")
+    /** "Формат\n" +
+     "Строка\n" +
+     "Тип элемента\n" +
+     "Необязательный\n" +
+     "Узел") */
     public Contact getContactList() {
         return contactList;
     }
@@ -118,11 +116,11 @@ public class Perevozchik {
     }
 
     @XmlElement(name = "БанкРекв")
-    @ApiModelProperty(value = "Формат\n" +
-            "Строка\n" +
-            "Тип элемента\n" +
-            "Необязательный\n" +
-            "Узел")
+    /** "Формат\n" +
+     "Строка\n" +
+     "Тип элемента\n" +
+     "Необязательный\n" +
+     "Узел") */
     public BankReq getBankReqList() {
         return bankReqList;
     }

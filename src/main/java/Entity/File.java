@@ -39,20 +39,20 @@ public class File implements Serializable {
     }
 
     @XmlAttribute(name = "ВерсФорм", required = true)
-    @ApiModelProperty(value = "Формат\n" +
-            "T(5) Строка (длина от 1 до 5 знаков)\n" +
-            "Тип элемента\n" +
-            "Обязательный\n" +
-            "Принимает значение: 5.01")
-    public String getVerForm() {
-        return verForm;
-    }
+    /** "Формат\n" +
+     "T(5) Строка (длина от 1 до 5 знаков)\n" +
+     "Тип элемента\n" +
+     "Обязательный\n" +
+     "Принимает значение: 5.01")
+     public String getVerForm() {
+     return verForm;
+     }
 
-    @XmlAttribute(name = "ИдФайл", required = true)
-    @ApiModelProperty(value = "Формат\n" +
-            "T(255) Строка (длина от 1 до 255 знаков)\n" +
-            "Тип элемента\n" +
-            "Обязательный")
+     @XmlAttribute(name = "ИдФайл", required = true)
+     /** "Формат\n" +
+     "T(255) Строка (длина от 1 до 255 знаков)\n" +
+     "Тип элемента\n" +
+     "Обязательный") */
     public String getIdFile() {
         return idFile;
     }

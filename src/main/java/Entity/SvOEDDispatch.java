@@ -1,7 +1,5 @@
 package Entity;
 
-import io.swagger.annotations.ApiModelProperty;
-
 import javax.xml.bind.annotation.XmlAttribute;
 
 /**
@@ -18,10 +16,10 @@ public class SvOEDDispatch {
     private String idEDO;
 
     @XmlAttribute(name = "НаимОрг", required = true)
-    @ApiModelProperty(value = "Формат\n" +
-            "T(1000) Строка (длина от 1 до 1000 знаков)\n" +
-            "Тип элемента\n" +
-            "Обязательный")
+    /** "Формат\n" +
+     "T(1000) Строка (длина от 1 до 1000 знаков)\n" +
+     "Тип элемента\n" +
+     "Обязательный") */
     public String getNameCompany() {
         return nameCompany;
     }
@@ -31,10 +29,10 @@ public class SvOEDDispatch {
     }
 
     @XmlAttribute(name = "ИННЮЛ", required = true)
-    @ApiModelProperty(value = "Формат\n" +
-            "T(=10) Строка (фиксированное число знаков 10)\n" +
-            "Тип элемента\n" +
-            "Обязательный")
+    /** "Формат\n" +
+     "T(=10) Строка (фиксированное число знаков 10)\n" +
+     "Тип элемента\n" +
+     "Обязательный") */
     public String getIdNumberCompany() {
         return idNumberCompany;
     }
@@ -44,10 +42,10 @@ public class SvOEDDispatch {
     }
 
     @XmlAttribute(name = "ИдЭДО", required = true)
-    @ApiModelProperty(value = "Формат\n" +
-            "T(=3) Строка (фиксированное число знаков 3)\n" +
-            "Тип элемента\n" +
-            "Обязательный")
+    /** "Формат\n" +
+     "T(=3) Строка (фиксированное число знаков 3)\n" +
+     "Тип элемента\n" +
+     "Обязательный") */
     public String getIdEDO() {
         return idEDO;
     }

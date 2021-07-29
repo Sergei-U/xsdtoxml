@@ -1,7 +1,5 @@
 package Entity;
 
-import io.swagger.annotations.ApiModelProperty;
-
 import javax.xml.bind.annotation.XmlElement;
 import java.math.BigDecimal;
 
@@ -22,10 +20,10 @@ public class TotalOpl {
     private SummNalAll summNalAllList;
 
     @XmlElement(name = "СтТовБезНДСВсего")
-    @ApiModelProperty(value = "Формат\n" +
-            "N(19.2) Вещественное (максимальное число знаков 19, в том числе десятичных 2)\n" +
-            "Тип элемента\n" +
-            "Необязательный")
+    /** "Формат\n" +
+     "N(19.2) Вещественное (максимальное число знаков 19, в том числе десятичных 2)\n" +
+     "Тип элемента\n" +
+     "Необязательный") */
     public BigDecimal getStProdNoNDSAll() {
         return stProdNoNDSAll;
     }
@@ -35,11 +33,11 @@ public class TotalOpl {
     }
 
     @XmlElement(name = "СтТовУчНалВсего", required = true)
-    @ApiModelProperty(value = "Формат\n" +
-            "N(19.2) Вещественное (максимальное число знаков 19, в том числе десятичных 2)\n" +
-            "Тип элемента\n" +
-            "Обязательный\n" +
-            "Принимает значение: 0")
+    /** "Формат\n" +
+     "N(19.2) Вещественное (максимальное число знаков 19, в том числе десятичных 2)\n" +
+     "Тип элемента\n" +
+     "Обязательный\n" +
+     "Принимает значение: 0")*/
     public BigDecimal getStProdUcNalAll() {
         return stProdUcNalAll;
     }
@@ -49,11 +47,11 @@ public class TotalOpl {
     }
 
     @XmlElement(name = "ДефСтТовУчНалВсего", required = true, defaultValue = "-")
-    @ApiModelProperty(value = "Формат\n" +
-            "T(=1) Строка (фиксированное число знаков 1)\n" +
-            "Тип элемента\n" +
-            "Обязательный\n" +
-            "Принимает значение: -")
+    /** "Формат\n" +
+     "T(=1) Строка (фиксированное число знаков 1)\n" +
+     "Тип элемента\n" +
+     "Обязательный\n" +
+     "Принимает значение: -")*/
     public String getDefStProdUcNalAll() {
         return defStProdUcNalAll;
     }
@@ -63,11 +61,11 @@ public class TotalOpl {
     }
 
     @XmlElement(name = "СумНалВсего")
-    @ApiModelProperty(value = "Формат\n" +
-            "Строка\n" +
-            "Тип элемента\n" +
-            "Обязательный\n" +
-            "Узел")
+    /** "Формат\n" +
+     "Строка\n" +
+     "Тип элемента\n" +
+     "Обязательный\n" +
+     "Узел") */
     public SummNalAll getSummNalAllList() {
         return summNalAllList;
     }
@@ -77,11 +75,11 @@ public class TotalOpl {
     }
 
     @XmlElement(name = "КолНеттоВс")
-    @ApiModelProperty(value = "Формат\n" +
-            "Вещественное (максимальное число знаков 26, в том числе десятичных 11)\n" +
-            "Тип элемента\n" +
-            "Необязательный\n" +
-            "Узел")
+    /** "Формат\n" +
+     "Вещественное (максимальное число знаков 26, в том числе десятичных 11)\n" +
+     "Тип элемента\n" +
+     "Необязательный\n" +
+     "Узел") */
     public BigDecimal getSummNetAll() {
         return summNetAll;
     }

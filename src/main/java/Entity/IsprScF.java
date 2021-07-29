@@ -1,7 +1,5 @@
 package Entity;
 
-import io.swagger.annotations.ApiModelProperty;
-
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
@@ -22,11 +20,11 @@ public class IsprScF {
     private String defDateIsprScf;
 
     @XmlAttribute(name = "НомИспрСчФ", required = true)
-    @ApiModelProperty(value = "Формат\n" +
-            "N(3) Целое (максимальное число знаков 3)\n" +
-            "Тип элемента\n" +
-            "Обязательный\n" +
-            "Принимает значение: 0")
+    /** "Формат\n" +
+     "N(3) Целое (максимальное число знаков 3)\n" +
+     "Тип элемента\n" +
+     "Обязательный\n" +
+     "Принимает значение: 0")*/
     public int getNomIsprScf() {
         return nomIsprScf;
     }
@@ -36,11 +34,11 @@ public class IsprScF {
     }
 
     @XmlAttribute(name = "ДефНомИспрСчФ", required = true)
-    @ApiModelProperty(value = "Формат\n" +
-            "T(=1) Строка (фиксированное число знаков 1)\n" +
-            "Тип элемента\n" +
-            "Обязательный\n" +
-            "Принимает значение: -")
+    /** "Формат\n" +
+     "T(=1) Строка (фиксированное число знаков 1)\n" +
+     "Тип элемента\n" +
+     "Обязательный\n" +
+     "Принимает значение: -")*/
     public String getDefNomIsprScf() {
         return defNomIsprScf;
     }
@@ -52,10 +50,10 @@ public class IsprScF {
     @XmlAttribute(name = "ДатаИспрСчФ", required = true)
     @XmlJavaTypeAdapter(DateAdapter.class)
     @XmlSchemaType(name = "datetime")
-    @ApiModelProperty(value = "Формат\n" +
-            "D(10) Дата (фиксированное число знаков 10)\n" +
-            "Тип элемента\n" +
-            "Обязательный")
+    /** "Формат\n" +
+     "D(10) Дата (фиксированное число знаков 10)\n" +
+     "Тип элемента\n" +
+     "Обязательный") */
     public LocalDate getDateIsprScf() {
         return dateIsprScf;
     }
@@ -65,11 +63,11 @@ public class IsprScF {
     }
 
     @XmlAttribute(name = "ДефДатаИспрСчФ", required = true)
-    @ApiModelProperty(value = "Формат\n" +
-            "T(=1) Строка (фиксированное число знаков 1)\n" +
-            "Тип элемента\n" +
-            "Обязательный\n" +
-            "Принимает значение: -")
+    /** "Формат\n" +
+     "T(=1) Строка (фиксированное число знаков 1)\n" +
+     "Тип элемента\n" +
+     "Обязательный\n" +
+     "Принимает значение: -")*/
     public String getDefDateIsprScf() {
         return defDateIsprScf;
     }

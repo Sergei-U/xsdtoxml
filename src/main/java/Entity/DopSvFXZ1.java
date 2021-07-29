@@ -1,7 +1,5 @@
 package Entity;
 
-import io.swagger.annotations.ApiModelProperty;
-
 import javax.xml.bind.annotation.XmlElement;
 import java.math.BigDecimal;
 
@@ -18,10 +16,12 @@ public class DopSvFXZ1 {
     private BigDecimal cursVal;
 
 
-    @ApiModelProperty(value = "Формат\n" +
-            "Перечисление (фиксированное число знаков 1)\n" +
-            "Тип элемента\n" +
-            "Необязательный")
+    /**
+     * "Формат\n" +
+     * "Перечисление (фиксированное число знаков 1)\n" +
+     * "Тип элемента\n" +
+     * "Необязательный")
+     */
     private ObsFormScf obsFormScfEnum;
 //    @XmlElement(name = "ОбстФормСЧФ")
 
@@ -30,10 +30,10 @@ public class DopSvFXZ1 {
     private SvFactor svFactorList;
 
     @XmlElement(name = "ИдГосКон")
-    @ApiModelProperty(value = "Формат\n" +
-            "T(25) Строка (длина от 20 до 25 знаков)\n" +
-            "Тип элемента\n" +
-            "Необязательный")
+    /** "Формат\n" +
+     "T(25) Строка (длина от 20 до 25 знаков)\n" +
+     "Тип элемента\n" +
+     "Необязательный") */
     public String getIdGosContr() {
         return idGosContr;
     }
@@ -43,10 +43,10 @@ public class DopSvFXZ1 {
     }
 
     @XmlElement(name = "НаимОКВ")
-    @ApiModelProperty(value = "Формат\n" +
-            "T(100) Строка (длина от 1 до 100 знаков)\n" +
-            "Тип элемента\n" +
-            "Необязательный")
+    /** "Формат\n" +
+     "T(100) Строка (длина от 1 до 100 знаков)\n" +
+     "Тип элемента\n" +
+     "Необязательный") */
     public String getNameOKV() {
         return nameOKV;
     }
@@ -56,10 +56,10 @@ public class DopSvFXZ1 {
     }
 
     @XmlElement(name = "КурсВал")
-    @ApiModelProperty(value = "Формат\n" +
-            "N(10.4) Вещественное (максимальное число знаков 10, в том числе десятичных 4)\n" +
-            "Тип элемента\n" +
-            "Необязательный")
+    /** "Формат\n" +
+     "N(10.4) Вещественное (максимальное число знаков 10, в том числе десятичных 4)\n" +
+     "Тип элемента\n" +
+     "Необязательный") */
     public BigDecimal getCursVal() {
         return cursVal;
     }
@@ -69,11 +69,11 @@ public class DopSvFXZ1 {
     }
 
     @XmlElement(name = "ИнфПродГосЗакКазн")
-    @ApiModelProperty(value = "Формат\n" +
-            "Строка\n" +
-            "Тип элемента\n" +
-            "Необязательный\n" +
-            "Узел")
+    /** "Формат\n" +
+     "Строка\n" +
+     "Тип элемента\n" +
+     "Необязательный\n" +
+     "Узел") */
     public InfProdGosZakKazn getInfProdGosZakKaznList() {
         return infProdGosZakKaznList;
     }
@@ -83,11 +83,11 @@ public class DopSvFXZ1 {
     }
 
     @XmlElement(name = "СвФактор")
-    @ApiModelProperty(value = "Формат\n" +
-            "Строка\n" +
-            "Тип элемента\n" +
-            "Необязательный\n" +
-            "Узел")
+    /** "Формат\n" +
+     "Строка\n" +
+     "Тип элемента\n" +
+     "Необязательный\n" +
+     "Узел") */
     public SvFactor getSvFactorList() {
         return svFactorList;
     }

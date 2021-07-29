@@ -1,7 +1,5 @@
 package Entity;
 
-import io.swagger.annotations.ApiModelProperty;
-
 import javax.xml.bind.annotation.XmlElement;
 
 /**
@@ -15,11 +13,11 @@ public class TableScFact {
     private TotalOpl totalOplList;
 
     @XmlElement(name = "СведТов", required = true)
-    @ApiModelProperty(value = "Формат\n" +
-            "Составной элемент\n" +
-            "Тип элемента\n" +
-            "Обязательный\n" +
-            "Узел")
+    /** "Формат\n" +
+     "Составной элемент\n" +
+     "Тип элемента\n" +
+     "Обязательный\n" +
+     "Узел") */
     public SvedTov getSvedTovList() {
         return svedTovList;
     }
@@ -29,11 +27,11 @@ public class TableScFact {
     }
 
     @XmlElement(name = "ВсегоОпл", required = true)
-    @ApiModelProperty(value = "Формат\n" +
-            "Строка\n" +
-            "Тип элемента\n" +
-            "Обязательный\n" +
-            "Узел")
+    /** "Формат\n" +
+     "Строка\n" +
+     "Тип элемента\n" +
+     "Обязательный\n" +
+     "Узел") */
     public TotalOpl getTotalOplList() {
         return totalOplList;
     }
