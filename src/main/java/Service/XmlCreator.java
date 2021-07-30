@@ -22,9 +22,8 @@ public class XmlCreator {
 //        TableScFact tableScFact = getTableScFact();
         SvProd svProd = getSvProd();
         Address addressProd = getAddressProd();
-
         IdSv idSv = getIdSv();
-
+        SvPRD svPRD = getSvPRD();
 
 
 
@@ -32,9 +31,29 @@ public class XmlCreator {
         file.setIdFile("ON_NSCHFDOPPR_" + svUcDocObor.getIdDispatch() + "_" + svUcDocObor.getIdReception() + "_" + document.getDateInfPr() + "_" + file.getUuid());
         file.setVerForm("5.01"); //ВерсФорм +
         file.setVerProgram("СБиС3"); //ВерсПрог +
-        file.setSvUcDocObor(getSvUcDocObor(getSvOEDDispatch()));
-        file.setDocument(getDocument(dataProcedureManager));
+        file.setSvUcDocObor(svUcDocObor);
+        file.setDocument(document);
         return file;
+    }
+
+
+
+    private Document getDocument(DataProcedureManager dataProcedureManager) {
+        Document document = new Document();
+        document.setKnd("1115131"); //КНД +
+        document.setFunc("СЧФ"); //Функиця +
+        document.setDateInfPr(LocalDate.now());
+        document.setTimeInfPr(LocalDateTime.now());
+        document.setNameEconSubCondition("ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РЕКСОФТ.РУ\""); //НаимЭконСубСост +
+//        document.setPoFactHZ("по факт ХЖ");
+        document.setNameDocReq(dataProcedureManager.mapDataProcedure.get("Document No_").toString());
+        document.setOsnDoverOrgCondition("ОснДоверОргСост T(120)");
+        document.setSoglStrDopInf("СоглСтрДопИнф");
+        document.setSvScFact(getSvScFact(dataProcedureManager));
+//        document.setTableScFact(tableScFact);
+//        document.setSvProdPer(svProdPer);
+//        document.setPodpisant(podpisant);
+        return document;
     }
 
     private IdSv getIdSv() {
@@ -76,13 +95,6 @@ public class XmlCreator {
         return svProd;
     }
 
-//    private TableScFact getTableScFact() {
-//        TableScFact tableScFact = new TableScFact();
-//        tableScFact.setTotalOplList(getTotalOpl()); //ВсегоОпл
-//        tableScFact.setSvedTovList(getSvedTov()); //СведТов
-//        return tableScFact;
-//    }
-
     private SvULUc getSvULUc() {
         SvULUc svULUc = new SvULUc();
         svULUc.setInnUL("7802144867");
@@ -95,8 +107,16 @@ public class XmlCreator {
         SvScFact svScFact = new SvScFact();
         svScFact.setCodeOKV(dataProcedureManager.mapDataProcedure.get("Currency Code").toString()); //КодОКВ+
         svScFact.setNumberScF(dataProcedureManager.mapDataProcedure.get("Inv_No").toString()); //НомерСчФ+
-        svScFact.setSvPRDList(svScFact.getSvPRDList());
-        return new SvScFact();
+        svScFact.setSvPRDList(getSvPRD());
+        return svScFact;
+    }
+
+    private SvPRD getSvPRD() {
+        SvPRD svPRD = new SvPRD();
+        svPRD.setDatePRD(); //ДатаПРД
+        svPRD.setNumberPRD(); //НомерПРД
+        svPRD.setSummPRD(); //СуммаПРД
+        return svPRD;
     }
 
     private SvUcDocObor getSvUcDocObor(SvOEDDispatch svOEDDispatch) {
@@ -125,23 +145,7 @@ public class XmlCreator {
 //        return totalOpl;
 //    }
 
-    private Document getDocument(DataProcedureManager dataProcedureManager) {
-        Document document = new Document();
-        document.setKnd("1115131"); //КНД +
-        document.setFunc("СЧФ"); //Функиця +
-        document.setDateInfPr(LocalDate.now());
-        document.setTimeInfPr(LocalDateTime.now());
-        document.setNameEconSubCondition("ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РЕКСОФТ.РУ\""); //НаимЭконСубСост +
-//        document.setPoFactHZ("по факт ХЖ");
-        document.setNameDocReq(dataProcedureManager.mapDataProcedure.get("Document No_").toString());
-        document.setOsnDoverOrgCondition("ОснДоверОргСост T(120)");
-        document.setSoglStrDopInf("СоглСтрДопИнф");
-        document.setSvScFact(getSvScFact(dataProcedureManager));
-//        document.setTableScFact(tableScFact);
-//        document.setSvProdPer(svProdPer);
-//        document.setPodpisant(podpisant);
-        return document;
-    }
+
 
 //    private SvedTov getSvedTov() {
 //        SvedTov svedTov = new SvedTov();
@@ -162,5 +166,10 @@ public class XmlCreator {
 //        return svedTov;
 //    }
 
-
+//    private TableScFact getTableScFact() {
+//        TableScFact tableScFact = new TableScFact();
+//        tableScFact.setTotalOplList(getTotalOpl()); //ВсегоОпл
+//        tableScFact.setSvedTovList(getSvedTov()); //СведТов
+//        return tableScFact;
+//    }
 }

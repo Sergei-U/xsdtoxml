@@ -20,17 +20,18 @@ public class DataProcedureManager {
 
     public Map<String, Object> getDataOnProcedureManager() {
 
-
         Properties property = new Properties();
         FileInputStream fis = null;
         try {
             fis = new FileInputStream("src/main/resources/config.properties");
         } catch (FileNotFoundException e) {
+            System.out.println("config.properties file not found");
             e.printStackTrace();
         }
         try {
             property.load(fis);
         } catch (IOException e) {
+
             e.printStackTrace();
         }
         String connectionUrl = property.getProperty("db.host");
