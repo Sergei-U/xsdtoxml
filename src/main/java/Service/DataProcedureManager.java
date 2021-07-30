@@ -2,21 +2,41 @@ package Service;
 
 import com.zaxxer.hikari.HikariConfig;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.sql.*;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Properties;
 
 public class DataProcedureManager {
 
-    private String connectionUrl = "jdbc:jtds:sqlserver://SWEBAP01:1433;databaseName=REFIRA_COM;domain=REKSOFT;USENTLMV2=true";
-    private String userName = "usov";
-    private String pass = "S";
 
     private HikariConfig config = new HikariConfig();
 
     Map<String, Object> mapDataProcedure = new HashMap<>();
 
+
     public Map<String, Object> getDataOnProcedureManager() {
+
+
+        Properties property = new Properties();
+        FileInputStream fis = null;
+        try {
+            fis = new FileInputStream("src/main/resources/config.properties");
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        try {
+            property.load(fis);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        String connectionUrl = property.getProperty("db.host");
+        String userName = property.getProperty("db.login");
+        String pass = property.getProperty("db.password");
+
 
         config.setDriverClassName("net.sourceforge.jtds.jdbc.Driver");
 

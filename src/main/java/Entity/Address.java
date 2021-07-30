@@ -20,7 +20,6 @@ public class Address {
  "Тип элемента\n" +
  "Обязательный\n" +
  "Узел") */
-
     public AddressRF getAddressRFList() {
         return addressRFList;
     }
@@ -29,7 +28,7 @@ public class Address {
         this.addressRFList = addressRFList;
     }
 
-    @XmlElement(name = "АдрИнф")
+    @XmlElement(name = "АдрИнф",required = true)
     /** "Формат\n" +
      "Строка\n" +
      "Тип элемента\n" +
