@@ -1,12 +1,12 @@
 package Entity;
 
+import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import java.math.BigDecimal;
 
 /**
  *
  */
-
 public class SvedTov {
 
     private int nomStr;
@@ -23,16 +23,6 @@ public class SvedTov {
 
     private BigDecimal priceProductNoNDS;
 
-
-    /**
-     * "Формат\n" +
-     * "Перечисление (длина от 1 до 35 знаков)\n" +
-     * "Тип элемента\n" +
-     * "Обязательный")
-     */
-    public NalST nalSTEnum;
-//@XmlElement(name = "НалСт",required = true)
-
     private BigDecimal stTovUcNal;
 
     private String defStTovUcNal;
@@ -47,22 +37,23 @@ public class SvedTov {
 
     private InfPolFXZ2 infPolFXZ2List;
 
-    @XmlElement(name = "НомСтр", required = true)
+
+    @XmlAttribute(name = "НомСтр", required = true)
     /** "Формат\n" +
      "N(6) Целое (максимальное число знаков 6)\n" +
      "Тип элемента\n" +
      "Обязательный\n" +
      "Принимает значение: 0")*/
-     public int getNomStr() {
-     return nomStr;
-     }
+    public int getNomStr() {
+        return nomStr;
+    }
 
-     public void setNomStr(int nomStr) {
-     this.nomStr = nomStr;
-     }
+    public void setNomStr(int nomStr) {
+        this.nomStr = nomStr;
+    }
 
-     @XmlElement(name = "НаимТов")
-     /** "Формат\n" +
+    @XmlAttribute(name = "НаимТов")
+    /** "Формат\n" +
      "T(1000) Строка (длина от 1 до 1000 знаков)\n" +
      "Тип элемента\n" +
      "Условно-Обязательный") */
@@ -74,7 +65,7 @@ public class SvedTov {
         this.nameProduct = nameProduct;
     }
 
-    @XmlElement(name = "ОКЕИ_Тов")
+    @XmlAttribute(name = "ОКЕИ_Тов")
     /** "Формат\n" +
      "T(4) Строка (длина от 3 до 4 знаков)\n" +
      "Тип элемента\n" +
@@ -87,22 +78,22 @@ public class SvedTov {
         this.okei_product = okei_product;
     }
 
-    @XmlElement(name = "ДефОКЕИ_Тов")
+    @XmlAttribute(name = "ДефОКЕИ_Тов")
     /** "Формат\n" +
      "T(=1) Строка (фиксированное число знаков 1)\n" +
      "Тип элемента\n" +
      "Условно-Обязательный\n" +
      "Принимает значение: -")*/
-     public String getDefOKEI_product() {
-     return defOKEI_product;
-     }
+    public String getDefOKEI_product() {
+        return defOKEI_product;
+    }
 
-     public void setDefOKEI_product(String defOKEI_product) {
-     this.defOKEI_product = defOKEI_product;
-     }
+    public void setDefOKEI_product(String defOKEI_product) {
+        this.defOKEI_product = defOKEI_product;
+    }
 
-     @XmlElement(name = "КолТов")
-     /** "Формат\n" +
+    @XmlAttribute(name = "КолТов")
+    /** "Формат\n" +
      "N(26.11) Вещественное (максимальное число знаков 26, в том числе десятичных 11)\n" +
      "Тип элемента\n" +
      "Условно-Обязательный") */
@@ -114,64 +105,65 @@ public class SvedTov {
         this.quantityProduct = quantityProduct;
     }
 
-    @XmlElement(name = "ЦенаТов")
+    @XmlAttribute(name = "ЦенаТов")
     /** "Формат\n" +
      "N(26.11) Вещественное (максимальное число знаков 26, в том числе десятичных 11)\n" +
      "Тип элемента\n" +
      "Необязательный\n" +
      "Принимает значение: 0")*/
-     public BigDecimal getPriceProduct() {
-     return priceProduct;
-     }
+    public BigDecimal getPriceProduct() {
+        return priceProduct;
+    }
 
-     public void setPriceProduct(BigDecimal priceProduct) {
-     this.priceProduct = priceProduct;
-     }
+    public void setPriceProduct(BigDecimal priceProduct) {
+        this.priceProduct = priceProduct;
+    }
 
-     @XmlElement(name = "СтТовБезНДС")
-     /** "Формат\n" +
+    @XmlAttribute(name = "СтТовБезНДС")
+    /** "Формат\n" +
      "N(19.2) Вещественное (максимальное число знаков 19, в том числе десятичных 2)\n" +
      "Тип элемента\n" +
      "Необязательный\n" +
      "Принимает значение: 0")*/
-     public BigDecimal getPriceProductNoNDS() {
-     return priceProductNoNDS;
-     }
+    public BigDecimal getPriceProductNoNDS() {
+        return priceProductNoNDS;
+    }
 
-     public void setPriceProductNoNDS(BigDecimal priceProductNoNDS) {
-     this.priceProductNoNDS = priceProductNoNDS;
-     }
+    public void setPriceProductNoNDS(BigDecimal priceProductNoNDS) {
+        this.priceProductNoNDS = priceProductNoNDS;
+    }
 
-     @XmlElement(name = "СтТовУчНал", required = true)
-     /** "Формат\n" +
+
+    @XmlAttribute(name = "СтТовУчНал", required = true)
+    /** "Формат\n" +
      "N(19.2) Вещественное (максимальное число знаков 19, в том числе десятичных 2)\n" +
      "Тип элемента\n" +
      "Обязательный\n" +
      "Принимает значение: 0")*/
-     public BigDecimal getStTovUcNal() {
-     return stTovUcNal;
-     }
+    public BigDecimal getStTovUcNal() {
+        return stTovUcNal;
+    }
 
-     public void setStTovUcNal(BigDecimal stTovUcNal) {
-     this.stTovUcNal = stTovUcNal;
-     }
+    public void setStTovUcNal(BigDecimal stTovUcNal) {
+        this.stTovUcNal = stTovUcNal;
+    }
 
-     @XmlElement(name = "ДефСтТовУчНал", required = true)
-     /** "Формат\n" +
+    @XmlAttribute(name = "ДефСтТовУчНал", required = true)
+    /** "Формат\n" +
      "T(=1) Строка (фиксированное число знаков 1)\n" +
      "Тип элемента\n" +
      "Обязательный\n" +
      "Принимает значение: -")*/
-     public String getDefStTovUcNal() {
-     return defStTovUcNal;
-     }
+    public String getDefStTovUcNal() {
+        return defStTovUcNal;
+    }
 
-     public void setDefStTovUcNal(String defStTovUcNal) {
-     this.defStTovUcNal = defStTovUcNal;
-     }
+    public void setDefStTovUcNal(String defStTovUcNal) {
+        this.defStTovUcNal = defStTovUcNal;
+    }
 
-     @XmlElement(name = "Акциз", required = true)
-     /** "Формат\n" +
+    @XmlElement(name = "Акциз", required = true)
+    /** "Формат\n" +
      "Строка\n" +
      "Тип элемента\n" +
      "Обязательный\n" +

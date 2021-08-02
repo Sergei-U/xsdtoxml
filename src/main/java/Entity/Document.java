@@ -6,6 +6,10 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 
+@XmlType(propOrder = {"svScFact",
+        "tableScFact",
+        "svProdPer",
+        "podpisant"})
 public class Document {
 
     private String knd;

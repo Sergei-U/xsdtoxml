@@ -53,14 +53,5 @@ public class FIO {
         this.thirdName = thirdName;
     }
 
-    public FIO(String firstName, String lastName) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-    }
 
-    public FIO(String firstName, String lastName, String thirdName) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.thirdName = thirdName;
-    }
 }

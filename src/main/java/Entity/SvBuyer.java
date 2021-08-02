@@ -1,11 +1,16 @@
 package Entity;
 
+import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  *
  */
-
+@XmlType(propOrder = {"idSvList",
+        "addressList",
+        "contactList",
+        "bankReqList"})
 public class SvBuyer {
 
     private String okpo;
@@ -24,7 +29,7 @@ public class SvBuyer {
 
     private BankReq bankReqList;
 
-    @XmlElement(name = "ОКПО")
+    @XmlAttribute(name = "ОКПО")
     /** "Формат\n" +
      "T(10) Строка (длина от 1 до 10 знаков)\n" +
      "Тип элемента\n" +
@@ -37,7 +42,7 @@ public class SvBuyer {
         this.okpo = okpo;
     }
 
-    @XmlElement(name = "СтруктПодр")
+    @XmlAttribute(name = "СтруктПодр")
     /** "Формат\n" +
      "T(1000) Строка (длина от 1 до 1000 знаков)\n" +
      "Тип элемента\n" +
@@ -50,7 +55,7 @@ public class SvBuyer {
         this.structSubdivision = structSubdivision;
     }
 
-    @XmlElement(name = "ИнфДляУчаст")
+    @XmlAttribute(name = "ИнфДляУчаст")
     /** "Формат\n" +
      "T(255) Строка (длина от 1 до 255 знаков)\n" +
      "Тип элемента\n" +
@@ -63,7 +68,7 @@ public class SvBuyer {
         this.infForParticipation = infForParticipation;
     }
 
-    @XmlElement(name = "КраткНазв")
+    @XmlAttribute(name = "КраткНазв")
     /** "Формат\n" +
      "T(255) Строка (длина от 1 до 255 знаков)\n" +
      "Тип элемента\n" +

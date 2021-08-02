@@ -2,6 +2,7 @@ package Service;
 
 import Entity.*;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
@@ -38,10 +39,115 @@ public class XmlCreator {
         document.setSoglStrDopInf("СоглСтрДопИнфФ"); //обязательно 14 знаков
         document.setSvScFact(getSvScFact(dataProcedureManager));
 //        document.setPoFactHZ("по факт ХЖ");
-//        document.setTableScFact(tableScFact);
-//        document.setSvProdPer(svProdPer);
-//        document.setPodpisant(podpisant);
+        document.setTableScFact(getTableScFact());
+        document.setSvProdPer(getSvProdPer());
+        document.setPodpisant(getPodpisant());
         return document;
+    }
+
+
+    private Podpisant getPodpisant() {
+        Podpisant podpisant = new Podpisant();
+        podpisant.setOblPolnEnum(6);
+        podpisant.setStatusEnum(1); //1 or 4
+        podpisant.setOsnPoln("Формат");
+        podpisant.setOsnPolnOrg("ОснПолнОрг");
+        podpisant.setUl(getUL());
+
+        return podpisant;
+    }
+
+    private UL getUL() {
+        UL ul = new UL();
+        ul.setGosRegIPVidDov("ГосРегИПВыдДов");
+        ul.setInnUL("7802144867");
+        ul.setOverInf("ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РЕКСОФТ.РУ\"\n");
+        ul.setNameOrg("ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РЕКСОФТ.РУ\"\n");
+        ul.setDolzhnost("ДИректор");
+        ul.setFioList(getFIOPodpisant());
+        return ul;
+    }
+
+    private FIO getFIOPodpisant() {
+        FIO fio = new FIO();
+        fio.setFirstName("Егоров А.Г.");
+        fio.setLastName("Егоров А.Г.");
+        return fio;
+    }
+
+
+    private SvProdPer getSvProdPer() {
+        SvProdPer svProdPer = new SvProdPer();
+        svProdPer.setSvPerList(getSvPerList());
+//        svProdPer.setInfPolFXZ3List(getInfPolFXZ3List());
+        return svProdPer;
+    }
+
+    private InfPolFXZ3 getInfPolFXZ3List() {
+        InfPolFXZ3 infPolFXZ3 = new InfPolFXZ3();
+        infPolFXZ3.setIdFileInfPol("9c3adc2b-a085-4acd-af8c-3494290d782c");
+//        infPolFXZ3.setTextInfList();
+        return infPolFXZ3;
+    }
+
+    private SvPer getSvPerList() {
+        SvPer svPer = new SvPer();
+        svPer.setSodOper("СодОпер");
+        svPer.setVidOper("ВидОпер");
+        svPer.setDatePer(LocalDate.now());
+        svPer.setDateStart(LocalDate.now());
+        svPer.setDateEnd(LocalDate.now());
+//        svPer.setOsnPerList();
+//        svPer.setSvLicPerList();
+//        svPer.setTranGruzList();
+//        svPer.setSvPerVechList();
+        return svPer;
+    }
+
+    private TableScFact getTableScFact() {
+        TableScFact tableScFact = new TableScFact();
+        tableScFact.setTotalOplList(getTotalOpl()); //ВсегоОпл
+        tableScFact.setSvedTovList(getSvedTov()); //СведТов
+        return tableScFact;
+    }
+
+    private TotalOpl getTotalOpl() {
+        TotalOpl totalOpl = new TotalOpl();
+        totalOpl.setDefStProdUcNalAll("-"); //ДефСтТовУчНалВсего
+        totalOpl.setStProdNoNDSAll(BigDecimal.valueOf(19.2)); //СтТовБезНДСВсего
+        totalOpl.setStProdUcNalAll(BigDecimal.valueOf(19.2)); //СтТовУчНалВсего
+        totalOpl.setSummNalAllList(getsummNalAll()); //СумНалВсего
+        totalOpl.setSummNetAll(BigDecimal.valueOf(19.2)); //КолНеттоВс
+        return totalOpl;
+    }
+
+    private SummNalAll getsummNalAll() {
+        SummNalAll summNalAll = new SummNalAll();
+        summNalAll.setSummNal(BigDecimal.valueOf(500.5));
+        summNalAll.setDefNDS("-");
+        summNalAll.setNonNDS(String.valueOf(480.5));
+        return summNalAll;
+    }
+
+
+    private SvedTov getSvedTov() {
+        SvedTov svedTov = new SvedTov();
+        svedTov.setNomStr(6);
+        svedTov.setNameProduct("НаимТов T(1000) Строка (длина от 1 до 1000 знаков)");
+        svedTov.setOkei_product("334");
+        svedTov.setDefOKEI_product("-");
+        svedTov.setQuantityProduct(BigDecimal.valueOf(26.11));
+        svedTov.setPriceProduct(BigDecimal.valueOf(25.11));
+        svedTov.setPriceProductNoNDS(BigDecimal.valueOf(19.2));
+        svedTov.setStTovUcNal(BigDecimal.valueOf(19.2));
+        svedTov.setDefStTovUcNal("-");
+
+//        svedTov.setExciseList();
+//        svedTov.setSummNalList();
+//        svedTov.setSvTDList();
+//        svedTov.setDopSvedTovList();
+//        svedTov.setInfPolFXZ2List();
+        return svedTov;
     }
 
     private SvScFact getSvScFact(DataProcedureManager dataProcedureManager) {
@@ -50,12 +156,19 @@ public class XmlCreator {
 //        svScFact.setCodeOKV(dataProcedureManager.mapDataProcedure.get("Currency Code").toString()); //КодОКВ+
         svScFact.setCodeOKV("643"); //КодОКВ+
         svScFact.setNumberScF(dataProcedureManager.mapDataProcedure.get("Inv_No").toString()); //НомерСчФ+
-        svScFact.setSvProdList(getSvProd());
-        svScFact.setCargoReceiverList(getCargoReceiverShipTo());
+        svScFact.setSvProdList(getSvProd()); //СвПрод
+//        svScFact.setCargoSenderList(getCargoSendler()); //ГрузОт
+        svScFact.setCargoReceiverList(getCargoReceiverShipTo()); //ГрузПолуч
         svScFact.setSvBuyerList(getSvBuyer());
         svScFact.setIsprScFList(getIsprScFList());
 //        svScFact.setSvPRDList(getSvPRD());
         return svScFact;
+    }
+
+    private CargoSender getCargoSendler() {
+        CargoSender cargoSender = new CargoSender();
+        cargoSender.setOnZ("Он Же");
+        return cargoSender;
     }
 
     private SvULUc getSvULUcShipTo() {
@@ -90,7 +203,6 @@ public class XmlCreator {
         return addressRFProd;
     }
 
-
     private Address getAddressProd() {
         Address addressProd = new Address();
         addressProd.setAddressRFList(getAddressRFProd());
@@ -123,7 +235,6 @@ public class XmlCreator {
         svULUc.setKpp("781301001");
         return svULUc;
     }
-
 
 
     private IsprScF getIsprScFList() {
@@ -172,50 +283,7 @@ public class XmlCreator {
         return svOEDDispatch;
     }
 
-//    private SvPRD getSvPRD() {
-//        SvPRD svPRD = new SvPRD();
-//        svPRD.setDatePRD(); //ДатаПРД
-//        svPRD.setNumberPRD(); //НомерПРД
-//        svPRD.setSummPRD(); //СуммаПРД
-//        return svPRD;
-//    }
 
 
 
-//    private TotalOpl getTotalOpl() {
-//        TotalOpl totalOpl = new TotalOpl();
-//        totalOpl.setDefStProdUcNalAll(); //ДефСтТовУчНалВсего
-//        totalOpl.setStProdNoNDSAll(); //СтТовБезНДСВсего
-//        totalOpl.setStProdUcNalAll(); //СтТовУчНалВсего
-//        totalOpl.setSummNalAllList(); //СумНалВсего
-//        totalOpl.setSummNetAll(); //КолНеттоВс
-//        return totalOpl;
-//    }
-
-
-//    private SvedTov getSvedTov() {
-//        SvedTov svedTov = new SvedTov();
-//        svedTov.setNomStr();
-//        svedTov.setNameProduct();
-//        svedTov.setOkei_product();
-//        svedTov.setDefOKEI_product();
-//        svedTov.setQuantityProduct();
-//        svedTov.setPriceProduct();
-//        svedTov.setPriceProductNoNDS();
-//        svedTov.setStTovUcNal();
-//        svedTov.setDefStTovUcNal();
-//        svedTov.setExciseList();
-//        svedTov.setSummNalList();
-//        svedTov.setSvTDList();
-//        svedTov.setDopSvedTovList();
-//        svedTov.setInfPolFXZ2List();
-//        return svedTov;
-//    }
-
-//    private TableScFact getTableScFact() {
-//        TableScFact tableScFact = new TableScFact();
-//        tableScFact.setTotalOplList(getTotalOpl()); //ВсегоОпл
-//        tableScFact.setSvedTovList(getSvedTov()); //СведТов
-//        return tableScFact;
-//    }
 }

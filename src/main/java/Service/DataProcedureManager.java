@@ -45,7 +45,7 @@ public class DataProcedureManager {
             System.out.println("Connecting to SQL Server ... ");
             try (Connection connection = DriverManager.getConnection(connectionUrl, userName, pass)) {
                 System.out.println("Retrieving procedure data from the database...");
-                String sql = "exec dbo.getDocument @DocumentType = 2, @DocumentNo='401-270/10'";
+                String sql = "exec dbo.getDocument @DocumentType = 2, @DocumentNo='401-256/16'";
 
                 try (Statement statement = connection.createStatement();
                      ResultSet resultSet = statement.executeQuery(sql)) {

@@ -22,7 +22,7 @@ public class DopSvFXZ1 {
      * "Тип элемента\n" +
      * "Необязательный")
      */
-    private ObsFormScf obsFormScfEnum;
+    private String obsFormScfEnum;
 //    @XmlElement(name = "ОбстФормСЧФ")
 
     private InfProdGosZakKazn infProdGosZakKaznList;

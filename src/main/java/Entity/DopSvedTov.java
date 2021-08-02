@@ -17,7 +17,7 @@ public class DopSvedTov {
      * "Тип элемента\n" +
      * "Необязательный")
      */
-    private PrTovRab prTovRabEnum;
+    private String prTovRabEnum;
 //@XmlElement(name = "ПрТовРаб")
 
     private String dopPrizn;
