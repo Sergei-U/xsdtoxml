@@ -39,7 +39,7 @@ public class XmlCreator {
         document.setSoglStrDopInf("СоглСтрДопИнфФ"); //обязательно 14 знаков
         document.setSvScFact(getSvScFact(dataProcedureManager));
 //        document.setPoFactHZ("по факт ХЖ");
-        document.setTableScFact(getTableScFact());
+//        document.setTableScFact(getTableScFact());
         document.setSvProdPer(getSvProdPer());
         document.setPodpisant(getPodpisant());
         return document;
@@ -61,8 +61,8 @@ public class XmlCreator {
         UL ul = new UL();
         ul.setGosRegIPVidDov("ГосРегИПВыдДов");
         ul.setInnUL("7802144867");
-        ul.setOverInf("ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РЕКСОФТ.РУ\"\n");
-        ul.setNameOrg("ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"РЕКСОФТ.РУ\"\n");
+        ul.setOverInf("ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ РЕКСОФТ.РУ");
+        ul.setNameOrg("ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ РЕКСОФТ.РУ");
         ul.setDolzhnost("ДИректор");
         ul.setFioList(getFIOPodpisant());
         return ul;
@@ -92,16 +92,26 @@ public class XmlCreator {
 
     private SvPer getSvPerList() {
         SvPer svPer = new SvPer();
-        svPer.setSodOper("СодОпер");
+        svPer.setSodOper("Обязательный");
         svPer.setVidOper("ВидОпер");
         svPer.setDatePer(LocalDate.now());
         svPer.setDateStart(LocalDate.now());
         svPer.setDateEnd(LocalDate.now());
-//        svPer.setOsnPerList();
+        svPer.setOsnPerList(getOsnPerList());
 //        svPer.setSvLicPerList();
 //        svPer.setTranGruzList();
 //        svPer.setSvPerVechList();
         return svPer;
+    }
+
+    private OsnPer getOsnPerList() {
+        OsnPer osnPer = new OsnPer();
+        osnPer.setNameOsn("Без документа-основания");
+        osnPer.setNomOns("Необязательный");
+        osnPer.setDateOsn(LocalDate.now());
+        osnPer.setDopSvOsn("Необязательный");
+        osnPer.setIdentOsn("Необязательный");
+        return osnPer;
     }
 
     private TableScFact getTableScFact() {
@@ -141,13 +151,20 @@ public class XmlCreator {
         svedTov.setPriceProductNoNDS(BigDecimal.valueOf(19.2));
         svedTov.setStTovUcNal(BigDecimal.valueOf(19.2));
         svedTov.setDefStTovUcNal("-");
-
-//        svedTov.setExciseList();
+        svedTov.setNalst("0%");
+        svedTov.setExciseList(getExiceList());
 //        svedTov.setSummNalList();
 //        svedTov.setSvTDList();
 //        svedTov.setDopSvedTovList();
 //        svedTov.setInfPolFXZ2List();
         return svedTov;
+    }
+
+    private Excise getExiceList() {
+        Excise excise = new Excise();
+        excise.setSummExcise(BigDecimal.valueOf(19.2));
+        excise.setNonExcise("Без акциза");
+        return excise;
     }
 
     private SvScFact getSvScFact(DataProcedureManager dataProcedureManager) {

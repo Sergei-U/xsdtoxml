@@ -48,7 +48,7 @@ public class Podpisant {
     }
 
 
-    @XmlElement(name = "ОснПолн",required = true)
+    @XmlAttribute(name = "ОснПолн",required = true)
     /**
      * Формат
      * T(255) Строка (длина от 1 до 255 знаков)

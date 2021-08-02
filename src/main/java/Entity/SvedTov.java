@@ -37,6 +37,17 @@ public class SvedTov {
 
     private InfPolFXZ2 infPolFXZ2List;
 
+    private String nalst;
+
+
+    @XmlAttribute(name = "НалСт")
+    public String getNalst() {
+        return nalst;
+    }
+
+    public void setNalst(String nalst) {
+        this.nalst = nalst;
+    }
 
     @XmlAttribute(name = "НомСтр", required = true)
     /** "Формат\n" +

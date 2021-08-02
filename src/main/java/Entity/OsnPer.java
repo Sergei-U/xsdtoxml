@@ -1,5 +1,6 @@
 package Entity;
 
+import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
@@ -18,7 +19,7 @@ public class OsnPer {
 
     private String identOsn;
 
-    @XmlElement(name = "НаимОсн", required = true)
+    @XmlAttribute(name = "НаимОсн", required = true)
     /** "Формат\n" +
      "T(255) Строка (длина от 1 до 255 знаков)\n" +
      "Тип элемента\n" +
@@ -32,7 +33,7 @@ public class OsnPer {
         this.nameOsn = nameOsn;
     }
 
-    @XmlElement(name = "НомОсн")
+    @XmlAttribute(name = "НомОсн")
     /** "Формат\n" +
      "T(255) Строка (длина от 1 до 255 знаков)\n" +
      "Тип элемента\n" +
@@ -45,7 +46,7 @@ public class OsnPer {
         this.nomOns = nomOns;
     }
 
-    @XmlElement(name = "ДатаОсн")
+    @XmlAttribute(name = "ДатаОсн")
     @XmlJavaTypeAdapter(DateAdapter.class)
     @XmlSchemaType(name = "datetime")
     /** "Формат\n" +
@@ -60,7 +61,7 @@ public class OsnPer {
         this.dateOsn = dateOsn;
     }
 
-    @XmlElement(name = "ДопСвОсн")
+    @XmlAttribute(name = "ДопСвОсн")
     /** "Формат\n" +
      "T(1000) Строка (длина от 1 до 1000 знаков)\n" +
      "Тип элемента\n" +
@@ -73,7 +74,7 @@ public class OsnPer {
         this.dopSvOsn = dopSvOsn;
     }
 
-    @XmlElement(name = "ИдентОсн")
+    @XmlAttribute(name = "ИдентОсн")
     /** "Формат\n" +
      "T(255) Строка (длина от 1 до 255 знаков)\n" +
      "Тип элемента\n" +

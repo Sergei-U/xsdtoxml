@@ -30,7 +30,7 @@ public class UL {
         this.gosRegIPVidDov = gosRegIPVidDov;
     }
 
-    @XmlAttribute(name = "ИННФЛ")
+    @XmlAttribute(name = "ИННЮЛ")
     /** "Формат\n" +
      "T(=12) Строка (фиксированное число знаков 12)\n" +
      "Тип элемента\n" +
@@ -70,7 +70,7 @@ public class UL {
         this.fioList = fioList;
     }
 
-    @XmlElement(name = "НаимОрг")
+    @XmlAttribute(name = "НаимОрг")
     /**
      * Формат
      * T(1000) Строка (длина от 1 до 1000 знаков)

@@ -14,7 +14,7 @@ public class Excise {
     private String nonExcise;
 
 
-    @XmlAttribute(name = "СумАкциз", required = true)
+    @XmlAttribute(name = "СумАкциз")
     /** "Формат\n" +
      "Вещественное (максимальное число знаков 19, в том числе десятичных 2)\n" +
      "Тип элемента\n" +
@@ -29,7 +29,7 @@ public class Excise {
         this.summExcise = summExcise;
     }
 
-    @XmlAttribute(name = "БезАкциз", required = true)
+    @XmlAttribute(name = "БезАкциз")
     /** "Формат\n" +
      "Строка (фиксированное число знаков 10)\n" +
      "Тип элемента\n" +

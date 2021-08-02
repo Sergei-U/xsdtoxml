@@ -1,11 +1,17 @@
 package Entity;
 
+import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.time.LocalDate;
 
 
+@XmlType(propOrder = {"osnPerList",
+        "svLicPerList",
+        "tranGruzList",
+        "svPerVechList"})
 public class SvPer {
 
     private String sodOper;
@@ -27,7 +33,7 @@ public class SvPer {
     private SvPerVech svPerVechList;
 
 
-    @XmlElement(name = "СодОпер", required = true)
+    @XmlAttribute(name = "СодОпер", required = true)
     /** "Формат\n" +
      "T(255) Строка (длина от 1 до 255 знаков)\n" +
      "Тип элемента\n" +
@@ -40,7 +46,7 @@ public class SvPer {
         this.sodOper = sodOper;
     }
 
-    @XmlElement(name = "ВидОпер")
+    @XmlAttribute(name = "ВидОпер")
     /** "Формат\n" +
      "T(255) Строка (длина от 1 до 255 знаков)\n" +
      "Тип элемента\n" +
@@ -53,7 +59,7 @@ public class SvPer {
         this.vidOper = vidOper;
     }
 
-    @XmlElement(name = "ДатаПер")
+    @XmlAttribute(name = "ДатаПер")
     @XmlJavaTypeAdapter(DateAdapter.class)
     @XmlSchemaType(name = "datetime")
     /** "Формат\n" +
@@ -68,7 +74,7 @@ public class SvPer {
         this.datePer = datePer;
     }
 
-    @XmlElement(name = "ДатаНач")
+    @XmlAttribute(name = "ДатаНач")
     @XmlJavaTypeAdapter(DateAdapter.class)
     @XmlSchemaType(name = "datetime")
     /** "Формат\n" +
@@ -83,7 +89,7 @@ public class SvPer {
         this.dateStart = dateStart;
     }
 
-    @XmlElement(name = "ДатаОкон")
+    @XmlAttribute(name = "ДатаОкон")
     @XmlJavaTypeAdapter(DateAdapter.class)
     @XmlSchemaType(name = "datetime")
     /** "Формат\n" +
