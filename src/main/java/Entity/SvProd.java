@@ -2,11 +2,16 @@ package Entity;
 
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  *
  */
 
+@XmlType(propOrder = {"idSvList",
+        "adressList",
+        "contactList",
+        "bankReqList"})
 public class SvProd {
 
     private String okpo;

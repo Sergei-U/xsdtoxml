@@ -1,15 +1,21 @@
 package Entity;
 
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.*;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.time.LocalDate;
 
 /**
  *
  */
-
+@XmlType(propOrder = {"isprScFList",
+        "svProdList",
+        "cargoSenderList",
+        "cargoReceiverList",
+        "svPRDList",
+        "svBuyerList",
+        "dopSvFXZ1List",
+        "documentConfirmShipmentList",
+        "infPolFXZ1List"})
 public class SvScFact {
 
     private String numberScF;

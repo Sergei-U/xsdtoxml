@@ -13,7 +13,7 @@ import java.util.UUID;
 
 @XmlRootElement(name = "Файл")
 @XmlAccessorType(XmlAccessType.NONE)
-@XmlType(name = "File")
+@XmlType(name = "File",propOrder = {"svUcDocObor" , "document"})
 public class File implements Serializable {
 
     UUID uuid = UUID.randomUUID();
@@ -43,7 +43,7 @@ public class File implements Serializable {
      "T(5) Строка (длина от 1 до 5 знаков)\n" +
      "Тип элемента\n" +
      "Обязательный\n" +
-     "Принимает значение: 5.01")
+     "Принимает значение: 5.01")*/
      public String getVerForm() {
      return verForm;
      }
@@ -65,12 +65,12 @@ public class File implements Serializable {
         this.verForm = verForm;
     }
 
-
     public void setVerProgram(String verProgram) {
         this.verProgram = verProgram;
     }
 
     @XmlElement(name = "СвУчДокОбор")
+
     public SvUcDocObor getSvUcDocObor() {
         return svUcDocObor;
     }
